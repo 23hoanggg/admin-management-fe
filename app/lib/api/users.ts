@@ -1,6 +1,6 @@
 import { authClient } from "../auth-client";
 
-interface createUser {
+export interface CreateUserInput {
   email: string;
   password: string;
   username: string;
@@ -8,9 +8,11 @@ interface createUser {
   role: "user";
 }
 
-interface updateUser {
-  username: string;
-  name: string;
+export interface UpdateUserInput {
+  name?: string;
+  username?: string;
+  email?: string;
+  password?: string;
 }
 
 export interface ListUsersParams {
@@ -120,17 +122,40 @@ export async function setRole(userId: string) {
   return data;
 }
 
-export async function updateUser(userId: string, input: updateUser) {
-  const { data, error } = await authClient.admin.updateUser({
-    userId,
-    data: input,
-  });
-  if (error) throw new Error(error.message);
-  return data;
+export async function updateUser(userId: string, input: UpdateUserInput) {
+  const updateData: Record<string, string> = {};
+
+  if (input.name !== undefined) updateData.name = input.name;
+  if (input.username !== undefined) updateData.username = input.username;
+  if (input.email !== undefined) updateData.email = input.email;
+
+  if (Object.keys(updateData).length > 0) {
+    const { error } = await authClient.admin.updateUser({
+      userId,
+      data: updateData,
+    });
+    if (error) throw new Error(error.message);
+  }
+
+  if (input.password && input.password.trim() !== "") {
+    const { error: pwdError } = await authClient.admin.setUserPassword({
+      userId,
+      newPassword: input.password,
+    });
+    if (pwdError) throw new Error(pwdError.message);
+  }
 }
 
-export async function createUser(input: createUser) {
-  const { data, error } = await authClient.admin.createUser(input);
+export async function createUser(input: CreateUserInput) {
+  const { data, error } = await authClient.admin.createUser({
+    name: input.name,
+    email: input.email,
+    password: input.password,
+    role: input.role,
+    data: {
+      username: input.username,
+    },
+  });
 
   if (error) {
     throw new Error(error.message);

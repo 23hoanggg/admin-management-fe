@@ -33,71 +33,83 @@ export default function ActivitySlot() {
   });
 
   return (
-    <section className="space-y-6">
-      <div>
-        {isPending && <p className="text-sm">Checking session...</p>}
+    <section className="space-y-8">
+      <div className="flex min-h-16 items-center justify-end gap-3 border-b border-gray-200 pb-4">
+        {isPending && (
+          <p className="text-sm text-gray-500">Checking session...</p>
+        )}
 
-        {error && <p className="text-sm">Session error: {error.message}</p>}
+        {error && (
+          <p className="text-sm text-red-600">Session error: {error.message}</p>
+        )}
 
         {!isPending && !error && !session && (
-          <div className="space-y-2">
-            <p className="text-sm">No user is currently logged in.</p>
-
-            <button
-              type="button"
-              onClick={() => router.push("/login")}
-              className="rounded border px-3 py-1 text-sm"
-            >
-              Login
-            </button>
-          </div>
+          <button
+            type="button"
+            onClick={() => router.push("/login")}
+            className="rounded-lg bg-gray-900 px-4 py-2 text-sm font-medium text-white hover:bg-gray-700"
+          >
+            Login
+          </button>
         )}
 
         {!isPending && !error && session && (
-          <div className="space-y-3">
-            <div className="space-y-2 text-sm">
-              <div className="flex justify-between pb-1">
-                <span>Name</span>
-                <span>{session.user.name}</span>
+          <>
+            <div className="flex items-center gap-3 border-r border-gray-200 pr-4">
+              <div className="hidden sm:block">
+                <p className="text-sm font-semibold text-gray-900">
+                  {session.user.name}
+                </p>
+                <p className="text-xs text-gray-500">
+                  @{session.user.username ?? "N/A"}
+                </p>
               </div>
 
-              <div className="flex justify-between pb-1">
-                <span>Username</span>
-                <span>{session.user.username ?? "N/A"}</span>
-              </div>
-
-              <div className="flex justify-between pb-1">
-                <span>Role</span>
-                <span>{session.user.role ?? "user"}</span>
-              </div>
+              <span
+                className={`rounded-full px-2.5 py-1 text-xs font-semibold ${
+                  session.user.role === "admin"
+                    ? "bg-indigo-100 text-indigo-700"
+                    : "bg-gray-100 text-gray-700"
+                }`}
+              >
+                {session.user.role ?? "user"}
+              </span>
             </div>
 
-            <button
-              type="button"
-              onClick={handleLogout}
-              className="rounded border px-3 py-1 text-sm"
-            >
-              Logout
-            </button>
+            {/* Các nút thao tác */}
+            <div className="flex items-center gap-2">
+              {session.user.role !== "admin" && (
+                <button
+                  type="button"
+                  onClick={() => stopImpersonateMutation.mutate()}
+                  disabled={stopImpersonateMutation.isPending}
+                  className="rounded-lg border border-amber-300 bg-amber-50 px-3 py-2 text-sm font-medium text-amber-800 hover:bg-amber-100 disabled:opacity-50"
+                >
+                  {stopImpersonateMutation.isPending
+                    ? "Stopping..."
+                    : "Stop impersonation"}
+                </button>
+              )}
 
-            <button
-              type="button"
-              onClick={() => {
-                stopImpersonateMutation.mutate();
-              }}
-              className="rounded border px-3 py-1 text-sm"
-            >
-              Stop Impersonate User
-            </button>
-          </div>
+              <button
+                type="button"
+                onClick={handleLogout}
+                className="rounded-lg bg-gray-900 px-4 py-2 text-sm font-medium text-white hover:bg-gray-700"
+              >
+                Logout
+              </button>
+            </div>
+          </>
         )}
       </div>
 
       {/* Activity */}
       <div>
-        <h2 className="mb-4 text-lg font-bold">Activity</h2>
+        <h2 className="mb-4 text-lg font-bold text-gray-900">Activity</h2>
 
-        <div className="space-y-3"></div>
+        <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+          <p className="text-sm text-gray-500">No recent activity.</p>
+        </div>
       </div>
     </section>
   );

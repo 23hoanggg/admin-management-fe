@@ -17,23 +17,27 @@ export default function DashboardLayout({
   modal,
 }: DashboardLayoutProps) {
   return (
-    <div className="h-screen p-6">
-      <div className="mx-auto max-w-7xl space-y-4">
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-4">
-          <aside className="rounded border bg-white p-4 lg:col-span-1">
-            {sidebar}
-          </aside>
+    <div className="h-dvh overflow-hidden bg-gray-50 p-3">
+      <div className="mx-auto grid h-full max-w-[1800px] grid-cols-[200px_minmax(0,1fr)_minmax(380px,520px)] grid-rows-[minmax(0,1fr)_minmax(180px,auto)] gap-3">
+        {/* Sidebar */}
+        <aside className="row-span-2 min-h-0 overflow-y-auto rounded-xl border border-gray-200 bg-white p-3">
+          {sidebar}
+        </aside>
 
-          <main className="rounded border bg-white p-4 lg:col-span-2">
-            {activity}
-          </main>
+        {/* Activity - ở giữa */}
+        <section className="min-h-0 min-w-0 overflow-y-auto rounded-xl border border-gray-200 bg-white p-4">
+          {activity}
+        </section>
 
-          <section className="rounded border bg-white p-4 lg:col-span-1">
-            {user}
-          </section>
-        </div>
+        {/* User - bên phải, rộng hơn */}
+        <section className="row-span-2 min-h-0 min-w-0 overflow-x-hidden overflow-y-auto rounded-xl border border-gray-200 bg-white p-4">
+          {user}
+        </section>
 
-        <section className="rounded border bg-white p-4">{admin}</section>
+        {/* Admin - phía dưới Activity */}
+        <section className="min-h-0 min-w-0 overflow-y-auto rounded-xl border border-gray-200 bg-white p-4">
+          {admin}
+        </section>
       </div>
 
       {modal}
