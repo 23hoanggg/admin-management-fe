@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { updateUser, type UpdateUserInput } from "@/app/lib/api/users";
+import { updateUserSchema } from "@/app/lib/schemas/user.schema";
 
 interface UpdateUserFormProps {
   user: {
@@ -24,23 +25,23 @@ export default function UpdateUserForm({ user, onClose }: UpdateUserFormProps) {
   const queryClient = useQueryClient();
 
   const updateMutation = useMutation({
-    mutationFn: async () => {
+    mutationFn: async (data: UpdateUserInput) => {
       const payload: UpdateUserInput = {};
 
-      if (name.trim() !== (user.name ?? "").trim()) {
-        payload.name = name.trim();
+      if (data.name !== (user.name ?? "").trim()) {
+        payload.name = data.name;
       }
 
-      if (username.trim() !== (user.username ?? "").trim()) {
-        payload.username = username.trim();
+      if (data.username !== (user.username ?? "").trim()) {
+        payload.username = data.username;
       }
 
-      if (email.trim() !== (user.email ?? "").trim()) {
-        payload.email = email.trim();
+      if (data.email !== (user.email ?? "").trim()) {
+        payload.email = data.email;
       }
 
-      if (password.trim() !== "") {
-        payload.password = password;
+      if (data.password !== "") {
+        payload.password = data.password;
       }
 
       if (Object.keys(payload).length === 0) {
@@ -66,17 +67,31 @@ export default function UpdateUserForm({ user, onClose }: UpdateUserFormProps) {
     },
   });
 
-  function handleSubmit(event: React.SubmitEvent<HTMLFormElement>) {
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setErrorMessage(null);
-    updateMutation.mutate();
+
+    const result = updateUserSchema.safeParse({
+      name,
+      username,
+      email,
+      password,
+    });
+
+    if (!result.success) {
+      setErrorMessage(result.error.issues[0].message);
+      return;
+    }
+
+    updateMutation.mutate(result.data);
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
-      <div className="w-full max-w-md rounded border bg-white p-6 shadow-md">
-        <div className="mb-4 flex items-center justify-between">
-          <h3 className="text-lg font-bold">Update User</h3>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4">
+      <div className="w-full max-w-md rounded-lg border bg-white p-6 shadow-lg">
+        <div className="mb-5 flex items-center justify-between">
+          <h2 className="text-lg font-semibold">Update User</h2>
+
           <button
             type="button"
             onClick={onClose}
@@ -87,66 +102,75 @@ export default function UpdateUserForm({ user, onClose }: UpdateUserFormProps) {
         </div>
 
         {errorMessage && (
-          <p className="mb-3 text-sm text-red-600">{errorMessage}</p>
+          <p role="alert" className="mb-4 text-sm text-red-600">
+            {errorMessage}
+          </p>
         )}
 
-        <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <div>
-            <label htmlFor="update-name" className="block text-sm font-medium">
+            <label
+              htmlFor="update-name"
+              className="mb-1 block text-sm font-medium"
+            >
               Name
             </label>
             <input
               id="update-name"
-              className="mt-1 w-full rounded border px-2 py-1 text-sm"
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
+              className="w-full rounded-md border px-3 py-2 text-sm outline-none focus:border-black"
             />
           </div>
 
           <div>
             <label
               htmlFor="update-username"
-              className="block text-sm font-medium"
+              className="mb-1 block text-sm font-medium"
             >
               Username
             </label>
             <input
               id="update-username"
-              className="mt-1 w-full rounded border px-2 py-1 text-sm"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
+              required
+              className="w-full rounded-md border px-3 py-2 text-sm outline-none focus:border-black"
             />
           </div>
 
           <div>
-            <label htmlFor="update-email" className="block text-sm font-medium">
+            <label
+              htmlFor="update-email"
+              className="mb-1 block text-sm font-medium"
+            >
               Email
             </label>
             <input
               id="update-email"
               type="email"
-              className="mt-1 w-full rounded border px-2 py-1 text-sm"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              className="w-full rounded-md border px-3 py-2 text-sm outline-none focus:border-black"
             />
           </div>
 
           <div>
             <label
               htmlFor="update-password"
-              className="block text-sm font-medium"
+              className="mb-1 block text-sm font-medium"
             >
               Password
             </label>
             <input
               id="update-password"
               type="password"
-              placeholder="password"
-              className="mt-1 w-full rounded border px-2 py-1 text-sm"
+              placeholder="Để trống nếu không đổi"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              className="w-full rounded-md border px-3 py-2 text-sm outline-none focus:border-black"
             />
           </div>
 
@@ -154,14 +178,15 @@ export default function UpdateUserForm({ user, onClose }: UpdateUserFormProps) {
             <button
               type="button"
               onClick={onClose}
-              className="rounded border px-3 py-1 text-sm"
+              className="rounded-md border px-4 py-2 text-sm hover:bg-gray-100"
             >
               Cancel
             </button>
+
             <button
               type="submit"
               disabled={updateMutation.isPending}
-              className="rounded border bg-black px-3 py-1 text-sm text-white disabled:opacity-50"
+              className="rounded-md bg-black px-4 py-2 text-sm text-white hover:bg-gray-800 disabled:cursor-not-allowed disabled:opacity-50"
             >
               {updateMutation.isPending ? "Updating..." : "Update user"}
             </button>

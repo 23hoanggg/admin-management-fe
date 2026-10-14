@@ -53,7 +53,8 @@ export default function UserSlot() {
     },
 
     onError: (error: Error) => {
-      window.alert(`user got banned`);
+      console.log(error);
+      window.alert("user got banned");
     },
   });
 
@@ -156,7 +157,7 @@ export default function UserSlot() {
           >
             {/* Username + Status */}
             <div className="flex min-w-0 flex-col items-start gap-2">
-              <span className="max-w-full break-words font-medium text-gray-900">
+              <span className="max-w-full font-medium text-gray-900">
                 {user.username ?? user.name}
               </span>
 

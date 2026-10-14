@@ -1,41 +1,50 @@
 import { z } from "zod";
 
+const nameSchema = z
+  .string()
+  .trim()
+  .min(1, "Tên không được để trống")
+  .max(50, "Tên tối đa 50 ký tự")
+  .regex(
+    /^[\p{L}\p{M}]+(?:[ '\u2019-][\p{L}\p{M}]+)*$/u,
+    "Tên chỉ được chứa chữ cái, khoảng trắng và dấu nối",
+  );
+
+const usernameSchema = z
+  .string()
+  .trim()
+  .min(3, "Username tối thiểu 3 ký tự")
+  .max(20, "Username tối đa 20 ký tự")
+  .regex(/^[a-zA-Z0-9_]+$/, "Username chỉ được chứa chữ, số và gạch dưới");
+
+const emailSchema = z.string().trim().email("Email không hợp lệ");
+
+const createPasswordSchema = z
+  .string()
+  .min(8, "Mật khẩu tối thiểu 8 ký tự")
+  .max(64, "Mật khẩu tối đa 64 ký tự");
+
+const updatePasswordSchema = z
+  .string()
+  .refine(
+    (value) => value === "" || value.length >= 8,
+    "Mật khẩu tối thiểu 8 ký tự",
+  )
+  .refine((value) => value.length <= 64, "Mật khẩu tối đa 64 ký tự");
+
 export const createUserSchema = z.object({
-  name: z
-    .string()
-    .trim()
-    .min(1, "Tên không được để trống")
-    .max(50, "Tối đa 50 ký tự"),
-  email: z.string().trim().email("Email không hợp lệ"),
-  password: z
-    .string()
-    .min(8, "Mật khẩu tối thiểu 8 ký tự")
-    .max(64, "Tối đa 64 ký tự"),
-  role: z.enum(["user", "admin"], { message: "Role không hợp lệ" }),
+  name: nameSchema,
+  username: usernameSchema,
+  email: emailSchema,
+  password: createPasswordSchema,
 });
 
 export const updateUserSchema = z.object({
-  name: z
-    .string()
-    .trim()
-    .min(1, "Tên không được để trống")
-    .max(50, "Tối đa 50 ký tự"),
-  username: z
-    .string()
-    .trim()
-    .min(3, "Tối thiểu 3 ký tự")
-    .max(20, "Tối đa 20 ký tự")
-    .regex(/^[a-zA-Z0-9_]+$/, "Chỉ gồm chữ, số và gạch dưới"),
+  name: nameSchema,
+  username: usernameSchema,
+  email: emailSchema,
+  password: updatePasswordSchema,
 });
 
 export type CreateUserInput = z.infer<typeof createUserSchema>;
-export type UpdateUserInput = z.infer<typeof updateUserSchema>;
-
-export function getFieldErrors(error: z.ZodError) {
-  const errors: Record<string, string> = {};
-  for (const issue of error.issues) {
-    const field = String(issue.path[0] ?? "");
-    if (field && !errors[field]) errors[field] = issue.message;
-  }
-  return errors;
-}
+export type UpdateUserFormValues = z.infer<typeof updateUserSchema>;
