@@ -28,7 +28,7 @@ export async function listUsers({ currentPage, pageSize }: ListUsersParams) {
       limit: pageSize,
       offset: (currentPage - 1) * pageSize,
       sortBy: "name",
-      sortDirection: "desc",
+      sortDirection: "asc",
     },
   });
 

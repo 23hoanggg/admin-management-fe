@@ -29,7 +29,7 @@ interface User {
 
 export default function UserSlot() {
   const [currentPage, setCurrentPage] = useState(1);
-  const [pageSize, setPageSize] = useState(3);
+  const [pageSize, setPageSize] = useState(5);
 
   const [isCreateForm, setIsCreateForm] = useState(false);
   const [editingUser, setEditingUser] = useState<User | null>(null);
@@ -53,8 +53,8 @@ export default function UserSlot() {
     },
 
     onError: (error: Error) => {
-      console.log(error);
-      window.alert("user got banned");
+      console.error(error);
+      window.alert("User got banned, can not sign in");
     },
   });
 
@@ -80,8 +80,8 @@ export default function UserSlot() {
 
   const removeUserMutation = useMutation({
     mutationFn: removeUser,
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["users"] });
+    onSuccess: async () => {
+      await queryClient.invalidateQueries({ queryKey: ["users"] });
     },
     onError: (error) => {
       console.error("Remove user failed:", error);
@@ -104,19 +104,19 @@ export default function UserSlot() {
   const totalPages = Math.ceil((data?.total ?? 0) / pageSize);
 
   if (authPending) {
-    return <p>đang đăng nhập...</p>;
+    return <p>Đang kiểm tra đăng nhập...</p>;
   }
 
   if (authError) {
-    return <p>lỗi đăng nhập</p>;
+    return <p>Lỗi xác thực. Vui lòng thử lại.</p>;
   }
 
   if (!session?.user) {
-    return <p>chưa đăng nhập</p>;
+    return <p>Chưa đăng nhập.</p>;
   }
 
   if (session.user.role !== "admin") {
-    return <p>user kh xem được</p>;
+    return <p>User kh xem duoc.</p>;
   }
 
   if (usersPending) {
@@ -148,120 +148,123 @@ export default function UserSlot() {
         </button>
       </div>
 
-      {/* Users list */}
-      <div className="space-y-3">
-        {(data.users as User[]).map((user) => (
-          <div
-            key={user.id}
-            className="flex min-w-0 flex-col gap-3 rounded-xl border border-gray-200 bg-white p-4 transition hover:border-gray-300 sm:flex-row sm:items-center sm:justify-between"
-          >
-            {/* Username + Status */}
-            <div className="flex min-w-0 flex-col items-start gap-2">
-              <span className="max-w-full font-medium text-gray-900">
-                {user.username ?? user.name}
-              </span>
-
-              {user.banned === true ? (
-                <span className="rounded-full bg-red-50 px-2.5 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-200">
-                  Banned
+      {/* Users list + Pagination */}
+      <div className="flex flex-col">
+        <div className="min-h-[360px] space-y-3">
+          {data.users.map((user: User) => (
+            <div
+              key={user.id}
+              className="flex min-w-0 flex-col gap-3 rounded-xl border border-gray-200 bg-white p-4 transition hover:border-gray-300 sm:flex-row sm:items-center sm:justify-between"
+            >
+              {/* Username + Status */}
+              <div className="flex min-w-0 flex-col items-start gap-2">
+                <span className="max-w-full font-medium text-gray-900">
+                  {user.username ?? user.name}
                 </span>
-              ) : user.banned === false ? (
-                <span className="rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-medium text-emerald-700 ring-1 ring-inset ring-emerald-200">
-                  Active
-                </span>
-              ) : (
-                <span className="rounded-full bg-gray-100 px-2.5 py-1 text-xs text-gray-500">
-                  Unknown
-                </span>
-              )}
-            </div>
 
-            {/* Actions */}
-            <div className="flex min-w-0 flex-wrap items-center gap-2">
-              <button
-                type="button"
-                disabled={impersonateMutation.isPending}
-                className="rounded-md border border-indigo-200 bg-indigo-50 px-3 py-1.5 text-xs font-medium text-indigo-700 transition hover:bg-indigo-100 disabled:cursor-not-allowed disabled:opacity-50"
-                onClick={() => impersonateMutation.mutate(user.id)}
-              >
-                {impersonateMutation.isPending ? "Loading..." : "Login"}
-              </button>
+                {user.banned === true ? (
+                  <span className="rounded-full bg-red-50 px-2.5 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-200">
+                    Banned
+                  </span>
+                ) : user.banned === false ? (
+                  <span className="rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-medium text-emerald-700 ring-1 ring-inset ring-emerald-200">
+                    Active
+                  </span>
+                ) : (
+                  <span className="rounded-full bg-gray-100 px-2.5 py-1 text-xs text-gray-500">
+                    Unknown
+                  </span>
+                )}
+              </div>
 
-              <button
-                type="button"
-                disabled={removeUserMutation.isPending}
-                className="rounded-md border border-red-200 bg-white px-3 py-1.5 text-xs font-medium text-red-600 transition hover:bg-red-50 disabled:opacity-50"
-                onClick={() => removeUserMutation.mutate(user.id)}
-              >
-                Delete
-              </button>
-
-              {user.banned === true ? (
+              {/* Actions */}
+              <div className="flex min-w-0 flex-wrap items-center gap-2">
                 <button
                   type="button"
-                  disabled={unbanUserMutation.isPending}
-                  className="rounded-md border border-emerald-200 bg-white px-3 py-1.5 text-xs font-medium text-emerald-700 transition hover:bg-emerald-50 disabled:opacity-50"
-                  onClick={() => unbanUserMutation.mutate(user.id)}
+                  disabled={impersonateMutation.isPending}
+                  className="rounded-md border border-indigo-200 bg-indigo-50 px-3 py-1.5 text-xs font-medium text-indigo-700 transition hover:bg-indigo-100 disabled:cursor-not-allowed disabled:opacity-50"
+                  onClick={() => impersonateMutation.mutate(user.id)}
                 >
-                  Unban
+                  {impersonateMutation.isPending ? "Loading..." : "Login"}
                 </button>
-              ) : (
+
                 <button
                   type="button"
-                  disabled={banUserMutation.isPending}
-                  className="rounded-md border border-amber-200 bg-white px-3 py-1.5 text-xs font-medium text-amber-700 transition hover:bg-amber-50 disabled:opacity-50"
-                  onClick={() => banUserMutation.mutate(user.id)}
+                  disabled={removeUserMutation.isPending}
+                  className="rounded-md border border-red-200 bg-white px-3 py-1.5 text-xs font-medium text-red-600 transition hover:bg-red-50 disabled:opacity-50"
+                  onClick={() => removeUserMutation.mutate(user.id)}
                 >
-                  Ban
+                  Delete
                 </button>
-              )}
 
-              <button
-                type="button"
-                className="rounded-md border border-gray-200 bg-white px-3 py-1.5 text-xs font-medium text-gray-700 transition hover:bg-gray-100"
-                onClick={() => setEditingUser(user)}
-              >
-                Update
-              </button>
+                {user.banned === true ? (
+                  <button
+                    type="button"
+                    disabled={unbanUserMutation.isPending}
+                    className="rounded-md border border-emerald-200 bg-white px-3 py-1.5 text-xs font-medium text-emerald-700 transition hover:bg-emerald-50 disabled:opacity-50"
+                    onClick={() => unbanUserMutation.mutate(user.id)}
+                  >
+                    Unban
+                  </button>
+                ) : (
+                  <button
+                    type="button"
+                    disabled={banUserMutation.isPending}
+                    className="rounded-md border border-amber-200 bg-white px-3 py-1.5 text-xs font-medium text-amber-700 transition hover:bg-amber-50 disabled:opacity-50"
+                    onClick={() => banUserMutation.mutate(user.id)}
+                  >
+                    Ban
+                  </button>
+                )}
+
+                <button
+                  type="button"
+                  className="rounded-md border border-gray-200 bg-white px-3 py-1.5 text-xs font-medium text-gray-700 transition hover:bg-gray-100"
+                  onClick={() => setEditingUser(user)}
+                >
+                  Update
+                </button>
+              </div>
             </div>
+          ))}
+
+          {data.users.length === 0 && (
+            <div className="rounded-xl border border-gray-200 bg-white px-4 py-12 text-center text-sm text-gray-500">
+              No users found.
+            </div>
+          )}
+        </div>
+
+        <div className="mt-auto flex min-h-[56px] flex-wrap items-center justify-between gap-3 border-t border-gray-200 pt-4">
+          <p className="text-sm text-gray-500">
+            Page{" "}
+            <span className="font-medium text-gray-900">{currentPage}</span> of{" "}
+            <span className="font-medium text-gray-900">{totalPages || 1}</span>
+          </p>
+
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              disabled={currentPage === 1 || isPlaceholderData}
+              onClick={() => setCurrentPage((p) => p - 1)}
+              className="rounded-lg border border-gray-200 px-3 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              Previous
+            </button>
+
+            <button
+              type="button"
+              disabled={
+                isPlaceholderData ||
+                totalPages === 0 ||
+                currentPage >= totalPages
+              }
+              onClick={() => setCurrentPage((p) => p + 1)}
+              className="rounded-lg border border-gray-200 px-3 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              Next
+            </button>
           </div>
-        ))}
-
-        {data.users.length === 0 && (
-          <div className="rounded-xl border border-gray-200 bg-white px-4 py-12 text-center text-sm text-gray-500">
-            No users found.
-          </div>
-        )}
-      </div>
-
-      <div> {}</div>
-
-      {/* Pagination */}
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <p className="text-sm text-gray-500">
-          Page <span className="font-medium text-gray-900">{currentPage}</span>{" "}
-          of{" "}
-          <span className="font-medium text-gray-900">{totalPages || 1}</span>
-        </p>
-
-        <div className="flex items-center gap-2">
-          <button
-            type="button"
-            disabled={currentPage === 1 || isPlaceholderData}
-            onClick={() => setCurrentPage((p) => p - 1)}
-            className="rounded-lg border border-gray-200 px-3 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-40"
-          >
-            Previous
-          </button>
-
-          <button
-            type="button"
-            disabled={isPlaceholderData || currentPage >= totalPages}
-            onClick={() => setCurrentPage((p) => p + 1)}
-            className="rounded-lg border border-gray-200 px-3 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-40"
-          >
-            Next
-          </button>
         </div>
       </div>
 
