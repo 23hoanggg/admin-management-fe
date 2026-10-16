@@ -1,0 +1,4561 @@
+{
+    "end_search": 1776671723.9482856,
+    "job_time": 47.225125789642334,
+    "message": "success",
+    "results": [
+        {
+            "bboxes": [
+                2596,
+                812,
+                346,
+                628
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "33：メビウス・イーシリーズ・3・100's/IMG_4800_crop_half.jpg_AUGROTATED_0",
+            "id": "33：メビウス・イーシリーズ・3・100's",
+            "img_crop_id": "Cq3Yi0w-afH6vA",
+            "matched_files": [
+                {
+                    "drank_score": 0.9836302399635315,
+                    "image": "33：メビウス・イーシリーズ・3・100's/IMG_4800_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5454247921116113,
+                    "mode": "geometric matching",
+                    "score": 0.055697978,
+                    "score_rerank": 0.8364373184225429
+                },
+                {
+                    "drank_score": 0.9831094145774841,
+                    "image": "33：メビウス・イーシリーズ・3・100's/IMG_4798_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5121540468059952,
+                    "mode": "geometric matching",
+                    "score": 0.08922738,
+                    "score_rerank": 0.8128880864150438
+                },
+                {
+                    "drank_score": 0.9788209199905396,
+                    "image": "33：メビウス・イーシリーズ・3・100's/IMG_4793_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.43905882486047826,
+                    "mode": "geometric matching",
+                    "score": 0.07094365,
+                    "score_rerank": 0.7969864634553052
+                },
+                {
+                    "drank_score": 0.9806052446365356,
+                    "image": "33：メビウス・イーシリーズ・3・100's/IMG_4792_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.3516767694500294,
+                    "mode": "geometric matching",
+                    "score": 0.07158399,
+                    "score_rerank": 0.7710510082259695
+                },
+                {
+                    "drank_score": 0.9456742405891418,
+                    "image": "33：メビウス・イーシリーズ・3・100's/IMG_4794_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.3176898823039308,
+                    "mode": "geometric matching",
+                    "score": 0.07986456,
+                    "score_rerank": 0.7470634128679219
+                }
+            ],
+            "name": "メビウス・Eシリーズ・3・100",
+            "score": 0.85,
+            "score_rerank": 0.8364373184225429,
+            "shelf_digit": "446",
+            "topn": [
+                "33：メビウス・イーシリーズ・3・100's",
+                "33：メビウス・イーシリーズ・3・100's/IMG_4800_crop_half.jpg_AUGROTATED_0",
+                "33：メビウス・イーシリーズ・3・100's/IMG_4793_crop_half.jpg_AUGROTATED_0",
+                "33：メビウス・イーシリーズ・3・100's/IMG_4792_crop_half.jpg_AUGROTATED_0",
+                "33：メビウス・イーシリーズ・3・100's/IMG_4794_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                3573,
+                4153,
+                360,
+                641
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "39：ケント・3・100・ボックス/IMG_4665_crop_half.jpg_AUGROTATED_0",
+            "id": "39：ケント・3・100・ボックス",
+            "img_crop_id": "MsYem9fyZ1n_mQ",
+            "matched_files": [
+                {
+                    "drank_score": 0.8467633724212646,
+                    "image": "39：ケント・3・100・ボックス/IMG_4665_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.16158141336255116,
+                    "mode": "geometric matching",
+                    "score": 0.37581813,
+                    "score_rerank": 0.5521761837351448
+                },
+                {
+                    "drank_score": 0.7799155712127686,
+                    "image": "39：ケント・3・100・ボックス/IMG_4673_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.18682595613280392,
+                    "mode": "geometric matching",
+                    "score": 0.38501942,
+                    "score_rerank": 0.5360146902036717
+                },
+                {
+                    "drank_score": 0.6742833256721497,
+                    "image": "39：ケント・3・100・ボックス/IMG_4668_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.1758721895881541,
+                    "mode": "geometric matching",
+                    "score": 0.3824755,
+                    "score_rerank": 0.5020564545780911
+                },
+                {
+                    "drank_score": 0.5041350722312927,
+                    "image": "38：ケント・6・100・ボックス/IMG_4501_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.21028274443436876,
+                    "mode": "geometric matching",
+                    "score": 0.3808319,
+                    "score_rerank": 0.4619925849996984
+                },
+                {
+                    "drank_score": 0.37899813055992126,
+                    "image": "39：ケント・3・100・ボックス/IMG_4669_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.19694963546790428,
+                    "mode": "geometric matching",
+                    "score": 0.38736653,
+                    "score_rerank": 0.41783771780834766
+                }
+            ],
+            "name": "ケント・エス・シリーズ・スパーク・5・100・ボックス",
+            "score": 0.85,
+            "score_rerank": 0.5521761837351448,
+            "shelf_digit": "635",
+            "topn": [
+                "39：ケント・3・100・ボックス",
+                "39：ケント・3・100・ボックス/IMG_4665_crop_half.jpg_AUGROTATED_0",
+                "38：ケント・6・100・ボックス/IMG_4501_crop_half.jpg_AUGROTATED_0",
+                "39：ケント・3・100・ボックス/IMG_4668_crop_half.jpg_AUGROTATED_0",
+                "39：ケント・3・100・ボックス/IMG_4673_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                510,
+                2304,
+                344,
+                465
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "16：テリア サン パール/IMG_4707_crop_half.jpg_AUGROTATED_0",
+            "id": "16：テリア サン パール",
+            "img_crop_id": "jr-aMZlCHOQb9A",
+            "matched_files": [
+                {
+                    "drank_score": 0.9970442652702332,
+                    "image": "16：テリア サン パール/IMG_4707_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.7495735952107344,
+                    "mode": "geometric matching",
+                    "score": 0.2874871,
+                    "score_rerank": 0.8089905181442902
+                },
+                {
+                    "drank_score": 0.9911203980445862,
+                    "image": "15：テリア リビエラ パール/IMG_4718_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6550809723048483,
+                    "mode": "geometric matching",
+                    "score": 0.2162376,
+                    "score_rerank": 0.8073653711048303
+                },
+                {
+                    "drank_score": 0.9947705864906311,
+                    "image": "16：テリア サン パール/IMG_4706_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6737240534147535,
+                    "mode": "geometric matching",
+                    "score": 0.26010585,
+                    "score_rerank": 0.7965060519716154
+                },
+                {
+                    "drank_score": 0.9979597330093384,
+                    "image": "15：テリア リビエラ パール/IMG_4717_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6632644278204222,
+                    "mode": "geometric matching",
+                    "score": 0.273243,
+                    "score_rerank": 0.7890700482489281
+                },
+                {
+                    "drank_score": 0.9950876832008362,
+                    "image": "15：テリア リビエラ パール/IMG_4720_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6857197738995151,
+                    "mode": "geometric matching",
+                    "score": 0.3026607,
+                    "score_rerank": 0.7831779571301054
+                }
+            ],
+            "name": "テリア ・サンパールE",
+            "score": 0.85,
+            "score_rerank": 0.8089905181442902,
+            "shelf_digit": "727",
+            "topn": [
+                "16：テリア サン パール",
+                "15：テリア リビエラ パール/IMG_4718_crop_half.jpg_AUGROTATED_0",
+                "16：テリア サン パール/IMG_4706_crop_half.jpg_AUGROTATED_0",
+                "15：テリア リビエラ パール/IMG_4717_crop_half.jpg_AUGROTATED_0",
+                "16：テリア サン パール/IMG_4707_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                1476,
+                3671,
+                341,
+                477
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "29：ヴァルト・アイスト・ベリー・クリック/IMG_4484_crop_half.jpg_AUGROTATED_0",
+            "id": "29：ヴァルト・アイスト・ベリー・クリック",
+            "img_crop_id": "wF9QIQg3sUSQPg",
+            "matched_files": [
+                {
+                    "drank_score": 0.9616605043411255,
+                    "image": "29：ヴァルト・アイスト・ベリー・クリック/IMG_4484_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6848473099744194,
+                    "mode": "geometric matching",
+                    "score": 0.17297137,
+                    "score_rerank": 0.8247637962946636
+                },
+                {
+                    "drank_score": 0.9669306874275208,
+                    "image": "29：ヴァルト・アイスト・ベリー・クリック/IMG_4481_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6244162228427697,
+                    "mode": "geometric matching",
+                    "score": 0.15837383,
+                    "score_rerank": 0.8140545410810871
+                },
+                {
+                    "drank_score": 0.9761021137237549,
+                    "image": "29：ヴァルト・アイスト・ベリー・クリック/IMG_4480_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5560718373219862,
+                    "mode": "geometric matching",
+                    "score": 0.1925723,
+                    "score_rerank": 0.7826232653137223
+                },
+                {
+                    "drank_score": 0.94600909948349,
+                    "image": "26：ヴァルト・ダーク/IMG_4578_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5372690889049319,
+                    "mode": "geometric matching",
+                    "score": 0.20739037,
+                    "score_rerank": 0.7620273085165266
+                },
+                {
+                    "drank_score": 0.9353435635566711,
+                    "image": "29：ヴァルト・アイスト・ベリー・クリック/IMG_4485_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.4873864190855026,
+                    "mode": "geometric matching",
+                    "score": 0.17804182,
+                    "score_rerank": 0.7556022667926521
+                }
+            ],
+            "name": "ヴァルト・アイスト・ベリー・クリック",
+            "score": 0.85,
+            "score_rerank": 0.8247637962946636,
+            "shelf_digit": "386",
+            "topn": [
+                "29：ヴァルト・アイスト・ベリー・クリック",
+                "29：ヴァルト・アイスト・ベリー・クリック/IMG_4481_crop_half.jpg_AUGROTATED_0",
+                "29：ヴァルト・アイスト・ベリー・クリック/IMG_4484_crop_half.jpg_AUGROTATED_0",
+                "29：ヴァルト・アイスト・ベリー・クリック/IMG_4485_crop_half.jpg_AUGROTATED_0",
+                "29：ヴァルト・アイスト・ベリー・クリック/IMG_4480_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                2591,
+                1551,
+                339,
+                560
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "32：メビウス・イーシリーズ・6/IMG_4563_crop_half.jpg_AUGROTATED_0",
+            "id": "32：メビウス・イーシリーズ・6",
+            "img_crop_id": "puotSKtTdyb2nA",
+            "matched_files": [
+                {
+                    "drank_score": 0.9680739641189575,
+                    "image": "32：メビウス・イーシリーズ・6/IMG_4563_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.25449452353684165,
+                    "mode": "geometric matching",
+                    "score": 0.18456662,
+                    "score_rerank": 0.6929438982967397
+                },
+                {
+                    "drank_score": 0.9454826712608337,
+                    "image": "32：メビウス・イーシリーズ・6/IMG_4562_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.237280210149376,
+                    "mode": "geometric matching",
+                    "score": 0.18298405,
+                    "score_rerank": 0.681635244423063
+                },
+                {
+                    "drank_score": 0.9491923451423645,
+                    "image": "32：メビウス・イーシリーズ・6/IMG_4564_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.20424407428045616,
+                    "mode": "geometric matching",
+                    "score": 0.1763444,
+                    "score_rerank": 0.6754931658268462
+                },
+                {
+                    "drank_score": 0.918428897857666,
+                    "image": "32：メビウス・イーシリーズ・6/IMG_4567_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.18453635198196333,
+                    "mode": "geometric matching",
+                    "score": 0.1711874,
+                    "score_rerank": 0.6624146149518888
+                },
+                {
+                    "drank_score": 0.880445122718811,
+                    "image": "32：メビウス・イーシリーズ・6/IMG_4561_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.19629317712689145,
+                    "mode": "geometric matching",
+                    "score": 0.17650187,
+                    "score_rerank": 0.6524207419537106
+                }
+            ],
+            "name": "メビウス・スーパーライト・ボックス",
+            "score": 0.85,
+            "score_rerank": 0.6929438982967397,
+            "shelf_digit": "221",
+            "topn": [
+                "32：メビウス・イーシリーズ・6",
+                "32：メビウス・イーシリーズ・6/IMG_4567_crop_half.jpg_AUGROTATED_0",
+                "32：メビウス・イーシリーズ・6/IMG_4564_crop_half.jpg_AUGROTATED_0",
+                "32：メビウス・イーシリーズ・6/IMG_4561_crop_half.jpg_AUGROTATED_0",
+                "32：メビウス・イーシリーズ・6/IMG_4562_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                2933,
+                840,
+                346,
+                623
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "34：メビウス・イーシリーズ・ワン・100's/IMG_4407_crop_half.jpg_AUGROTATED_0",
+            "id": "34：メビウス・イーシリーズ・ワン・100's",
+            "img_crop_id": "YxzIhwl4w1xafg",
+            "matched_files": [
+                {
+                    "drank_score": 0.9836898446083069,
+                    "image": "34：メビウス・イーシリーズ・ワン・100's/IMG_4407_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6334307112239583,
+                    "mode": "geometric matching",
+                    "score": 0.07944715,
+                    "score_rerank": 0.8533573067496796
+                },
+                {
+                    "drank_score": 0.9501841068267822,
+                    "image": "34：メビウス・イーシリーズ・ワン・100's/IMG_4411_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.46592968991470257,
+                    "mode": "geometric matching",
+                    "score": 0.10321772,
+                    "score_rerank": 0.7835470510224455
+                },
+                {
+                    "drank_score": 0.9578127264976501,
+                    "image": "34：メビウス・イーシリーズ・ワン・100's/IMG_4410_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.30893327631128165,
+                    "mode": "geometric matching",
+                    "score": 0.080005825,
+                    "score_rerank": 0.7480214708426797
+                },
+                {
+                    "drank_score": 0.9310643076896667,
+                    "image": "34：メビウス・イーシリーズ・ワン・100's/IMG_4409_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.28613086852847125,
+                    "mode": "geometric matching",
+                    "score": 0.0759359,
+                    "score_rerank": 0.7347841928654415
+                },
+                {
+                    "drank_score": 0.938605785369873,
+                    "image": "34：メビウス・イーシリーズ・ワン・100's/IMG_4412_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.2726063385691461,
+                    "mode": "geometric matching",
+                    "score": 0.1212762,
+                    "score_rerank": 0.7148531571817057
+                }
+            ],
+            "name": "メビウス・Eシリーズ・1・100",
+            "score": 0.85,
+            "score_rerank": 0.8533573067496796,
+            "shelf_digit": "447",
+            "topn": [
+                "34：メビウス・イーシリーズ・ワン・100's",
+                "34：メビウス・イーシリーズ・ワン・100's/IMG_4409_crop_half.jpg_AUGROTATED_0",
+                "34：メビウス・イーシリーズ・ワン・100's/IMG_4407_crop_half.jpg_AUGROTATED_0",
+                "34：メビウス・イーシリーズ・ワン・100's/IMG_4410_crop_half.jpg_AUGROTATED_0",
+                "34：メビウス・イーシリーズ・ワン・100's/IMG_4411_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                1145,
+                3679,
+                348,
+                475
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "28：ヴァルト・メンソール・クリック/IMG_4753_crop_half.jpg_AUGROTATED_0",
+            "id": "28：ヴァルト・メンソール・クリック",
+            "img_crop_id": "Wy5mqBi3U0C5eA",
+            "matched_files": [
+                {
+                    "drank_score": 0.995100200176239,
+                    "image": "28：ヴァルト・メンソール・クリック/IMG_4753_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6784150624488474,
+                    "mode": "geometric matching",
+                    "score": 0.122086406,
+                    "score_rerank": 0.8532200163875259
+                },
+                {
+                    "drank_score": 0.9865104556083679,
+                    "image": "27：ヴァルト・ミント・クリック/IMG_4592_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5922776114252079,
+                    "mode": "geometric matching",
+                    "score": 0.13796443,
+                    "score_rerank": 0.8184506481100727
+                },
+                {
+                    "drank_score": 0.9871499538421631,
+                    "image": "28：ヴァルト・メンソール・クリック/IMG_4757_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5392798611638662,
+                    "mode": "geometric matching",
+                    "score": 0.13555455,
+                    "score_rerank": 0.8037071245018088
+                },
+                {
+                    "drank_score": 0.9641512036323547,
+                    "image": "30：ヴァルト・アイスト・メンソール・クリック/IMG_4638_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5620989592105898,
+                    "mode": "geometric matching",
+                    "score": 0.14801157,
+                    "score_rerank": 0.7986704208528834
+                },
+                {
+                    "drank_score": 0.9401673078536987,
+                    "image": "27：ヴァルト・ミント・クリック/IMG_4593_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5436580089483629,
+                    "mode": "geometric matching",
+                    "score": 0.14682269,
+                    "score_rerank": 0.7864185190406185
+                }
+            ],
+            "name": "ヴァルト・メンソール・クリック",
+            "score": 0.85,
+            "score_rerank": 0.8532200163875259,
+            "shelf_digit": "385",
+            "topn": [
+                "28：ヴァルト・メンソール・クリック",
+                "28：ヴァルト・メンソール・クリック/IMG_4753_crop_half.jpg_AUGROTATED_0",
+                "28：ヴァルト・メンソール・クリック/IMG_4757_crop_half.jpg_AUGROTATED_0",
+                "27：ヴァルト・ミント・クリック/IMG_4592_crop_half.jpg_AUGROTATED_0",
+                "27：ヴァルト・ミント・クリック/IMG_4593_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                3570,
+                1567,
+                349,
+                531
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "33：メビウス・イーシリーズ・3・100's/IMG_4793_crop_half.jpg_AUGROTATED_0",
+            "id": "33：メビウス・イーシリーズ・3・100's",
+            "img_crop_id": "rwsQZCA6OjN02w",
+            "matched_files": [
+                {
+                    "drank_score": 0.9656269550323486,
+                    "image": "33：メビウス・イーシリーズ・3・100's/IMG_4793_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.2229974393356443,
+                    "mode": "geometric matching",
+                    "score": 0.21149552,
+                    "score_rerank": 0.6719891103103979
+                },
+                {
+                    "drank_score": 0.9375482797622681,
+                    "image": "33：メビウス・イーシリーズ・3・100's/IMG_4798_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.22315141988707143,
+                    "mode": "geometric matching",
+                    "score": 0.22624189,
+                    "score_rerank": 0.6577131538948019
+                },
+                {
+                    "drank_score": 0.8693124055862427,
+                    "image": "33：メビウス・イーシリーズ・3・100's/IMG_4802_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.2858683171241746,
+                    "mode": "geometric matching",
+                    "score": 0.2241447,
+                    "score_rerank": 0.6568963368131252
+                },
+                {
+                    "drank_score": 0.8851024508476257,
+                    "image": "33：メビウス・イーシリーズ・3・100's/IMG_4801_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.22134426984629224,
+                    "mode": "geometric matching",
+                    "score": 0.21799695,
+                    "score_rerank": 0.6447352362081755
+                },
+                {
+                    "drank_score": 0.9035335779190063,
+                    "image": "33：メビウス・イーシリーズ・3・100's/IMG_4792_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.17775266642561638,
+                    "mode": "geometric matching",
+                    "score": 0.20542794,
+                    "score_rerank": 0.6422146973033868
+                }
+            ],
+            "name": "メビウス・エクストラライト・ボックス",
+            "score": 0.85,
+            "score_rerank": 0.6719891103103979,
+            "shelf_digit": "224",
+            "topn": [
+                "33：メビウス・イーシリーズ・3・100's",
+                "33：メビウス・イーシリーズ・3・100's/IMG_4792_crop_half.jpg_AUGROTATED_0",
+                "33：メビウス・イーシリーズ・3・100's/IMG_4793_crop_half.jpg_AUGROTATED_0",
+                "33：メビウス・イーシリーズ・3・100's/IMG_4801_crop_half.jpg_AUGROTATED_0",
+                "33：メビウス・イーシリーズ・3・100's/IMG_4802_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                493,
+                3638,
+                350,
+                480
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "26：ヴァルト・ダーク/IMG_4577_crop_half.jpg_AUGROTATED_0",
+            "id": "26：ヴァルト・ダーク",
+            "img_crop_id": "VaZ-p18VHLaPaw",
+            "matched_files": [
+                {
+                    "drank_score": 0.9788684248924255,
+                    "image": "26：ヴァルト・ダーク/IMG_4577_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.660553145366982,
+                    "mode": "geometric matching",
+                    "score": 0.14806908,
+                    "score_rerank": 0.8325988390778222
+                },
+                {
+                    "drank_score": 0.9763034582138062,
+                    "image": "26：ヴァルト・ダーク/IMG_4578_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6104980661988879,
+                    "mode": "geometric matching",
+                    "score": 0.13814664,
+                    "score_rerank": 0.8207818013238082
+                },
+                {
+                    "drank_score": 0.9730343818664551,
+                    "image": "29：ヴァルト・アイスト・ベリー・クリック/IMG_4484_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6484521311475272,
+                    "mode": "geometric matching",
+                    "score": 0.17959183,
+                    "score_rerank": 0.8146092219041947
+                },
+                {
+                    "drank_score": 0.9851042628288269,
+                    "image": "26：ヴァルト・ダーク/IMG_4574_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5850018689147967,
+                    "mode": "geometric matching",
+                    "score": 0.20708525,
+                    "score_rerank": 0.788197739523087
+                },
+                {
+                    "drank_score": 0.8540282845497131,
+                    "image": "29：ヴァルト・アイスト・ベリー・クリック/IMG_4485_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5109145763380297,
+                    "mode": "geometric matching",
+                    "score": 0.18581694,
+                    "score_rerank": 0.7351560822663228
+                }
+            ],
+            "name": "ヴァルト・ダーク",
+            "score": 0.85,
+            "score_rerank": 0.8325988390778222,
+            "shelf_digit": "383",
+            "topn": [
+                "26：ヴァルト・ダーク",
+                "26：ヴァルト・ダーク/IMG_4578_crop_half.jpg_AUGROTATED_0",
+                "26：ヴァルト・ダーク/IMG_4577_crop_half.jpg_AUGROTATED_0",
+                "29：ヴァルト・アイスト・ベリー・クリック/IMG_4484_crop_half.jpg_AUGROTATED_0",
+                "29：ヴァルト・アイスト・ベリー・クリック/IMG_4485_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                2281,
+                167,
+                352,
+                592
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "31：メビウス・イーシリーズ・10/IMG_4365_crop_half.jpg_AUGROTATED_0",
+            "id": "31：メビウス・イーシリーズ・10",
+            "img_crop_id": "lCGGmrL5TTSTqA",
+            "matched_files": [
+                {
+                    "drank_score": 0.9725093841552734,
+                    "image": "31：メビウス・イーシリーズ・10/IMG_4365_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.2179697990322189,
+                    "mode": "geometric matching",
+                    "score": 0.19600439,
+                    "score_rerank": 0.6787419989562478
+                },
+                {
+                    "drank_score": 0.9760946035385132,
+                    "image": "31：メビウス・イーシリーズ・10/IMG_4373_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.2102809926409307,
+                    "mode": "geometric matching",
+                    "score": 0.19848442,
+                    "score_rerank": 0.6765189108538332
+                },
+                {
+                    "drank_score": 0.9871056079864502,
+                    "image": "31：メビウス・イーシリーズ・10/IMG_4363_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.2073367219418934,
+                    "mode": "geometric matching",
+                    "score": 0.20649421,
+                    "score_rerank": 0.6757350149785032
+                },
+                {
+                    "drank_score": 0.9766210913658142,
+                    "image": "31：メビウス・イーシリーズ・10/IMG_4366_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.18269870993687204,
+                    "mode": "geometric matching",
+                    "score": 0.1955303,
+                    "score_rerank": 0.6695838203908058
+                },
+                {
+                    "drank_score": 0.9869945645332336,
+                    "image": "31：メビウス・イーシリーズ・10/IMG_4361_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.15810025057284133,
+                    "mode": "geometric matching",
+                    "score": 0.1969502,
+                    "score_rerank": 0.6647483645318225
+                }
+            ],
+            "name": "メビウス・ボックス",
+            "score": 0.85,
+            "score_rerank": 0.6787419989562478,
+            "shelf_digit": "440",
+            "topn": [
+                "31：メビウス・イーシリーズ・10",
+                "31：メビウス・イーシリーズ・10/IMG_4366_crop_half.jpg_AUGROTATED_0",
+                "31：メビウス・イーシリーズ・10/IMG_4365_crop_half.jpg_AUGROTATED_0",
+                "31：メビウス・イーシリーズ・10/IMG_4361_crop_half.jpg_AUGROTATED_0",
+                "31：メビウス・イーシリーズ・10/IMG_4373_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                2924,
+                4184,
+                349,
+                643
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "38：ケント・6・100・ボックス/IMG_4505_crop_half.jpg_AUGROTATED_0",
+            "id": "38：ケント・6・100・ボックス",
+            "img_crop_id": "cARNxpYOq15ZFg",
+            "matched_files": [
+                {
+                    "drank_score": 0.8955221176147461,
+                    "image": "38：ケント・6・100・ボックス/IMG_4505_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.41794378379666497,
+                    "mode": "geometric matching",
+                    "score": 0.24289483,
+                    "score_rerank": 0.6968818384234233
+                },
+                {
+                    "drank_score": 0.6972048282623291,
+                    "image": "38：ケント・6・100・ボックス/IMG_4506_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.41155256077815,
+                    "mode": "geometric matching",
+                    "score": 0.24147308,
+                    "score_rerank": 0.6360379847121438
+                },
+                {
+                    "drank_score": 0.7980203628540039,
+                    "image": "38：ケント・6・100・ボックス/IMG_4502_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.21749349397045653,
+                    "mode": "geometric matching",
+                    "score": 0.22590381,
+                    "score_rerank": 0.614292633047338
+                },
+                {
+                    "drank_score": 0.7907603979110718,
+                    "image": "38：ケント・6・100・ボックス/IMG_4501_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.21396260679952847,
+                    "mode": "geometric matching",
+                    "score": 0.24372607,
+                    "score_rerank": 0.6039264734131801
+                },
+                {
+                    "drank_score": 0.6772347092628479,
+                    "image": "38：ケント・6・100・ボックス/IMG_4503_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.18976138427984074,
+                    "mode": "geometric matching",
+                    "score": 0.24974507,
+                    "score_rerank": 0.5602008000628066
+                }
+            ],
+            "name": "ケント・アイ・ブースト・1・100・ボックス",
+            "score": 0.85,
+            "score_rerank": 0.6968818384234233,
+            "shelf_digit": "633",
+            "topn": [
+                "38：ケント・6・100・ボックス",
+                "38：ケント・6・100・ボックス/IMG_4502_crop_half.jpg_AUGROTATED_0",
+                "38：ケント・6・100・ボックス/IMG_4506_crop_half.jpg_AUGROTATED_0",
+                "38：ケント・6・100・ボックス/IMG_4505_crop_half.jpg_AUGROTATED_0",
+                "38：ケント・6・100・ボックス/IMG_4501_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                2932,
+                2866,
+                339,
+                610
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "",
+            "id": null,
+            "img_crop_id": "NmjqNAd0NYZOFw",
+            "matched_files": [],
+            "name": "ラーク・スーパーマイルド・100ボックス",
+            "score": 0.55,
+            "score_rerank": 0,
+            "shelf_digit": "012",
+            "topn": [
+                "103：メビウス・ワン ボックス 20本入/IMG_2203_crop_half.jpg_AUGROTATED_0",
+                "100：Marlboro/IMG_1871_crop_half.jpg_AUGROTATED_0",
+                "36：マールボロ・メンソール・8・ボックス/IMG_4536_crop_half.jpg_AUGROTATED_0",
+                "20：センティア スムース ゴールド/IMG_4732_crop_half.jpg_AUGROTATED_0",
+                "36：マールボロ・メンソール・8・ボックス/IMG_4543_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                507,
+                1634,
+                341,
+                469
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "11：テリア クリア レギュラー/IMG_4775_crop_half.jpg_AUGROTATED_0",
+            "id": "11：テリア クリア レギュラー",
+            "img_crop_id": "tJqK3dtM09sG6Q",
+            "matched_files": [
+                {
+                    "drank_score": 0.9952747821807861,
+                    "image": "11：テリア クリア レギュラー/IMG_4775_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.7028861870246847,
+                    "mode": "geometric matching",
+                    "score": 0.31980675,
+                    "score_rerank": 0.7815255907616413
+                },
+                {
+                    "drank_score": 0.99037104845047,
+                    "image": "11：テリア クリア レギュラー/IMG_4774_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.613406973756916,
+                    "mode": "geometric matching",
+                    "score": 0.33484334,
+                    "score_rerank": 0.7471960706622158
+                },
+                {
+                    "drank_score": 0.9831163287162781,
+                    "image": "11：テリア クリア レギュラー/IMG_4776_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5834667055181724,
+                    "mode": "geometric matching",
+                    "score": 0.31965822,
+                    "score_rerank": 0.7421116222703351
+                },
+                {
+                    "drank_score": 0.9935986995697021,
+                    "image": "11：テリア クリア レギュラー/IMG_4772_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5768081465783808,
+                    "mode": "geometric matching",
+                    "score": 0.34344268,
+                    "score_rerank": 0.7337449818444249
+                },
+                {
+                    "drank_score": 0.9161816835403442,
+                    "image": "17：センティア アイシー レッド/IMG_4826_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.16000988563964852,
+                    "mode": "geometric matching",
+                    "score": 0.39782524,
+                    "score_rerank": 0.5637273747539978
+                }
+            ],
+            "name": "テリア ・クリア ・レギュラー",
+            "score": 0.85,
+            "score_rerank": 0.7815255907616413,
+            "shelf_digit": "565",
+            "topn": [
+                "11：テリア クリア レギュラー",
+                "11：テリア クリア レギュラー/IMG_4776_crop_half.jpg_AUGROTATED_0",
+                "11：テリア クリア レギュラー/IMG_4775_crop_half.jpg_AUGROTATED_0",
+                "11：テリア クリア レギュラー/IMG_4774_crop_half.jpg_AUGROTATED_0",
+                "11：テリア クリア レギュラー/IMG_4772_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                2560,
+                4794,
+                372,
+                665
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "38：ケント・6・100・ボックス/IMG_4498_crop_half.jpg_AUGROTATED_0",
+            "id": "38：ケント・6・100・ボックス",
+            "img_crop_id": "W34mtt8La41hUg",
+            "matched_files": [
+                {
+                    "drank_score": 0.3941839039325714,
+                    "image": "38：ケント・6・100・ボックス/IMG_4498_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.22944279319088787,
+                    "mode": "geometric matching",
+                    "score": 0.4346847,
+                    "score_rerank": 0.41321412913703776
+                },
+                {
+                    "drank_score": 0.34724855422973633,
+                    "image": "38：ケント・6・100・ボックス/IMG_4501_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.24738268243456796,
+                    "mode": "geometric matching",
+                    "score": 0.4134171,
+                    "score_rerank": 0.4130225309992913
+                },
+                {
+                    "drank_score": 0.2882232367992401,
+                    "image": "38：ケント・6・100・ボックス/IMG_4503_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.24365039981449108,
+                    "mode": "geometric matching",
+                    "score": 0.43151587,
+                    "score_rerank": 0.38695574298411933
+                },
+                {
+                    "drank_score": 0.3030935823917389,
+                    "image": "39：ケント・3・100・ボックス/IMG_4665_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.20359913383418976,
+                    "mode": "geometric matching",
+                    "score": 0.43424696,
+                    "score_rerank": 0.37830903086777856
+                },
+                {
+                    "drank_score": 0.0,
+                    "image": "38：ケント・6・100・ボックス/IMG_4502_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.3028901273684787,
+                    "mode": "geometric matching",
+                    "score": 0.4071715,
+                    "score_rerank": 0.3279984382105436
+                }
+            ],
+            "name": "ケント・エス・シリーズ・スパーク・ミント5・100・ボックス",
+            "score": 0.85,
+            "score_rerank": 0.41321412913703776,
+            "shelf_digit": "637",
+            "topn": [
+                "38：ケント・6・100・ボックス",
+                "38：ケント・6・100・ボックス/IMG_4502_crop_half.jpg_AUGROTATED_0",
+                "38：ケント・6・100・ボックス/IMG_4501_crop_half.jpg_AUGROTATED_0",
+                "38：ケント・6・100・ボックス/IMG_4503_crop_half.jpg_AUGROTATED_0",
+                "39：ケント・3・100・ボックス/IMG_4665_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                2929,
+                3615,
+                346,
+                544
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "32：メビウス・イーシリーズ・6/IMG_4562_crop_half.jpg_AUGROTATED_0",
+            "id": null,
+            "img_crop_id": "T5G6o5cnFMCm9Q",
+            "matched_files": [],
+            "name": "ラッキーストライク・エキスパートカット・6",
+            "score": 0.85,
+            "score_rerank": 0.41290149259796466,
+            "shelf_digit": "017",
+            "topn": [
+                "32：メビウス・イーシリーズ・6",
+                "32：メビウス・イーシリーズ・6/IMG_4562_crop_half.jpg_AUGROTATED_0",
+                "32：メビウス・イーシリーズ・6/IMG_4563_crop_half.jpg_AUGROTATED_0",
+                "32：メビウス・イーシリーズ・6/IMG_4567_crop_half.jpg_AUGROTATED_0",
+                "32：メビウス・イーシリーズ・6/IMG_4569_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                814,
+                4881,
+                343,
+                601
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "100：Marlboro/IMG_1870_crop_half.jpg_AUGROTATED_0",
+            "id": null,
+            "img_crop_id": "gFI_Q1K3bhbbnA",
+            "matched_files": [],
+            "name": "マールボロ",
+            "score": 0.85,
+            "score_rerank": 0.5700406532481767,
+            "shelf_digit": "626",
+            "topn": [
+                "100：Marlboro",
+                "100：Marlboro/IMG_1871_crop_half.jpg_AUGROTATED_0",
+                "100：Marlboro/IMG_1869_crop_half.jpg_AUGROTATED_0",
+                "100：Marlboro/IMG_1870_crop_half.jpg_AUGROTATED_0",
+                "35：マールボロ・ボックス/IMG_4843_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                1501,
+                4222,
+                346,
+                576
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "36：マールボロ・メンソール・8・ボックス/IMG_4537_crop_half.jpg_AUGROTATED_0",
+            "id": "36：マールボロ・メンソール・8・ボックス",
+            "img_crop_id": "BAt6BxbfsRVdLA",
+            "matched_files": [
+                {
+                    "drank_score": 0.9759481549263,
+                    "image": "36：マールボロ・メンソール・8・ボックス/IMG_4537_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.21139070344342686,
+                    "mode": "geometric matching",
+                    "score": 0.3676169,
+                    "score_rerank": 0.609154897510918
+                },
+                {
+                    "drank_score": 0.9438561201095581,
+                    "image": "36：マールボロ・メンソール・8・ボックス/IMG_4538_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.24804282316061094,
+                    "mode": "geometric matching",
+                    "score": 0.42410278,
+                    "score_rerank": 0.5879285709810507
+                },
+                {
+                    "drank_score": 0.8988988995552063,
+                    "image": "36：マールボロ・メンソール・8・ボックス/IMG_4540_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.2435880884910382,
+                    "mode": "geometric matching",
+                    "score": 0.43078995,
+                    "score_rerank": 0.5704301164138734
+                },
+                {
+                    "drank_score": 0.9291210770606995,
+                    "image": "36：マールボロ・メンソール・8・ボックス/IMG_4542_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.16234016946502483,
+                    "mode": "geometric matching",
+                    "score": 0.4462033,
+                    "score_rerank": 0.5489570539577172
+                }
+            ],
+            "name": "マールボロ・ブラック・メンソール・8ボックス",
+            "score": 0.85,
+            "score_rerank": 0.609154897510918,
+            "shelf_digit": "623",
+            "topn": [
+                "36：マールボロ・メンソール・8・ボックス",
+                "36：マールボロ・メンソール・8・ボックス/IMG_4537_crop_half.jpg_AUGROTATED_0",
+                "36：マールボロ・メンソール・8・ボックス/IMG_4545_crop_half.jpg_AUGROTATED_0",
+                "36：マールボロ・メンソール・8・ボックス/IMG_4538_crop_half.jpg_AUGROTATED_0",
+                "36：マールボロ・メンソール・8・ボックス/IMG_4540_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                2910,
+                4814,
+                346,
+                639
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "38：ケント・6・100・ボックス/IMG_4502_crop_half.jpg_AUGROTATED_0",
+            "id": "38：ケント・6・100・ボックス",
+            "img_crop_id": "fC9abLw5-Tf5Jw",
+            "matched_files": [
+                {
+                    "drank_score": 0.26408642530441284,
+                    "image": "38：ケント・6・100・ボックス/IMG_4502_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.21415110000339274,
+                    "mode": "geometric matching",
+                    "score": 0.4744439,
+                    "score_rerank": 0.3536936975923417
+                },
+                {
+                    "drank_score": 0.2026071697473526,
+                    "image": "39：ケント・3・100・ボックス/IMG_4672_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.20078969967807916,
+                    "mode": "geometric matching",
+                    "score": 0.48252112,
+                    "score_rerank": 0.3280106128276295
+                }
+            ],
+            "name": "ケント・エス・シリーズ・スパーク・D－1・100・ボックス",
+            "score": 0.85,
+            "score_rerank": 0.3536936975923417,
+            "shelf_digit": "638",
+            "topn": [
+                "38：ケント・6・100・ボックス",
+                "14：テリア シャイン パール/IMG_4684_crop_half.jpg_AUGROTATED_0",
+                "38：ケント・6・100・ボックス/IMG_4502_crop_half.jpg_AUGROTATED_0",
+                "40：ケント・1・100・ボックス/IMG_4400_crop_half.jpg_AUGROTATED_0",
+                "40：ケント・1・100・ボックス/IMG_4402_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                1494,
+                4810,
+                339,
+                668
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "36：マールボロ・メンソール・8・ボックス/IMG_4538_crop_half.jpg_AUGROTATED_0",
+            "id": null,
+            "img_crop_id": "Ch0tGmHN8pttcw",
+            "matched_files": [],
+            "name": "マールボロ・ゴールド・100ボックス",
+            "score": 0.85,
+            "score_rerank": 0.5630919429025513,
+            "shelf_digit": "628",
+            "topn": [
+                "36：マールボロ・メンソール・8・ボックス",
+                "37：マールボロ・ゴールド・ボックス/IMG_4559_crop_half.jpg_AUGROTATED_0",
+                "36：マールボロ・メンソール・8・ボックス/IMG_4545_crop_half.jpg_AUGROTATED_0",
+                "36：マールボロ・メンソール・8・ボックス/IMG_4536_crop_half.jpg_AUGROTATED_0",
+                "36：マールボロ・メンソール・8・ボックス/IMG_4538_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                2905,
+                1510,
+                337,
+                616
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "32：メビウス・イーシリーズ・6/IMG_4563_crop_half.jpg_AUGROTATED_0",
+            "id": "32：メビウス・イーシリーズ・6",
+            "img_crop_id": "eZI5vBIU13NmKw",
+            "matched_files": [
+                {
+                    "drank_score": 0.9847776889801025,
+                    "image": "32：メビウス・イーシリーズ・6/IMG_4563_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.20071095796165608,
+                    "mode": "geometric matching",
+                    "score": 0.18513632,
+                    "score_rerank": 0.6815920660825276
+                },
+                {
+                    "drank_score": 0.9791384339332581,
+                    "image": "32：メビウス・イーシリーズ・6/IMG_4564_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.19914488756323073,
+                    "mode": "geometric matching",
+                    "score": 0.19170368,
+                    "score_rerank": 0.6768035244489466
+                },
+                {
+                    "drank_score": 0.9772147536277771,
+                    "image": "32：メビウス・イーシリーズ・6/IMG_4561_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.20496317936686848,
+                    "mode": "geometric matching",
+                    "score": 0.19759625,
+                    "score_rerank": 0.6756148798983937
+                },
+                {
+                    "drank_score": 0.9312089681625366,
+                    "image": "32：メビウス・イーシリーズ・6/IMG_4565_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.2001626170482118,
+                    "mode": "geometric matching",
+                    "score": 0.208826,
+                    "score_rerank": 0.6558810755632245
+                },
+                {
+                    "drank_score": 0.9291275143623352,
+                    "image": "32：メビウス・イーシリーズ・6/IMG_4567_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.18513776012796596,
+                    "mode": "geometric matching",
+                    "score": 0.20296359,
+                    "score_rerank": 0.6530941463470903
+                }
+            ],
+            "name": "メビウス・スーパーライト・100ボックス",
+            "score": 0.85,
+            "score_rerank": 0.6815920660825276,
+            "shelf_digit": "222",
+            "topn": [
+                "32：メビウス・イーシリーズ・6",
+                "32：メビウス・イーシリーズ・6/IMG_4563_crop_half.jpg_AUGROTATED_0",
+                "32：メビウス・イーシリーズ・6/IMG_4564_crop_half.jpg_AUGROTATED_0",
+                "32：メビウス・イーシリーズ・6/IMG_4561_crop_half.jpg_AUGROTATED_0",
+                "32：メビウス・イーシリーズ・6/IMG_4567_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                828,
+                3665,
+                343,
+                479
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "27：ヴァルト・ミント・クリック/IMG_4595_crop_half.jpg_AUGROTATED_0",
+            "id": "27：ヴァルト・ミント・クリック",
+            "img_crop_id": "Slk88l5Rb9ZcGQ",
+            "matched_files": [
+                {
+                    "drank_score": 0.9459987282752991,
+                    "image": "27：ヴァルト・ミント・クリック/IMG_4595_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6599987270283535,
+                    "mode": "geometric matching",
+                    "score": 0.1444779,
+                    "score_rerank": 0.8240080765910959
+                },
+                {
+                    "drank_score": 0.9638405442237854,
+                    "image": "27：ヴァルト・ミント・クリック/IMG_4592_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6102714130120839,
+                    "mode": "geometric matching",
+                    "score": 0.14584458,
+                    "score_rerank": 0.8138957551707608
+                },
+                {
+                    "drank_score": 0.935671865940094,
+                    "image": "28：ヴァルト・メンソール・クリック/IMG_4756_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.604288253914449,
+                    "mode": "geometric matching",
+                    "score": 0.13630915,
+                    "score_rerank": 0.8074643759563629
+                },
+                {
+                    "drank_score": 0.9586385488510132,
+                    "image": "28：ヴァルト・メンソール・クリック/IMG_4757_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.508570597928782,
+                    "mode": "geometric matching",
+                    "score": 0.15124989,
+                    "score_rerank": 0.7796627880339386
+                },
+                {
+                    "drank_score": 0.8852134346961975,
+                    "image": "27：ヴァルト・ミント・クリック/IMG_4593_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.4921249132817158,
+                    "mode": "geometric matching",
+                    "score": 0.1295914,
+                    "score_rerank": 0.761364944393374
+                }
+            ],
+            "name": "ヴァルト・ミント・クリック",
+            "score": 0.85,
+            "score_rerank": 0.8240080765910959,
+            "shelf_digit": "384",
+            "topn": [
+                "27：ヴァルト・ミント・クリック",
+                "27：ヴァルト・ミント・クリック/IMG_4593_crop_half.jpg_AUGROTATED_0",
+                "28：ヴァルト・メンソール・クリック/IMG_4756_crop_half.jpg_AUGROTATED_0",
+                "27：ヴァルト・ミント・クリック/IMG_4595_crop_half.jpg_AUGROTATED_0",
+                "27：ヴァルト・ミント・クリック/IMG_4592_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                3553,
+                4785,
+                353,
+                656
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "39：ケント・3・100・ボックス/IMG_4673_crop_half.jpg_AUGROTATED_0",
+            "id": "39：ケント・3・100・ボックス",
+            "img_crop_id": "1xTK6Jpx2WqK4w",
+            "matched_files": [
+                {
+                    "drank_score": 0.860207200050354,
+                    "image": "39：ケント・3・100・ボックス/IMG_4673_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.1973777942747219,
+                    "mode": "geometric matching",
+                    "score": 0.25815326,
+                    "score_rerank": 0.6140141942975227
+                },
+                {
+                    "drank_score": 0.7350219488143921,
+                    "image": "39：ケント・3・100・ボックス/IMG_4672_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.2562709360371428,
+                    "mode": "geometric matching",
+                    "score": 0.24543995,
+                    "score_rerank": 0.5992118854554606
+                },
+                {
+                    "drank_score": 0.7559013366699219,
+                    "image": "39：ケント・3・100・ボックス/IMG_4671_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.1803679660356908,
+                    "mode": "geometric matching",
+                    "score": 0.24679512,
+                    "score_rerank": 0.5821627428116839
+                },
+                {
+                    "drank_score": 0.7073217034339905,
+                    "image": "39：ケント・3・100・ボックス/IMG_4668_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.21293793118173077,
+                    "mode": "geometric matching",
+                    "score": 0.25665438,
+                    "score_rerank": 0.5734161383847163
+                },
+                {
+                    "drank_score": 0.43151888251304626,
+                    "image": "39：ケント・3・100・ボックス/IMG_4674_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.20093395796864186,
+                    "mode": "geometric matching",
+                    "score": 0.22882032,
+                    "score_rerank": 0.4982077241445065
+                }
+            ],
+            "name": "ケント・エス・シリーズ・3・100・ボックス",
+            "score": 0.85,
+            "score_rerank": 0.6140141942975227,
+            "shelf_digit": "640",
+            "topn": [
+                "39：ケント・3・100・ボックス",
+                "39：ケント・3・100・ボックス/IMG_4674_crop_half.jpg_AUGROTATED_0",
+                "39：ケント・3・100・ボックス/IMG_4672_crop_half.jpg_AUGROTATED_0",
+                "39：ケント・3・100・ボックス/IMG_4671_crop_half.jpg_AUGROTATED_0",
+                "39：ケント・3・100・ボックス/IMG_4668_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                3244,
+                2195,
+                339,
+                600
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "102：メビウス・ワン 100's・ボックス 20本入/IMG_2187_crop_half.jpg_AUGROTATED_0",
+            "id": "102：メビウス・ワン 100's・ボックス 20本入",
+            "img_crop_id": "EcCqunjIcsH7bg",
+            "matched_files": [
+                {
+                    "drank_score": 0.9903388619422913,
+                    "image": "102：メビウス・ワン 100's・ボックス 20本入/IMG_2187_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5451680728569507,
+                    "mode": "geometric matching",
+                    "score": 0.09193587,
+                    "score_rerank": 0.8238777324397727
+                },
+                {
+                    "drank_score": 0.9914186000823975,
+                    "image": "102：メビウス・ワン 100's・ボックス 20本入/IMG_2193_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.4454468395409661,
+                    "mode": "geometric matching",
+                    "score": 0.09780735,
+                    "score_rerank": 0.7919366918870091
+                },
+                {
+                    "drank_score": 0.9927470088005066,
+                    "image": "103：メビウス・ワン ボックス 20本入/IMG_2203_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.2918552649535517,
+                    "mode": "geometric matching",
+                    "score": 0.094320476,
+                    "score_rerank": 0.7476524917262175
+                },
+                {
+                    "drank_score": 0.992720365524292,
+                    "image": "103：メビウス・ワン ボックス 20本入/IMG_2209_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.27576155988421286,
+                    "mode": "geometric matching",
+                    "score": 0.099329114,
+                    "score_rerank": 0.7408129320225515
+                },
+                {
+                    "drank_score": 0.9811387658119202,
+                    "image": "102：メビウス・ワン 100's・ボックス 20本入/IMG_2189_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.21543678478447323,
+                    "mode": "geometric matching",
+                    "score": 0.08978754,
+                    "score_rerank": 0.723057649178918
+                }
+            ],
+            "name": "メビウス・ワン・100ボックス",
+            "score": 0.85,
+            "score_rerank": 0.8238777324397727,
+            "shelf_digit": "228",
+            "topn": [
+                "102：メビウス・ワン 100's・ボックス 20本入",
+                "102：メビウス・ワン 100's・ボックス 20本入/IMG_2189_crop_half.jpg_AUGROTATED_0",
+                "102：メビウス・ワン 100's・ボックス 20本入/IMG_2187_crop_half.jpg_AUGROTATED_0",
+                "103：メビウス・ワン ボックス 20本入/IMG_2203_crop_half.jpg_AUGROTATED_0",
+                "102：メビウス・ワン 100's・ボックス 20本入/IMG_2193_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                2287,
+                2151,
+                349,
+                610
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "102：メビウス・ワン 100's・ボックス 20本入/IMG_2193_crop_half.jpg_AUGROTATED_0",
+            "id": "102：メビウス・ワン 100's・ボックス 20本入",
+            "img_crop_id": "2B0Bvcj7D9AbgQ",
+            "matched_files": [
+                {
+                    "drank_score": 0.9936981797218323,
+                    "image": "102：メビウス・ワン 100's・ボックス 20本入/IMG_2193_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.510866819635763,
+                    "mode": "geometric matching",
+                    "score": 0.15207583,
+                    "score_rerank": 0.7905391678072786
+                },
+                {
+                    "drank_score": 0.9707275629043579,
+                    "image": "102：メビウス・ワン 100's・ボックス 20本入/IMG_2186_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5856338792740321,
+                    "mode": "geometric matching",
+                    "score": 0.19578123,
+                    "score_rerank": 0.7885959406535169
+                },
+                {
+                    "drank_score": 0.9740681648254395,
+                    "image": "102：メビウス・ワン 100's・ボックス 20本入/IMG_2189_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.250078888184803,
+                    "mode": "geometric matching",
+                    "score": 0.17559803,
+                    "score_rerank": 0.6970049039030728
+                },
+                {
+                    "drank_score": 0.974824070930481,
+                    "image": "33：メビウス・イーシリーズ・3・100's/IMG_4800_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.24214956958832512,
+                    "mode": "geometric matching",
+                    "score": 0.18052429,
+                    "score_rerank": 0.6928823761556417
+                },
+                {
+                    "drank_score": 0.9833558797836304,
+                    "image": "101：メビウス・ワン 20本入/IMG_2143_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.15958084915712314,
+                    "mode": "geometric matching",
+                    "score": 0.17848444,
+                    "score_rerank": 0.671487242682226
+                }
+            ],
+            "name": "メビウス・エクストラライト・100ボックス",
+            "score": 0.85,
+            "score_rerank": 0.7905391678072786,
+            "shelf_digit": "225",
+            "topn": [
+                "102：メビウス・ワン 100's・ボックス 20本入",
+                "102：メビウス・ワン 100's・ボックス 20本入/IMG_2193_crop_half.jpg_AUGROTATED_0",
+                "102：メビウス・ワン 100's・ボックス 20本入/IMG_2189_crop_half.jpg_AUGROTATED_0",
+                "101：メビウス・ワン 20本入/IMG_2143_crop_half.jpg_AUGROTATED_0",
+                "33：メビウス・イーシリーズ・3・100's/IMG_4800_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                2926,
+                2261,
+                338,
+                533
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "103：メビウス・ワン ボックス 20本入/IMG_2202_crop_half.jpg_AUGROTATED_0",
+            "id": "103：メビウス・ワン ボックス 20本入",
+            "img_crop_id": "yZkMFrzuqkLcFg",
+            "matched_files": [
+                {
+                    "drank_score": 0.978129506111145,
+                    "image": "103：メビウス・ワン ボックス 20本入/IMG_2202_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6043278981340494,
+                    "mode": "geometric matching",
+                    "score": 0.09526843,
+                    "score_rerank": 0.8366298492735584
+                },
+                {
+                    "drank_score": 0.9622385501861572,
+                    "image": "103：メビウス・ワン ボックス 20本入/IMG_2203_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.4356553909293359,
+                    "mode": "geometric matching",
+                    "score": 0.08940315,
+                    "score_rerank": 0.7836069223346479
+                },
+                {
+                    "drank_score": 0.981745719909668,
+                    "image": "103：メビウス・ワン ボックス 20本入/IMG_2209_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.2911231274534895,
+                    "mode": "geometric matching",
+                    "score": 0.08582401,
+                    "score_rerank": 0.7475310502089473
+                },
+                {
+                    "drank_score": 0.9443549513816833,
+                    "image": "101：メビウス・ワン 20本入/IMG_2137_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.3129541123701283,
+                    "mode": "geometric matching",
+                    "score": 0.11011875,
+                    "score_rerank": 0.7331452191255434
+                },
+                {
+                    "drank_score": 0.9774846434593201,
+                    "image": "103：メビウス・ワン ボックス 20本入/IMG_2207_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.26222267157719314,
+                    "mode": "geometric matching",
+                    "score": 0.10741925,
+                    "score_rerank": 0.728944494510954
+                }
+            ],
+            "name": "メビウス・ワン・ボックス",
+            "score": 0.85,
+            "score_rerank": 0.8366298492735584,
+            "shelf_digit": "227",
+            "topn": [
+                "103：メビウス・ワン ボックス 20本入",
+                "103：メビウス・ワン ボックス 20本入/IMG_2209_crop_half.jpg_AUGROTATED_0",
+                "103：メビウス・ワン ボックス 20本入/IMG_2203_crop_half.jpg_AUGROTATED_0",
+                "103：メビウス・ワン ボックス 20本入/IMG_2202_crop_half.jpg_AUGROTATED_0",
+                "103：メビウス・ワン ボックス 20本入/IMG_2207_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                1139,
+                4864,
+                357,
+                611
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "100：Marlboro/IMG_1869_crop_half.jpg_AUGROTATED_0",
+            "id": "100：Marlboro",
+            "img_crop_id": "igse95LsmGP1ew",
+            "matched_files": [
+                {
+                    "drank_score": 0.9850784540176392,
+                    "image": "100：Marlboro/IMG_1869_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5027311503725485,
+                    "mode": "geometric matching",
+                    "score": 0.25126553,
+                    "score_rerank": 0.7458366693170564
+                },
+                {
+                    "drank_score": 0.9863507151603699,
+                    "image": "100：Marlboro/IMG_1870_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.4738726306019397,
+                    "mode": "geometric matching",
+                    "score": 0.26925796,
+                    "score_rerank": 0.7303638197286929
+                },
+                {
+                    "drank_score": 0.9851621985435486,
+                    "image": "100：Marlboro/IMG_1871_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.23537345189343184,
+                    "mode": "geometric matching",
+                    "score": 0.28794974,
+                    "score_rerank": 0.6509807991310941
+                },
+                {
+                    "drank_score": 0.9938018918037415,
+                    "image": "100：Marlboro/IMG_1941_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.23422513779643922,
+                    "mode": "geometric matching",
+                    "score": 0.34751308,
+                    "score_rerank": 0.6294028768800543
+                }
+            ],
+            "name": "マールボロ・ボックス",
+            "score": 0.85,
+            "score_rerank": 0.7458366693170564,
+            "shelf_digit": "627",
+            "topn": [
+                "100：Marlboro",
+                "100：Marlboro/IMG_1869_crop_half.jpg_AUGROTATED_0",
+                "100：Marlboro/IMG_1870_crop_half.jpg_AUGROTATED_0",
+                "100：Marlboro/IMG_1871_crop_half.jpg_AUGROTATED_0",
+                "35：マールボロ・ボックス/IMG_4843_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                2254,
+                4149,
+                355,
+                648
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "39：ケント・3・100・ボックス/IMG_4672_crop_half.jpg_AUGROTATED_0",
+            "id": "39：ケント・3・100・ボックス",
+            "img_crop_id": "BFceKNa_-dXFvA",
+            "matched_files": [
+                {
+                    "drank_score": 0.993830144405365,
+                    "image": "39：ケント・3・100・ボックス/IMG_4672_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5819733640723066,
+                    "mode": "geometric matching",
+                    "score": 0.15040791,
+                    "score_rerank": 0.8125778885433015
+                },
+                {
+                    "drank_score": 0.991659939289093,
+                    "image": "39：ケント・3・100・ボックス/IMG_4673_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5226022118079148,
+                    "mode": "geometric matching",
+                    "score": 0.14707923,
+                    "score_rerank": 0.7954469533291023
+                },
+                {
+                    "drank_score": 0.9939678907394409,
+                    "image": "39：ケント・3・100・ボックス/IMG_4671_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.42274561314384923,
+                    "mode": "geometric matching",
+                    "score": 0.18240434,
+                    "score_rerank": 0.752052315164987
+                },
+                {
+                    "drank_score": 0.9479748606681824,
+                    "image": "39：ケント・3・100・ボックス/IMG_4668_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.18849958806124772,
+                    "mode": "geometric matching",
+                    "score": 0.16041034,
+                    "score_rerank": 0.676778198618829
+                }
+            ],
+            "name": "ケント・3・100・ボックス",
+            "score": 0.85,
+            "score_rerank": 0.8125778885433015,
+            "shelf_digit": "631",
+            "topn": [
+                "39：ケント・3・100・ボックス",
+                "39：ケント・3・100・ボックス/IMG_4673_crop_half.jpg_AUGROTATED_0",
+                "39：ケント・3・100・ボックス/IMG_4672_crop_half.jpg_AUGROTATED_0",
+                "39：ケント・3・100・ボックス/IMG_4668_crop_half.jpg_AUGROTATED_0",
+                "39：ケント・3・100・ボックス/IMG_4671_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                2591,
+                3502,
+                349,
+                640
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "103：メビウス・ワン ボックス 20本入/IMG_2203_crop_half.jpg_AUGROTATED_0",
+            "id": null,
+            "img_crop_id": "QQLPVe07gWb4gg",
+            "matched_files": [],
+            "name": "ラーク・ウルトラ・1・100ボックス",
+            "score": 0.85,
+            "score_rerank": 0.37450675937421257,
+            "shelf_digit": "016",
+            "topn": [
+                "103：メビウス・ワン ボックス 20本入",
+                "40：ケント・1・100・ボックス/IMG_4397_crop_half.jpg_AUGROTATED_0",
+                "40：ケント・1・100・ボックス/IMG_4405_crop_half.jpg_AUGROTATED_0",
+                "103：メビウス・ワン ボックス 20本入/IMG_2203_crop_half.jpg_AUGROTATED_0",
+                "40：ケント・1・100・ボックス/IMG_4403_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                1796,
+                3647,
+                350,
+                488
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "30：ヴァルト・アイスト・メンソール・クリック/IMG_4638_crop_half.jpg_AUGROTATED_0",
+            "id": "30：ヴァルト・アイスト・メンソール・クリック",
+            "img_crop_id": "Ohomr3IrWFBo6w",
+            "matched_files": [
+                {
+                    "drank_score": 0.9793599843978882,
+                    "image": "30：ヴァルト・アイスト・メンソール・クリック/IMG_4638_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6271114805803166,
+                    "mode": "geometric matching",
+                    "score": 0.12844354,
+                    "score_rerank": 0.8305640234934615
+                },
+                {
+                    "drank_score": 0.9942215085029602,
+                    "image": "30：ヴァルト・アイスト・メンソール・クリック/IMG_4635_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.645131325960214,
+                    "mode": "geometric matching",
+                    "score": 0.16156948,
+                    "score_rerank": 0.8271780583389523
+                },
+                {
+                    "drank_score": 0.9662471413612366,
+                    "image": "28：ヴァルト・メンソール・クリック/IMG_4756_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6178906963432291,
+                    "mode": "geometric matching",
+                    "score": 0.15135467,
+                    "score_rerank": 0.8146994833113397
+                },
+                {
+                    "drank_score": 0.990243136882782,
+                    "image": "30：ヴァルト・アイスト・メンソール・クリック/IMG_4639_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5739339855982255,
+                    "mode": "geometric matching",
+                    "score": 0.148327,
+                    "score_rerank": 0.8099223367443021
+                },
+                {
+                    "drank_score": 0.9895777702331543,
+                    "image": "28：ヴァルト・メンソール・クリック/IMG_4753_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5711186823548153,
+                    "mode": "geometric matching",
+                    "score": 0.15947825,
+                    "score_rerank": 0.8044176357763909
+                }
+            ],
+            "name": "ヴァルト・アイスト・メンソール・クリック",
+            "score": 0.85,
+            "score_rerank": 0.8305640234934615,
+            "shelf_digit": "387",
+            "topn": [
+                "30：ヴァルト・アイスト・メンソール・クリック",
+                "30：ヴァルト・アイスト・メンソール・クリック/IMG_4638_crop_half.jpg_AUGROTATED_0",
+                "30：ヴァルト・アイスト・メンソール・クリック/IMG_4639_crop_half.jpg_AUGROTATED_0",
+                "28：ヴァルト・メンソール・クリック/IMG_4756_crop_half.jpg_AUGROTATED_0",
+                "28：ヴァルト・メンソール・クリック/IMG_4753_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                503,
+                1000,
+                348,
+                427
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "6：メビウス・アロマリッチ・レギュラー・プルーム用/IMG_4859_crop_half.jpg_AUGROTATED_0",
+            "id": "6：メビウス・アロマリッチ・レギュラー・プルーム用",
+            "img_crop_id": "SnO_CxlSnC9_Fw",
+            "matched_files": [
+                {
+                    "drank_score": 0.9887679219245911,
+                    "image": "6：メビウス・アロマリッチ・レギュラー・プルーム用/IMG_4859_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.44958630694965657,
+                    "mode": "geometric matching",
+                    "score": 0.18346,
+                    "score_rerank": 0.7581222686622742
+                },
+                {
+                    "drank_score": 0.9753690361976624,
+                    "image": "6：メビウス・アロマリッチ・レギュラー・プルーム用/IMG_4862_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.3991079251674391,
+                    "mode": "geometric matching",
+                    "score": 0.21741563,
+                    "score_rerank": 0.7253768364095304
+                },
+                {
+                    "drank_score": 0.9830675721168518,
+                    "image": "6：メビウス・アロマリッチ・レギュラー・プルーム用/IMG_4860_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.3788235081158987,
+                    "mode": "geometric matching",
+                    "score": 0.23111242,
+                    "score_rerank": 0.7161223560698251
+                },
+                {
+                    "drank_score": 0.9812849760055542,
+                    "image": "6：メビウス・アロマリッチ・レギュラー・プルーム用/IMG_4861_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.3642585422455305,
+                    "mode": "geometric matching",
+                    "score": 0.21990514,
+                    "score_rerank": 0.7157009994753255
+                },
+                {
+                    "drank_score": 0.9865635633468628,
+                    "image": "6：メビウス・アロマリッチ・レギュラー・プルーム用/IMG_4858_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.34282861779624285,
+                    "mode": "geometric matching",
+                    "score": 0.21117103,
+                    "score_rerank": 0.7143492423429317
+                }
+            ],
+            "name": "メビウス・アロマリッチ・レギュラー・プルーム用",
+            "score": 0.85,
+            "score_rerank": 0.7581222686622742,
+            "shelf_digit": "880",
+            "topn": [
+                "6：メビウス・アロマリッチ・レギュラー・プルーム用",
+                "6：メビウス・アロマリッチ・レギュラー・プルーム用/IMG_4859_crop_half.jpg_AUGROTATED_0",
+                "6：メビウス・アロマリッチ・レギュラー・プルーム用/IMG_4858_crop_half.jpg_AUGROTATED_0",
+                "6：メビウス・アロマリッチ・レギュラー・プルーム用/IMG_4862_crop_half.jpg_AUGROTATED_0",
+                "6：メビウス・アロマリッチ・レギュラー・プルーム用/IMG_4861_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                3560,
+                830,
+                357,
+                623
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "31：メビウス・イーシリーズ・10/IMG_4366_crop_half.jpg_AUGROTATED_0",
+            "id": "31：メビウス・イーシリーズ・10",
+            "img_crop_id": "zylITv7nNxRYnw",
+            "matched_files": [
+                {
+                    "drank_score": 0.9467437863349915,
+                    "image": "31：メビウス・イーシリーズ・10/IMG_4366_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.21910638586370063,
+                    "mode": "geometric matching",
+                    "score": 0.18051481,
+                    "score_rerank": 0.6775491276596076
+                },
+                {
+                    "drank_score": 0.9701521992683411,
+                    "image": "31：メビウス・イーシリーズ・10/IMG_4365_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.16531125153913317,
+                    "mode": "geometric matching",
+                    "score": 0.16519213,
+                    "score_rerank": 0.6745621832422422
+                },
+                {
+                    "drank_score": 0.9265329837799072,
+                    "image": "32：メビウス・イーシリーズ・6/IMG_4563_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.21115002302370062,
+                    "mode": "geometric matching",
+                    "score": 0.18330884,
+                    "score_rerank": 0.6679813660410824
+                },
+                {
+                    "drank_score": 0.8796339631080627,
+                    "image": "6：メビウス・アロマリッチ・レギュラー・プルーム用/IMG_4854_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.1524197883249525,
+                    "mode": "geometric matching",
+                    "score": 0.16180527,
+                    "score_rerank": 0.6448940174299047
+                },
+                {
+                    "drank_score": 0.8718705177307129,
+                    "image": "31：メビウス・イーシリーズ・10/IMG_4361_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.16725754146439395,
+                    "mode": "geometric matching",
+                    "score": 0.17332989,
+                    "score_rerank": 0.6424064617585321
+                }
+            ],
+            "name": "メビウス・ライト・100ボックス",
+            "score": 0.85,
+            "score_rerank": 0.6775491276596076,
+            "shelf_digit": "449",
+            "topn": [
+                "31：メビウス・イーシリーズ・10",
+                "6：メビウス・アロマリッチ・レギュラー・プルーム用/IMG_4854_crop_half.jpg_AUGROTATED_0",
+                "31：メビウス・イーシリーズ・10/IMG_4365_crop_half.jpg_AUGROTATED_0",
+                "31：メビウス・イーシリーズ・10/IMG_4361_crop_half.jpg_AUGROTATED_0",
+                "31：メビウス・イーシリーズ・10/IMG_4366_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                2609,
+                140,
+                335,
+                598
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "31：メビウス・イーシリーズ・10/IMG_4365_crop_half.jpg_AUGROTATED_0",
+            "id": "31：メビウス・イーシリーズ・10",
+            "img_crop_id": "N38SiJHWZtjc3g",
+            "matched_files": [
+                {
+                    "drank_score": 0.9364840984344482,
+                    "image": "31：メビウス・イーシリーズ・10/IMG_4365_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.19867697593532468,
+                    "mode": "geometric matching",
+                    "score": 0.16932786,
+                    "score_rerank": 0.6728171783109319
+                },
+                {
+                    "drank_score": 0.8913814425468445,
+                    "image": "31：メビウス・イーシリーズ・10/IMG_4366_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.2282313629308098,
+                    "mode": "geometric matching",
+                    "score": 0.1808433,
+                    "score_rerank": 0.6635465216432962
+                },
+                {
+                    "drank_score": 0.933025062084198,
+                    "image": "31：メビウス・イーシリーズ・10/IMG_4363_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.18148088151432817,
+                    "mode": "geometric matching",
+                    "score": 0.2012167,
+                    "score_rerank": 0.6538651030795577
+                },
+                {
+                    "drank_score": 0.8184633851051331,
+                    "image": "31：メビウス・イーシリーズ・10/IMG_4361_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.21372319246074994,
+                    "mode": "geometric matching",
+                    "score": 0.19483739,
+                    "score_rerank": 0.6317210172697649
+                },
+                {
+                    "drank_score": 0.5939567685127258,
+                    "image": "31：メビウス・イーシリーズ・10/IMG_4360_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.20149408966338256,
+                    "mode": "geometric matching",
+                    "score": 0.19591522,
+                    "score_rerank": 0.5602691694528326
+                }
+            ],
+            "name": "メビウス・100ボックス",
+            "score": 0.85,
+            "score_rerank": 0.6728171783109319,
+            "shelf_digit": "441",
+            "topn": [
+                "31：メビウス・イーシリーズ・10",
+                "31：メビウス・イーシリーズ・10/IMG_4365_crop_half.jpg_AUGROTATED_0",
+                "31：メビウス・イーシリーズ・10/IMG_4366_crop_half.jpg_AUGROTATED_0",
+                "31：メビウス・イーシリーズ・10/IMG_4361_crop_half.jpg_AUGROTATED_0",
+                "31：メビウス・イーシリーズ・10/IMG_4360_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                841,
+                2977,
+                335,
+                490
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "22：ネオ・アークティック・メンソール・hyper用/IMG_4882_crop_half.jpg_AUGROTATED_0",
+            "id": "22：ネオ・アークティック・メンソール・hyper用",
+            "img_crop_id": "oCKDMqIp8B0SCw",
+            "matched_files": [
+                {
+                    "drank_score": 0.9444296956062317,
+                    "image": "22：ネオ・アークティック・メンソール・hyper用/IMG_4882_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5537763412629056,
+                    "mode": "geometric matching",
+                    "score": 0.16854745,
+                    "score_rerank": 0.7820428310607412
+                },
+                {
+                    "drank_score": 0.9302150011062622,
+                    "image": "22：ネオ・アークティック・メンソール・hyper用/IMG_4879_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5686273158688517,
+                    "mode": "geometric matching",
+                    "score": 0.17115378,
+                    "score_rerank": 0.7811911830925342
+                },
+                {
+                    "drank_score": 0.9159073829650879,
+                    "image": "22：ネオ・アークティック・メンソール・hyper用/IMG_4883_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.49801673546038566,
+                    "mode": "geometric matching",
+                    "score": 0.15241754,
+                    "score_rerank": 0.763210219527642
+                },
+                {
+                    "drank_score": 0.8904085755348206,
+                    "image": "22：ネオ・アークティック・メンソール・hyper用/IMG_4878_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.49487119856472384,
+                    "mode": "geometric matching",
+                    "score": 0.13851559,
+                    "score_rerank": 0.7601776962298632
+                },
+                {
+                    "drank_score": 0.901569664478302,
+                    "image": "22：ネオ・アークティック・メンソール・hyper用/IMG_4881_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5169377836257509,
+                    "mode": "geometric matching",
+                    "score": 0.18061751,
+                    "score_rerank": 0.7533052304312159
+                }
+            ],
+            "name": "ネオ・アークティック・メンソール・hyper用",
+            "score": 0.85,
+            "score_rerank": 0.7820428310607412,
+            "shelf_digit": "909",
+            "topn": [
+                "22：ネオ・アークティック・メンソール・hyper用",
+                "22：ネオ・アークティック・メンソール・hyper用/IMG_4878_crop_half.jpg_AUGROTATED_0",
+                "22：ネオ・アークティック・メンソール・hyper用/IMG_4883_crop_half.jpg_AUGROTATED_0",
+                "22：ネオ・アークティック・メンソール・hyper用/IMG_4882_crop_half.jpg_AUGROTATED_0",
+                "22：ネオ・アークティック・メンソール・hyper用/IMG_4879_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                2251,
+                838,
+                354,
+                584
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "32：メビウス・イーシリーズ・6/IMG_4562_crop_half.jpg_AUGROTATED_0",
+            "id": "32：メビウス・イーシリーズ・6",
+            "img_crop_id": "8AsjSUKqUmtmEQ",
+            "matched_files": [
+                {
+                    "drank_score": 0.9828170537948608,
+                    "image": "32：メビウス・イーシリーズ・6/IMG_4562_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5716219238257985,
+                    "mode": "geometric matching",
+                    "score": 0.1258502,
+                    "score_rerank": 0.8159916132861978
+                },
+                {
+                    "drank_score": 0.9710333943367004,
+                    "image": "32：メビウス・イーシリーズ・6/IMG_4563_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5205028230882649,
+                    "mode": "geometric matching",
+                    "score": 0.112497866,
+                    "score_rerank": 0.8024617188274896
+                },
+                {
+                    "drank_score": 0.9805285334587097,
+                    "image": "32：メビウス・イーシリーズ・6/IMG_4561_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.4765095194553012,
+                    "mode": "geometric matching",
+                    "score": 0.08751476,
+                    "score_rerank": 0.8021055118742032
+                },
+                {
+                    "drank_score": 0.95475834608078,
+                    "image": "32：メビウス・イーシリーズ・6/IMG_4565_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.388053592583824,
+                    "mode": "geometric matching",
+                    "score": 0.10967314,
+                    "score_rerank": 0.7589743255993812
+                },
+                {
+                    "drank_score": 0.9448735117912292,
+                    "image": "32：メビウス・イーシリーズ・6/IMG_4567_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.3024127316937463,
+                    "mode": "geometric matching",
+                    "score": 0.107592046,
+                    "score_rerank": 0.7311490546454927
+                }
+            ],
+            "name": "メビウス・Eシリーズ・6",
+            "score": 0.85,
+            "score_rerank": 0.8159916132861978,
+            "shelf_digit": "445",
+            "topn": [
+                "32：メビウス・イーシリーズ・6",
+                "32：メビウス・イーシリーズ・6/IMG_4561_crop_half.jpg_AUGROTATED_0",
+                "32：メビウス・イーシリーズ・6/IMG_4567_crop_half.jpg_AUGROTATED_0",
+                "32：メビウス・イーシリーズ・6/IMG_4565_crop_half.jpg_AUGROTATED_0",
+                "32：メビウス・イーシリーズ・6/IMG_4563_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                3229,
+                4818,
+                345,
+                625
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "39：ケント・3・100・ボックス/IMG_4672_crop_half.jpg_AUGROTATED_0",
+            "id": "39：ケント・3・100・ボックス",
+            "img_crop_id": "Nc8tfCfl-hN6Pw",
+            "matched_files": [
+                {
+                    "drank_score": 0.933925449848175,
+                    "image": "39：ケント・3・100・ボックス/IMG_4672_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.1579965181604998,
+                    "mode": "geometric matching",
+                    "score": 0.3149979,
+                    "score_rerank": 0.6015774304026025
+                },
+                {
+                    "drank_score": 0.8082530498504639,
+                    "image": "40：ケント・1・100・ボックス/IMG_4400_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.2039640142960772,
+                    "mode": "geometric matching",
+                    "score": 0.28681242,
+                    "score_rerank": 0.5889401512439623
+                },
+                {
+                    "drank_score": 0.7518596053123474,
+                    "image": "40：ケント・1・100・ボックス/IMG_4401_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.25077426114285484,
+                    "mode": "geometric matching",
+                    "score": 0.31110454,
+                    "score_rerank": 0.5763483439365606
+                },
+                {
+                    "drank_score": 0.7373202443122864,
+                    "image": "40：ケント・1・100・ボックス/IMG_4396_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.20219841200165128,
+                    "mode": "geometric matching",
+                    "score": 0.32133025,
+                    "score_rerank": 0.5533234968941814
+                },
+                {
+                    "drank_score": 0.4827425181865692,
+                    "image": "40：ケント・1・100・ボックス/IMG_4397_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.20298416473441033,
+                    "mode": "geometric matching",
+                    "score": 0.29911482,
+                    "score_rerank": 0.48607207687629383
+                }
+            ],
+            "name": "ケント・エス・シリーズ・1・100・ボックス",
+            "score": 0.85,
+            "score_rerank": 0.6015774304026025,
+            "shelf_digit": "639",
+            "topn": [
+                "39：ケント・3・100・ボックス",
+                "40：ケント・1・100・ボックス/IMG_4400_crop_half.jpg_AUGROTATED_0",
+                "40：ケント・1・100・ボックス/IMG_4397_crop_half.jpg_AUGROTATED_0",
+                "40：ケント・1・100・ボックス/IMG_4401_crop_half.jpg_AUGROTATED_0",
+                "39：ケント・3・100・ボックス/IMG_4672_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                3560,
+                233,
+                360,
+                527
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "31：メビウス・イーシリーズ・10/IMG_4372_crop_half.jpg_AUGROTATED_0",
+            "id": "31：メビウス・イーシリーズ・10",
+            "img_crop_id": "UMWX8ivYB9iEqg",
+            "matched_files": [
+                {
+                    "drank_score": 0.9391028881072998,
+                    "image": "31：メビウス・イーシリーズ・10/IMG_4372_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.3390444899775101,
+                    "mode": "geometric matching",
+                    "score": 0.11589682,
+                    "score_rerank": 0.7370854854254429
+                },
+                {
+                    "drank_score": 0.9564046263694763,
+                    "image": "31：メビウス・イーシリーズ・10/IMG_4361_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.34152319966810496,
+                    "mode": "geometric matching",
+                    "score": 0.13373977,
+                    "score_rerank": 0.7358824398112743
+                },
+                {
+                    "drank_score": 0.9513835906982422,
+                    "image": "31：メビウス・イーシリーズ・10/IMG_4373_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.25072661845975186,
+                    "mode": "geometric matching",
+                    "score": 0.12060732,
+                    "score_rerank": 0.7123901347473982
+                },
+                {
+                    "drank_score": 0.9492688179016113,
+                    "image": "31：メビウス・イーシリーズ・10/IMG_4368_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.2535632626866423,
+                    "mode": "geometric matching",
+                    "score": 0.13240719,
+                    "score_rerank": 0.7078867481764761
+                },
+                {
+                    "drank_score": 0.9247428774833679,
+                    "image": "31：メビウス・イーシリーズ・10/IMG_4360_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.2733140495845556,
+                    "mode": "geometric matching",
+                    "score": 0.14128703,
+                    "score_rerank": 0.7029022661203771
+                }
+            ],
+            "name": "メビウス・Eシリーズ・10",
+            "score": 0.85,
+            "score_rerank": 0.7370854854254429,
+            "shelf_digit": "444",
+            "topn": [
+                "31：メビウス・イーシリーズ・10",
+                "31：メビウス・イーシリーズ・10/IMG_4372_crop_half.jpg_AUGROTATED_0",
+                "31：メビウス・イーシリーズ・10/IMG_4373_crop_half.jpg_AUGROTATED_0",
+                "31：メビウス・イーシリーズ・10/IMG_4368_crop_half.jpg_AUGROTATED_0",
+                "31：メビウス・イーシリーズ・10/IMG_4361_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                3254,
+                940,
+                332,
+                525
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "31：メビウス・イーシリーズ・10/IMG_4365_crop_half.jpg_AUGROTATED_0",
+            "id": "31：メビウス・イーシリーズ・10",
+            "img_crop_id": "yx05grCJMyJDOg",
+            "matched_files": [
+                {
+                    "drank_score": 0.8052293658256531,
+                    "image": "31：メビウス・イーシリーズ・10/IMG_4365_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.19289846839639224,
+                    "mode": "geometric matching",
+                    "score": 0.23336196,
+                    "score_rerank": 0.6060935662666136
+                },
+                {
+                    "drank_score": 0.6458808183670044,
+                    "image": "31：メビウス・イーシリーズ・10/IMG_4366_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.18932056102762634,
+                    "mode": "geometric matching",
+                    "score": 0.23549974,
+                    "score_rerank": 0.5563605178183892
+                },
+                {
+                    "drank_score": 0.5877761244773865,
+                    "image": "31：メビウス・イーシリーズ・10/IMG_4360_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.20904036747707444,
+                    "mode": "geometric matching",
+                    "score": 0.21773654,
+                    "score_rerank": 0.5519503315863382
+                },
+                {
+                    "drank_score": 0.5514897704124451,
+                    "image": "31：メビウス・イーシリーズ・10/IMG_4372_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.22309081322562163,
+                    "mode": "geometric matching",
+                    "score": 0.23887646,
+                    "score_rerank": 0.53682359109142
+                },
+                {
+                    "drank_score": 0.3549750745296478,
+                    "image": "31：メビウス・イーシリーズ・10/IMG_4373_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.19146370697668336,
+                    "mode": "geometric matching",
+                    "score": 0.23232734,
+                    "score_rerank": 0.47100069845189935
+                }
+            ],
+            "name": "メビウス・10",
+            "score": 0.85,
+            "score_rerank": 0.6060935662666136,
+            "shelf_digit": "448",
+            "topn": [
+                "31：メビウス・イーシリーズ・10",
+                "31：メビウス・イーシリーズ・10/IMG_4360_crop_half.jpg_AUGROTATED_0",
+                "31：メビウス・イーシリーズ・10/IMG_4373_crop_half.jpg_AUGROTATED_0",
+                "31：メビウス・イーシリーズ・10/IMG_4365_crop_half.jpg_AUGROTATED_0",
+                "31：メビウス・イーシリーズ・10/IMG_4366_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                3248,
+                4190,
+                346,
+                638
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "39：ケント・3・100・ボックス/IMG_4668_crop_half.jpg_AUGROTATED_0",
+            "id": "39：ケント・3・100・ボックス",
+            "img_crop_id": "zRohyD9HrFGy6Q",
+            "matched_files": [
+                {
+                    "drank_score": 0.8880345821380615,
+                    "image": "39：ケント・3・100・ボックス/IMG_4668_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.19160067151827567,
+                    "mode": "geometric matching",
+                    "score": 0.41758597,
+                    "score_rerank": 0.5568561880969012
+                },
+                {
+                    "drank_score": 0.8749580979347229,
+                    "image": "39：ケント・3・100・ボックス/IMG_4673_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.18550493335630616,
+                    "mode": "geometric matching",
+                    "score": 0.42128766,
+                    "score_rerank": 0.5496238453873087
+                },
+                {
+                    "drank_score": 0.8324897289276123,
+                    "image": "39：ケント・3・100・ボックス/IMG_4669_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.20160735997582788,
+                    "mode": "geometric matching",
+                    "score": 0.42634106,
+                    "score_rerank": 0.5396927026710321
+                },
+                {
+                    "drank_score": 0.7052913904190063,
+                    "image": "38：ケント・6・100・ボックス/IMG_4502_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.2211144997158303,
+                    "mode": "geometric matching",
+                    "score": 0.42419648,
+                    "score_rerank": 0.508243175040451
+                }
+            ],
+            "name": "ケント・エス・シリーズ・スパーク・1・100・ボックス",
+            "score": 0.85,
+            "score_rerank": 0.5568561880969012,
+            "shelf_digit": "634",
+            "topn": [
+                "39：ケント・3・100・ボックス",
+                "39：ケント・3・100・ボックス/IMG_4668_crop_half.jpg_AUGROTATED_0",
+                "39：ケント・3・100・ボックス/IMG_4673_crop_half.jpg_AUGROTATED_0",
+                "38：ケント・6・100・ボックス/IMG_4502_crop_half.jpg_AUGROTATED_0",
+                "27：ヴァルト・ミント・クリック/IMG_4591_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                837,
+                4219,
+                354,
+                580
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "36：マールボロ・メンソール・8・ボックス/IMG_4546_crop_half.jpg_AUGROTATED_0",
+            "id": null,
+            "img_crop_id": "lxpMxV1O_s_1tQ",
+            "matched_files": [],
+            "name": "マールボロ・アイス・ブラスト・メガ・5ボックス",
+            "score": 0.85,
+            "score_rerank": 0.49343439518905496,
+            "shelf_digit": "621",
+            "topn": [
+                "36：マールボロ・メンソール・8・ボックス",
+                "36：マールボロ・メンソール・8・ボックス/IMG_4546_crop_half.jpg_AUGROTATED_0",
+                "8：メビウス・ブラック・コールド・メンソール・プルーム用/IMG_4615_crop_half.jpg_AUGROTATED_0",
+                "31：メビウス・イーシリーズ・10/IMG_4369_crop_half.jpg_AUGROTATED_0",
+                "8：メビウス・ブラック・コールド・メンソール・プルーム用/IMG_4620_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                2590,
+                4160,
+                349,
+                649
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "40：ケント・1・100・ボックス/IMG_4395_crop_half.jpg_AUGROTATED_0",
+            "id": "40：ケント・1・100・ボックス",
+            "img_crop_id": "88Bsg34OsM66ig",
+            "matched_files": [
+                {
+                    "drank_score": 0.9769243597984314,
+                    "image": "40：ケント・1・100・ボックス/IMG_4395_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6252677447867576,
+                    "mode": "geometric matching",
+                    "score": 0.1512652,
+                    "score_rerank": 0.8201515513755567
+                },
+                {
+                    "drank_score": 0.9957971572875977,
+                    "image": "40：ケント・1・100・ボックス/IMG_4394_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.4598617910923131,
+                    "mode": "geometric matching",
+                    "score": 0.10025978,
+                    "score_rerank": 0.7965937725139732
+                },
+                {
+                    "drank_score": 0.9901132583618164,
+                    "image": "40：ケント・1・100・ボックス/IMG_4396_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.4717335990430231,
+                    "mode": "geometric matching",
+                    "score": 0.11744201,
+                    "score_rerank": 0.7915772532214519
+                },
+                {
+                    "drank_score": 0.9828529953956604,
+                    "image": "40：ケント・1・100・ボックス/IMG_4397_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.38349485504577835,
+                    "mode": "geometric matching",
+                    "score": 0.1916346,
+                    "score_rerank": 0.7332505151324317
+                },
+                {
+                    "drank_score": 0.9915408492088318,
+                    "image": "39：ケント・3・100・ボックス/IMG_4668_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.34458304566555537,
+                    "mode": "geometric matching",
+                    "score": 0.19113272,
+                    "score_rerank": 0.7243840804623162
+                }
+            ],
+            "name": "ケント・1・100・ボックス",
+            "score": 0.85,
+            "score_rerank": 0.8201515513755567,
+            "shelf_digit": "632",
+            "topn": [
+                "40：ケント・1・100・ボックス",
+                "40：ケント・1・100・ボックス/IMG_4394_crop_half.jpg_AUGROTATED_0",
+                "40：ケント・1・100・ボックス/IMG_4396_crop_half.jpg_AUGROTATED_0",
+                "40：ケント・1・100・ボックス/IMG_4395_crop_half.jpg_AUGROTATED_0",
+                "39：ケント・3・100・ボックス/IMG_4668_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                2305,
+                2823,
+                344,
+                630
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "",
+            "id": null,
+            "img_crop_id": "WuYm-AkxVN6PSw",
+            "matched_files": [],
+            "name": "ラーク・100ボックス",
+            "score": 0.55,
+            "score_rerank": 0,
+            "shelf_digit": "010",
+            "topn": [
+                "100：Marlboro/IMG_1869_crop_half.jpg_AUGROTATED_0",
+                "100：Marlboro/IMG_1871_crop_half.jpg_AUGROTATED_0",
+                "35：マールボロ・ボックス/IMG_4843_crop_half.jpg_AUGROTATED_0",
+                "100：Marlboro/IMG_1870_crop_half.jpg_AUGROTATED_0",
+                "35：マールボロ・ボックス/IMG_4844_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                3246,
+                234,
+                343,
+                543
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "31：メビウス・イーシリーズ・10/IMG_4372_crop_half.jpg_AUGROTATED_0",
+            "id": "31：メビウス・イーシリーズ・10",
+            "img_crop_id": "TDfXh9W380LHTQ",
+            "matched_files": [
+                {
+                    "drank_score": 0.9223656058311462,
+                    "image": "31：メビウス・イーシリーズ・10/IMG_4372_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.2360732187487437,
+                    "mode": "geometric matching",
+                    "score": 0.22782075,
+                    "score_rerank": 0.6564033473739669
+                },
+                {
+                    "drank_score": 0.9639197587966919,
+                    "image": "32：メビウス・イーシリーズ・6/IMG_4564_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.21155947438490807,
+                    "mode": "geometric matching",
+                    "score": 0.2456615,
+                    "score_rerank": 0.6543791699544801
+                },
+                {
+                    "drank_score": 0.8883910179138184,
+                    "image": "32：メビウス・イーシリーズ・6/IMG_4565_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.234614578101565,
+                    "mode": "geometric matching",
+                    "score": 0.23624986,
+                    "score_rerank": 0.6424017348046149
+                },
+                {
+                    "drank_score": 0.8527520298957825,
+                    "image": "31：メビウス・イーシリーズ・10/IMG_4373_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.22341494324692338,
+                    "mode": "geometric matching",
+                    "score": 0.23788232,
+                    "score_rerank": 0.6276971639428118
+                },
+                {
+                    "drank_score": 0.7661983966827393,
+                    "image": "32：メビウス・イーシリーズ・6/IMG_4571_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.22608873712511318,
+                    "mode": "geometric matching",
+                    "score": 0.23414773,
+                    "score_rerank": 0.6040270481423556
+                }
+            ],
+            "name": "メビウス・ライト・ボックス",
+            "score": 0.85,
+            "score_rerank": 0.6564033473739669,
+            "shelf_digit": "443",
+            "topn": [
+                "32：メビウス・イーシリーズ・6",
+                "31：メビウス・イーシリーズ・10/IMG_4372_crop_half.jpg_AUGROTATED_0",
+                "32：メビウス・イーシリーズ・6/IMG_4571_crop_half.jpg_AUGROTATED_0",
+                "32：メビウス・イーシリーズ・6/IMG_4565_crop_half.jpg_AUGROTATED_0",
+                "31：メビウス・イーシリーズ・10/IMG_4373_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                1167,
+                4232,
+                339,
+                580
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "",
+            "id": null,
+            "img_crop_id": "Tevj4-bgpCU1gw",
+            "matched_files": [],
+            "name": "マールボロ・アイス・ブラスト・メガ・1ボックス",
+            "score": 0.55,
+            "score_rerank": 0,
+            "shelf_digit": "622",
+            "topn": [
+                "36：マールボロ・メンソール・8・ボックス/IMG_4546_crop_half.jpg_AUGROTATED_0",
+                "36：マールボロ・メンソール・8・ボックス/IMG_4540_crop_half.jpg_AUGROTATED_0",
+                "36：マールボロ・メンソール・8・ボックス/IMG_4542_crop_half.jpg_AUGROTATED_0",
+                "36：マールボロ・メンソール・8・ボックス/IMG_4539_crop_half.jpg_AUGROTATED_0",
+                "31：メビウス・イーシリーズ・10/IMG_4369_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                1161,
+                1658,
+                339,
+                470
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "13：テリア ブラック フューシャ メンソール/IMG_4743_crop_half.jpg_AUGROTATED_0",
+            "id": "13：テリア ブラック フューシャ メンソール",
+            "img_crop_id": "A4n_2tpSJpn_oA",
+            "matched_files": [
+                {
+                    "drank_score": 0.9878551363945007,
+                    "image": "13：テリア ブラック フューシャ メンソール/IMG_4743_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.651399550211266,
+                    "mode": "geometric matching",
+                    "score": 0.39635497,
+                    "score_rerank": 0.7332344179817301
+                },
+                {
+                    "drank_score": 0.9957037568092346,
+                    "image": "13：テリア ブラック フューシャ メンソール/IMG_4740_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.625325167922808,
+                    "mode": "geometric matching",
+                    "score": 0.39178705,
+                    "score_rerank": 0.7295938574196128
+                },
+                {
+                    "drank_score": 0.9939151406288147,
+                    "image": "13：テリア ブラック フューシャ メンソール/IMG_4739_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5766537473493072,
+                    "mode": "geometric matching",
+                    "score": 0.39730662,
+                    "score_rerank": 0.7122480183934365
+                },
+                {
+                    "drank_score": 0.9947695136070251,
+                    "image": "13：テリア ブラック フューシャ メンソール/IMG_4741_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5741232184757128,
+                    "mode": "geometric matching",
+                    "score": 0.40829444,
+                    "score_rerank": 0.7073500436248215
+                },
+                {
+                    "drank_score": 0.9867464900016785,
+                    "image": "13：テリア ブラック フューシャ メンソール/IMG_4742_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5587466410087487,
+                    "mode": "geometric matching",
+                    "score": 0.4270922,
+                    "score_rerank": 0.6928110593031283
+                }
+            ],
+            "name": "テリア ・ブラック・ フューシャ メンソール",
+            "score": 0.85,
+            "score_rerank": 0.7332344179817301,
+            "shelf_digit": "567",
+            "topn": [
+                "13：テリア ブラック フューシャ メンソール",
+                "13：テリア ブラック フューシャ メンソール/IMG_4740_crop_half.jpg_AUGROTATED_0",
+                "13：テリア ブラック フューシャ メンソール/IMG_4743_crop_half.jpg_AUGROTATED_0",
+                "13：テリア ブラック フューシャ メンソール/IMG_4739_crop_half.jpg_AUGROTATED_0",
+                "13：テリア ブラック フューシャ メンソール/IMG_4741_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                1839,
+                4852,
+                330,
+                620
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "36：マールボロ・メンソール・8・ボックス/IMG_4545_crop_half.jpg_AUGROTATED_0",
+            "id": null,
+            "img_crop_id": "CzjoVPZf4p2JPA",
+            "matched_files": [],
+            "name": "マールボロ・ゴールド・100ボックス",
+            "score": 0.85,
+            "score_rerank": 0.5865926084629791,
+            "shelf_digit": "629",
+            "topn": [
+                "36：マールボロ・メンソール・8・ボックス",
+                "37：マールボロ・ゴールド・ボックス/IMG_4559_crop_half.jpg_AUGROTATED_0",
+                "36：マールボロ・メンソール・8・ボックス/IMG_4545_crop_half.jpg_AUGROTATED_0",
+                "36：マールボロ・メンソール・8・ボックス/IMG_4538_crop_half.jpg_AUGROTATED_0",
+                "36：マールボロ・メンソール・8・ボックス/IMG_4546_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                2613,
+                2255,
+                328,
+                520
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "101：メビウス・ワン 20本入/IMG_2143_crop_half.jpg_AUGROTATED_0",
+            "id": "101：メビウス・ワン 20本入",
+            "img_crop_id": "fHs73aCSGPySVA",
+            "matched_files": [
+                {
+                    "drank_score": 0.9972642660140991,
+                    "image": "101：メビウス・ワン 20本入/IMG_2143_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5072211851365195,
+                    "mode": "geometric matching",
+                    "score": 0.12715775,
+                    "score_rerank": 0.8004825353451854
+                },
+                {
+                    "drank_score": 0.9953792095184326,
+                    "image": "101：メビウス・ワン 20本入/IMG_2137_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.4414008903444206,
+                    "mode": "geometric matching",
+                    "score": 0.13817722,
+                    "score_rerank": 0.775763141958856
+                },
+                {
+                    "drank_score": 0.9634016752243042,
+                    "image": "103：メビウス・ワン ボックス 20本入/IMG_2202_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.3435190132525736,
+                    "mode": "geometric matching",
+                    "score": 0.105822206,
+                    "score_rerank": 0.7497473241430633
+                },
+                {
+                    "drank_score": 0.8236744403839111,
+                    "image": "103：メビウス・ワン ボックス 20本入/IMG_2209_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.25686470736762934,
+                    "mode": "geometric matching",
+                    "score": 0.13324553,
+                    "score_rerank": 0.6708635323254621
+                },
+                {
+                    "drank_score": 0.828607439994812,
+                    "image": "103：メビウス・ワン ボックス 20本入/IMG_2214_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.20372868752413192,
+                    "mode": "geometric matching",
+                    "score": 0.12406945,
+                    "score_rerank": 0.6600730582556831
+                }
+            ],
+            "name": "メビウス・ワン",
+            "score": 0.85,
+            "score_rerank": 0.8004825353451854,
+            "shelf_digit": "226",
+            "topn": [
+                "101：メビウス・ワン 20本入",
+                "103：メビウス・ワン ボックス 20本入/IMG_2202_crop_half.jpg_AUGROTATED_0",
+                "103：メビウス・ワン ボックス 20本入/IMG_2214_crop_half.jpg_AUGROTATED_0",
+                "101：メビウス・ワン 20本入/IMG_2143_crop_half.jpg_AUGROTATED_0",
+                "103：メビウス・ワン ボックス 20本入/IMG_2209_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                1814,
+                2953,
+                330,
+                496
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "25：ネオ・ブリリアント・トロピカル・hyper用/IMG_4431_crop_half.jpg_AUGROTATED_0",
+            "id": "25：ネオ・ブリリアント・トロピカル・hyper用",
+            "img_crop_id": "iun_Y-TdsZRxgw",
+            "matched_files": [
+                {
+                    "drank_score": 0.9951719641685486,
+                    "image": "25：ネオ・ブリリアント・トロピカル・hyper用/IMG_4431_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6448215570292841,
+                    "mode": "geometric matching",
+                    "score": 0.12983686,
+                    "score_rerank": 0.8400633123593498
+                },
+                {
+                    "drank_score": 0.9943272471427917,
+                    "image": "25：ネオ・ブリリアント・トロピカル・hyper用/IMG_4430_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5732207702657186,
+                    "mode": "geometric matching",
+                    "score": 0.12834203,
+                    "score_rerank": 0.818927593222553
+                },
+                {
+                    "drank_score": 0.9913502931594849,
+                    "image": "25：ネオ・ブリリアント・トロピカル・hyper用/IMG_4432_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5781201772874949,
+                    "mode": "geometric matching",
+                    "score": 0.14023018,
+                    "score_rerank": 0.814749069134094
+                },
+                {
+                    "drank_score": 0.9915117621421814,
+                    "image": "25：ネオ・ブリリアント・トロピカル・hyper用/IMG_4434_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5546476208497249,
+                    "mode": "geometric matching",
+                    "score": 0.17710412,
+                    "score_rerank": 0.7930061668975719
+                },
+                {
+                    "drank_score": 0.9805117249488831,
+                    "image": "25：ネオ・ブリリアント・トロピカル・hyper用/IMG_4435_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.4800985171536643,
+                    "mode": "geometric matching",
+                    "score": 0.16765356,
+                    "score_rerank": 0.7711216486307642
+                }
+            ],
+            "name": "ネオ・ブリリアント・トロピカル・hyper用",
+            "score": 0.85,
+            "score_rerank": 0.8400633123593498,
+            "shelf_digit": "912",
+            "topn": [
+                "25：ネオ・ブリリアント・トロピカル・hyper用",
+                "25：ネオ・ブリリアント・トロピカル・hyper用/IMG_4430_crop_half.jpg_AUGROTATED_0",
+                "25：ネオ・ブリリアント・トロピカル・hyper用/IMG_4431_crop_half.jpg_AUGROTATED_0",
+                "25：ネオ・ブリリアント・トロピカル・hyper用/IMG_4432_crop_half.jpg_AUGROTATED_0",
+                "25：ネオ・ブリリアント・トロピカル・hyper用/IMG_4435_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                3258,
+                2933,
+                325,
+                526
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "",
+            "id": null,
+            "img_crop_id": "M59QAXlbwfEKQQ",
+            "matched_files": [],
+            "name": "ラーク・エクストラ・3・KSボックス",
+            "score": 0.55,
+            "score_rerank": 0,
+            "shelf_digit": "013",
+            "topn": [
+                "40：ケント・1・100・ボックス/IMG_4397_crop_half.jpg_AUGROTATED_0",
+                "39：ケント・3・100・ボックス/IMG_4674_crop_half.jpg_AUGROTATED_0",
+                "37：マールボロ・ゴールド・ボックス/IMG_4558_crop_half.jpg_AUGROTATED_0",
+                "39：ケント・3・100・ボックス/IMG_4668_crop_half.jpg_AUGROTATED_0",
+                "40：ケント・1・100・ボックス/IMG_4405_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                2623,
+                2928,
+                334,
+                537
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "",
+            "id": null,
+            "img_crop_id": "bCFhk3wfRUg2GQ",
+            "matched_files": [],
+            "name": "ラーク・マイルド・KSボックス",
+            "score": 0.55,
+            "score_rerank": 0,
+            "shelf_digit": "011",
+            "topn": [
+                "100：Marlboro/IMG_1871_crop_half.jpg_AUGROTATED_0",
+                "100：Marlboro/IMG_1869_crop_half.jpg_AUGROTATED_0",
+                "100：Marlboro/IMG_1870_crop_half.jpg_AUGROTATED_0",
+                "35：マールボロ・ボックス/IMG_4844_crop_half.jpg_AUGROTATED_0",
+                "36：マールボロ・メンソール・8・ボックス/IMG_4536_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                1488,
+                2977,
+                328,
+                485
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "24：ネオ・ブリリアント・ベリー・hyper用/IMG_4525_crop_half.jpg_AUGROTATED_0",
+            "id": "24：ネオ・ブリリアント・ベリー・hyper用",
+            "img_crop_id": "J9GRspy8Xh4TZw",
+            "matched_files": [
+                {
+                    "drank_score": 0.9935463070869446,
+                    "image": "24：ネオ・ブリリアント・ベリー・hyper用/IMG_4525_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6795498103080718,
+                    "mode": "geometric matching",
+                    "score": 0.12550986,
+                    "score_rerank": 0.8517248912185049
+                },
+                {
+                    "drank_score": 0.9843906760215759,
+                    "image": "24：ネオ・ブリリアント・ベリー・hyper用/IMG_4528_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6627528628971757,
+                    "mode": "geometric matching",
+                    "score": 0.13351768,
+                    "score_rerank": 0.8407359896756255
+                },
+                {
+                    "drank_score": 0.9923732876777649,
+                    "image": "24：ネオ・ブリリアント・ベリー・hyper用/IMG_4526_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6202764390083538,
+                    "mode": "geometric matching",
+                    "score": 0.13926339,
+                    "score_rerank": 0.8280895620058356
+                },
+                {
+                    "drank_score": 0.9853165745735168,
+                    "image": "24：ネオ・ブリリアント・ベリー・hyper用/IMG_4527_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5977799805951186,
+                    "mode": "geometric matching",
+                    "score": 0.151932,
+                    "score_rerank": 0.8141561665505906
+                },
+                {
+                    "drank_score": 0.984138548374176,
+                    "image": "24：ネオ・ブリリアント・ベリー・hyper用/IMG_4529_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5563323007945187,
+                    "mode": "geometric matching",
+                    "score": 0.12958723,
+                    "score_rerank": 0.8103063627506084
+                }
+            ],
+            "name": "ネオ・ブリリアント・ベリー・hyper用",
+            "score": 0.85,
+            "score_rerank": 0.8517248912185049,
+            "shelf_digit": "911",
+            "topn": [
+                "24：ネオ・ブリリアント・ベリー・hyper用",
+                "24：ネオ・ブリリアント・ベリー・hyper用/IMG_4525_crop_half.jpg_AUGROTATED_0",
+                "24：ネオ・ブリリアント・ベリー・hyper用/IMG_4529_crop_half.jpg_AUGROTATED_0",
+                "24：ネオ・ブリリアント・ベリー・hyper用/IMG_4528_crop_half.jpg_AUGROTATED_0",
+                "24：ネオ・ブリリアント・ベリー・hyper用/IMG_4526_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                3219,
+                1587,
+                353,
+                548
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "33：メビウス・イーシリーズ・3・100's/IMG_4793_crop_half.jpg_AUGROTATED_0",
+            "id": "33：メビウス・イーシリーズ・3・100's",
+            "img_crop_id": "XXVZUb3ZQUvxfg",
+            "matched_files": [
+                {
+                    "drank_score": 0.9415930509567261,
+                    "image": "33：メビウス・イーシリーズ・3・100's/IMG_4793_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.2117640872306213,
+                    "mode": "geometric matching",
+                    "score": 0.18873858,
+                    "score_rerank": 0.6705117094562043
+                },
+                {
+                    "drank_score": 0.9078102707862854,
+                    "image": "33：メビウス・イーシリーズ・3・100's/IMG_4798_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.18678889543537947,
+                    "mode": "geometric matching",
+                    "score": 0.20553339,
+                    "score_rerank": 0.6461663938664995
+                },
+                {
+                    "drank_score": 0.8379979133605957,
+                    "image": "33：メビウス・イーシリーズ・3・100's/IMG_4794_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.18257699295721802,
+                    "mode": "geometric matching",
+                    "score": 0.20998812,
+                    "score_rerank": 0.6221772238953441
+                },
+                {
+                    "drank_score": 0.7703221440315247,
+                    "image": "33：メビウス・イーシリーズ・3・100's/IMG_4792_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.15686119881900162,
+                    "mode": "geometric matching",
+                    "score": 0.20718765,
+                    "score_rerank": 0.595279942855158
+                },
+                {
+                    "drank_score": 0.6543735265731812,
+                    "image": "33：メビウス・イーシリーズ・3・100's/IMG_4800_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.18992369255062722,
+                    "mode": "geometric matching",
+                    "score": 0.20878631,
+                    "score_rerank": 0.5697746417371425
+                }
+            ],
+            "name": "メビウス・エクストラライト",
+            "score": 0.85,
+            "score_rerank": 0.6705117094562043,
+            "shelf_digit": "223",
+            "topn": [
+                "33：メビウス・イーシリーズ・3・100's",
+                "33：メビウス・イーシリーズ・3・100's/IMG_4793_crop_half.jpg_AUGROTATED_0",
+                "33：メビウス・イーシリーズ・3・100's/IMG_4798_crop_half.jpg_AUGROTATED_0",
+                "33：メビウス・イーシリーズ・3・100's/IMG_4792_crop_half.jpg_AUGROTATED_0",
+                "33：メビウス・イーシリーズ・3・100's/IMG_4800_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                3246,
+                3599,
+                337,
+                560
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "",
+            "id": null,
+            "img_crop_id": "g_MsXqZeV-byfQ",
+            "matched_files": [],
+            "name": "ラッキーストライク・エキスパートカット・8",
+            "score": 0.55,
+            "score_rerank": 0,
+            "shelf_digit": "018",
+            "topn": [
+                "6：メビウス・アロマリッチ・レギュラー・プルーム用/IMG_4855_crop_half.jpg_AUGROTATED_0",
+                "6：メビウス・アロマリッチ・レギュラー・プルーム用/IMG_4857_crop_half.jpg_AUGROTATED_0",
+                "6：メビウス・アロマリッチ・レギュラー・プルーム用/IMG_4863_crop_half.jpg_AUGROTATED_0",
+                "5：エボ・ディープ・レギュラー・プルーム用/IMG_4515_crop_half.jpg_AUGROTATED_0",
+                "6：メビウス・アロマリッチ・レギュラー・プルーム用/IMG_4861_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                1161,
+                2985,
+                328,
+                486
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "23：ネオ・アイスド・メンソール・hyper用/IMG_4869_crop_half.jpg_AUGROTATED_0",
+            "id": "23：ネオ・アイスド・メンソール・hyper用",
+            "img_crop_id": "zX0w7-USM6T_rQ",
+            "matched_files": [
+                {
+                    "drank_score": 0.9817937612533569,
+                    "image": "23：ネオ・アイスド・メンソール・hyper用/IMG_4869_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5828010472568206,
+                    "mode": "geometric matching",
+                    "score": 0.12922835,
+                    "score_rerank": 0.8176871025530533
+                },
+                {
+                    "drank_score": 0.9949032068252563,
+                    "image": "23：ネオ・アイスド・メンソール・hyper用/IMG_4866_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6074999680705246,
+                    "mode": "geometric matching",
+                    "score": 0.16193348,
+                    "score_rerank": 0.8159475604687343
+                },
+                {
+                    "drank_score": 0.9916905164718628,
+                    "image": "23：ネオ・アイスド・メンソール・hyper用/IMG_4867_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5441357780930725,
+                    "mode": "geometric matching",
+                    "score": 0.14187837,
+                    "score_rerank": 0.8039965403694807
+                },
+                {
+                    "drank_score": 0.9907715320587158,
+                    "image": "23：ネオ・アイスド・メンソール・hyper用/IMG_4868_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5169503083489715,
+                    "mode": "geometric matching",
+                    "score": 0.15003401,
+                    "score_rerank": 0.7923029481223061
+                },
+                {
+                    "drank_score": 0.9747679233551025,
+                    "image": "23：ネオ・アイスド・メンソール・hyper用/IMG_4870_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.4696528991676113,
+                    "mode": "geometric matching",
+                    "score": 0.17687929,
+                    "score_rerank": 0.7625745307568141
+                }
+            ],
+            "name": "ネオ・アイスド・メンソール・hyper用",
+            "score": 0.85,
+            "score_rerank": 0.8176871025530533,
+            "shelf_digit": "910",
+            "topn": [
+                "23：ネオ・アイスド・メンソール・hyper用",
+                "23：ネオ・アイスド・メンソール・hyper用/IMG_4869_crop_half.jpg_AUGROTATED_0",
+                "23：ネオ・アイスド・メンソール・hyper用/IMG_4867_crop_half.jpg_AUGROTATED_0",
+                "23：ネオ・アイスド・メンソール・hyper用/IMG_4868_crop_half.jpg_AUGROTATED_0",
+                "23：ネオ・アイスド・メンソール・hyper用/IMG_4866_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                1832,
+                4200,
+                340,
+                579
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "36：マールボロ・メンソール・8・ボックス/IMG_4537_crop_half.jpg_AUGROTATED_0",
+            "id": "36：マールボロ・メンソール・8・ボックス",
+            "img_crop_id": "MupZ6_L-4HHTgw",
+            "matched_files": [
+                {
+                    "drank_score": 0.9964179992675781,
+                    "image": "36：マールボロ・メンソール・8・ボックス/IMG_4537_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6419742211607785,
+                    "mode": "geometric matching",
+                    "score": 0.18893415,
+                    "score_rerank": 0.815944006128507
+                },
+                {
+                    "drank_score": 0.9910979866981506,
+                    "image": "36：マールボロ・メンソール・8・ボックス/IMG_4538_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6630040180364742,
+                    "mode": "geometric matching",
+                    "score": 0.21650064,
+                    "score_rerank": 0.8096303454203875
+                },
+                {
+                    "drank_score": 0.9952390193939209,
+                    "image": "36：マールボロ・メンソール・8・ボックス/IMG_4542_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6208934386675473,
+                    "mode": "geometric matching",
+                    "score": 0.23042917,
+                    "score_rerank": 0.7926680694184405
+                },
+                {
+                    "drank_score": 0.9924350380897522,
+                    "image": "36：マールボロ・メンソール・8・ボックス/IMG_4536_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5886793618805244,
+                    "mode": "geometric matching",
+                    "score": 0.23174286,
+                    "score_rerank": 0.781637175991083
+                },
+                {
+                    "drank_score": 0.992534875869751,
+                    "image": "36：マールボロ・メンソール・8・ボックス/IMG_4545_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.520396195219522,
+                    "mode": "geometric matching",
+                    "score": 0.2318747,
+                    "score_rerank": 0.761129441326782
+                }
+            ],
+            "name": "マールボロ・メンソール・8ボックス",
+            "score": 0.85,
+            "score_rerank": 0.815944006128507,
+            "shelf_digit": "624",
+            "topn": [
+                "36：マールボロ・メンソール・8・ボックス",
+                "36：マールボロ・メンソール・8・ボックス/IMG_4537_crop_half.jpg_AUGROTATED_0",
+                "36：マールボロ・メンソール・8・ボックス/IMG_4538_crop_half.jpg_AUGROTATED_0",
+                "36：マールボロ・メンソール・8・ボックス/IMG_4542_crop_half.jpg_AUGROTATED_0",
+                "36：マールボロ・メンソール・8・ボックス/IMG_4536_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                3568,
+                2814,
+                324,
+                610
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "",
+            "id": null,
+            "img_crop_id": "4avj6ZI2OXwM5Q",
+            "matched_files": [],
+            "name": "ラーク・エクストラ・3・100ボックス",
+            "score": 0.55,
+            "score_rerank": 0,
+            "shelf_digit": "014",
+            "topn": [
+                "40：ケント・1・100・ボックス/IMG_4397_crop_half.jpg_AUGROTATED_0",
+                "40：ケント・1・100・ボックス/IMG_4399_crop_half.jpg_AUGROTATED_0",
+                "40：ケント・1・100・ボックス/IMG_4396_crop_half.jpg_AUGROTATED_0",
+                "39：ケント・3・100・ボックス/IMG_4666_crop_half.jpg_AUGROTATED_0",
+                "40：ケント・1・100・ボックス/IMG_4395_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                829,
+                1644,
+                333,
+                474
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "12：テリア ベルベット パール/IMG_4892_crop_half.jpg_AUGROTATED_0",
+            "id": "12：テリア ベルベット パール",
+            "img_crop_id": "DVB87MLkK7WRkQ",
+            "matched_files": [
+                {
+                    "drank_score": 0.9949210286140442,
+                    "image": "12：テリア ベルベット パール/IMG_4892_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.7027431614386636,
+                    "mode": "geometric matching",
+                    "score": 0.30278206,
+                    "score_rerank": 0.7881864330158124
+                },
+                {
+                    "drank_score": 0.9960470795631409,
+                    "image": "12：テリア ベルベット パール/IMG_4895_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.7214290531868643,
+                    "mode": "geometric matching",
+                    "score": 0.3546756,
+                    "score_rerank": 0.7733725998250015
+                },
+                {
+                    "drank_score": 0.9926984906196594,
+                    "image": "12：テリア ベルベット パール/IMG_4894_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6343553435297613,
+                    "mode": "geometric matching",
+                    "score": 0.30526292,
+                    "score_rerank": 0.7660109822448262
+                },
+                {
+                    "drank_score": 0.9957578778266907,
+                    "image": "12：テリア ベルベット パール/IMG_4891_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.591680351364098,
+                    "mode": "geometric matching",
+                    "score": 0.33005184,
+                    "score_rerank": 0.7442107327572367
+                },
+                {
+                    "drank_score": 0.9513188600540161,
+                    "image": "15：テリア リビエラ パール/IMG_4720_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5084628634895516,
+                    "mode": "geometric matching",
+                    "score": 0.3719834,
+                    "score_rerank": 0.6891411570630703
+                }
+            ],
+            "name": "テリア・ ベルベット ・パール",
+            "score": 0.85,
+            "score_rerank": 0.7881864330158124,
+            "shelf_digit": "566",
+            "topn": [
+                "12：テリア ベルベット パール",
+                "12：テリア ベルベット パール/IMG_4892_crop_half.jpg_AUGROTATED_0",
+                "12：テリア ベルベット パール/IMG_4894_crop_half.jpg_AUGROTATED_0",
+                "12：テリア ベルベット パール/IMG_4891_crop_half.jpg_AUGROTATED_0",
+                "12：テリア ベルベット パール/IMG_4895_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                459,
+                4825,
+                357,
+                664
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "36：マールボロ・メンソール・8・ボックス/IMG_4545_crop_half.jpg_AUGROTATED_0",
+            "id": "36：マールボロ・メンソール・8・ボックス",
+            "img_crop_id": "95y8-e0Aud11Gg",
+            "matched_files": [
+                {
+                    "drank_score": 0.9824739098548889,
+                    "image": "36：マールボロ・メンソール・8・ボックス/IMG_4545_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.2590998889170784,
+                    "mode": "geometric matching",
+                    "score": 0.28120768,
+                    "score_rerank": 0.6599890676315902
+                },
+                {
+                    "drank_score": 0.9231491088867188,
+                    "image": "36：マールボロ・メンソール・8・ボックス/IMG_4537_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.22068840257149258,
+                    "mode": "geometric matching",
+                    "score": 0.27720344,
+                    "score_rerank": 0.6322698774374633
+                },
+                {
+                    "drank_score": 0.972115695476532,
+                    "image": "36：マールボロ・メンソール・8・ボックス/IMG_4543_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.19212382031873815,
+                    "mode": "geometric matching",
+                    "score": 0.31263053,
+                    "score_rerank": 0.624219642738581
+                },
+                {
+                    "drank_score": 0.9522613286972046,
+                    "image": "36：マールボロ・メンソール・8・ボックス/IMG_4538_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.18735659422705445,
+                    "mode": "geometric matching",
+                    "score": 0.31250268,
+                    "score_rerank": 0.6168843048772777
+                },
+                {
+                    "drank_score": 0.9063607454299927,
+                    "image": "36：マールボロ・メンソール・8・ボックス/IMG_4536_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.1630859284759707,
+                    "mode": "geometric matching",
+                    "score": 0.30071843,
+                    "score_rerank": 0.600546630171789
+                }
+            ],
+            "name": "マールボロ・メンソール・8・100ボックス",
+            "score": 0.85,
+            "score_rerank": 0.6599890676315902,
+            "shelf_digit": "625",
+            "topn": [
+                "36：マールボロ・メンソール・8・ボックス",
+                "36：マールボロ・メンソール・8・ボックス/IMG_4537_crop_half.jpg_AUGROTATED_0",
+                "36：マールボロ・メンソール・8・ボックス/IMG_4545_crop_half.jpg_AUGROTATED_0",
+                "36：マールボロ・メンソール・8・ボックス/IMG_4536_crop_half.jpg_AUGROTATED_0",
+                "36：マールボロ・メンソール・8・ボックス/IMG_4538_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                512,
+                309,
+                352,
+                430
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "1：エボ・ブラック・メンソール・プルーム用/IMG_4806_crop_half.jpg_AUGROTATED_0",
+            "id": "1：エボ・ブラック・メンソール・プルーム用",
+            "img_crop_id": "hwKV8k5n4E3dMw",
+            "matched_files": [
+                {
+                    "drank_score": 0.8230814337730408,
+                    "image": "1：エボ・ブラック・メンソール・プルーム用/IMG_4806_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.34427772073413687,
+                    "mode": "geometric matching",
+                    "score": 0.28552806,
+                    "score_rerank": 0.6359965223521533
+                },
+                {
+                    "drank_score": 0.6794183850288391,
+                    "image": "1：エボ・ブラック・メンソール・プルーム用/IMG_4811_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.3307119167668847,
+                    "mode": "geometric matching",
+                    "score": 0.26704663,
+                    "score_rerank": 0.5962204385387172
+                },
+                {
+                    "drank_score": 0.575410008430481,
+                    "image": "1：エボ・ブラック・メンソール・プルーム用/IMG_4808_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.3557868657725395,
+                    "mode": "geometric matching",
+                    "score": 0.23958415,
+                    "score_rerank": 0.5835254022609061
+                },
+                {
+                    "drank_score": 0.6942732930183411,
+                    "image": "1：エボ・ブラック・メンソール・プルーム用/IMG_4809_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.2836414570988012,
+                    "mode": "geometric matching",
+                    "score": 0.27765614,
+                    "score_rerank": 0.5823119690351427
+                },
+                {
+                    "drank_score": 0.5714314579963684,
+                    "image": "1：エボ・ブラック・メンソール・プルーム用/IMG_4810_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.3568239874728373,
+                    "mode": "geometric matching",
+                    "score": 0.2913614,
+                    "score_rerank": 0.5619320736407617
+                }
+            ],
+            "name": "エボ・ブラック・メンソール・プルーム用",
+            "score": 0.85,
+            "score_rerank": 0.6359965223521533,
+            "shelf_digit": "111",
+            "topn": [
+                "1：エボ・ブラック・メンソール・プルーム用",
+                "1：エボ・ブラック・メンソール・プルーム用/IMG_4808_crop_half.jpg_AUGROTATED_0",
+                "1：エボ・ブラック・メンソール・プルーム用/IMG_4811_crop_half.jpg_AUGROTATED_0",
+                "1：エボ・ブラック・メンソール・プルーム用/IMG_4809_crop_half.jpg_AUGROTATED_0",
+                "1：エボ・ブラック・メンソール・プルーム用/IMG_4806_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                836,
+                1006,
+                342,
+                391
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "7：メビウス・アップル・オプション・プルーム用/IMG_4445_crop_half.jpg_AUGROTATED_0",
+            "id": "7：メビウス・アップル・オプション・プルーム用",
+            "img_crop_id": "coHoHOO-DDDt3w",
+            "matched_files": [
+                {
+                    "drank_score": 0.9928954243659973,
+                    "image": "7：メビウス・アップル・オプション・プルーム用/IMG_4445_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.43991891498099434,
+                    "mode": "geometric matching",
+                    "score": 0.20138657,
+                    "score_rerank": 0.7492896738040975
+                },
+                {
+                    "drank_score": 0.9899964332580566,
+                    "image": "7：メビウス・アップル・オプション・プルーム用/IMG_4442_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.3793060402108164,
+                    "mode": "geometric matching",
+                    "score": 0.22843397,
+                    "score_rerank": 0.719417154040662
+                },
+                {
+                    "drank_score": 0.9880160689353943,
+                    "image": "7：メビウス・アップル・オプション・プルーム用/IMG_4450_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.3166486261878342,
+                    "mode": "geometric matching",
+                    "score": 0.20810199,
+                    "score_rerank": 0.7081586125369685
+                },
+                {
+                    "drank_score": 0.9852606654167175,
+                    "image": "7：メビウス・アップル・オプション・プルーム用/IMG_4449_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.2713396777220595,
+                    "mode": "geometric matching",
+                    "score": 0.22524023,
+                    "score_rerank": 0.6868840109416331
+                },
+                {
+                    "drank_score": 0.9628376960754395,
+                    "image": "7：メビウス・アップル・オプション・プルーム用/IMG_4451_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.29232909546767905,
+                    "mode": "geometric matching",
+                    "score": 0.2272579,
+                    "score_rerank": 0.6856468774629356
+                }
+            ],
+            "name": "メビウス・アップル・オプション・プルーム用",
+            "score": 0.85,
+            "score_rerank": 0.7492896738040975,
+            "shelf_digit": "881",
+            "topn": [
+                "7：メビウス・アップル・オプション・プルーム用",
+                "7：メビウス・アップル・オプション・プルーム用/IMG_4445_crop_half.jpg_AUGROTATED_0",
+                "7：メビウス・アップル・オプション・プルーム用/IMG_4450_crop_half.jpg_AUGROTATED_0",
+                "7：メビウス・アップル・オプション・プルーム用/IMG_4449_crop_half.jpg_AUGROTATED_0",
+                "7：メビウス・アップル・オプション・プルーム用/IMG_4451_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                496,
+                4212,
+                366,
+                584
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "",
+            "id": null,
+            "img_crop_id": "ZXmvaR-dMojWlA",
+            "matched_files": [],
+            "name": "マールボロ・アイス・ブラスト・メガ・8ボックス",
+            "score": 0.55,
+            "score_rerank": 0,
+            "shelf_digit": "620",
+            "topn": [
+                "36：マールボロ・メンソール・8・ボックス/IMG_4538_crop_half.jpg_AUGROTATED_0",
+                "36：マールボロ・メンソール・8・ボックス/IMG_4537_crop_half.jpg_AUGROTATED_0",
+                "36：マールボロ・メンソール・8・ボックス/IMG_4546_crop_half.jpg_AUGROTATED_0",
+                "36：マールボロ・メンソール・8・ボックス/IMG_4543_crop_half.jpg_AUGROTATED_0",
+                "36：マールボロ・メンソール・8・ボックス/IMG_4540_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                2250,
+                1543,
+                347,
+                527
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "32：メビウス・イーシリーズ・6/IMG_4564_crop_half.jpg_AUGROTATED_0",
+            "id": "32：メビウス・イーシリーズ・6",
+            "img_crop_id": "pp6OSH7SB3I-eQ",
+            "matched_files": [
+                {
+                    "drank_score": 0.9433500170707703,
+                    "image": "32：メビウス・イーシリーズ・6/IMG_4564_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.21511809554667274,
+                    "mode": "geometric matching",
+                    "score": 0.21188211,
+                    "score_rerank": 0.6627875897852329
+                },
+                {
+                    "drank_score": 0.8889898061752319,
+                    "image": "32：メビウス・イーシリーズ・6/IMG_4562_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.23292333122591324,
+                    "mode": "geometric matching",
+                    "score": 0.2144562,
+                    "score_rerank": 0.6507914612203436
+                },
+                {
+                    "drank_score": 0.8255199193954468,
+                    "image": "32：メビウス・イーシリーズ・6/IMG_4561_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.20645185153920023,
+                    "mode": "geometric matching",
+                    "score": 0.21984404,
+                    "score_rerank": 0.6216539152803942
+                },
+                {
+                    "drank_score": 0.7823017239570618,
+                    "image": "32：メビウス・イーシリーズ・6/IMG_4567_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.1965800045526353,
+                    "mode": "geometric matching",
+                    "score": 0.21127224,
+                    "score_rerank": 0.6091556225529091
+                },
+                {
+                    "drank_score": 0.6316109299659729,
+                    "image": "32：メビウス・イーシリーズ・6/IMG_4565_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.25445108850416337,
+                    "mode": "geometric matching",
+                    "score": 0.2325027,
+                    "score_rerank": 0.5728175255410409
+                }
+            ],
+            "name": "メビウス・スーパーライト",
+            "score": 0.85,
+            "score_rerank": 0.6627875897852329,
+            "shelf_digit": "220",
+            "topn": [
+                "32：メビウス・イーシリーズ・6",
+                "32：メビウス・イーシリーズ・6/IMG_4567_crop_half.jpg_AUGROTATED_0",
+                "32：メビウス・イーシリーズ・6/IMG_4564_crop_half.jpg_AUGROTATED_0",
+                "32：メビウス・イーシリーズ・6/IMG_4562_crop_half.jpg_AUGROTATED_0",
+                "32：メビウス・イーシリーズ・6/IMG_4561_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                2263,
+                3546,
+                343,
+                578
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "",
+            "id": null,
+            "img_crop_id": "gamYbqjMJI6epA",
+            "matched_files": [],
+            "name": "ラーク・ウルトラ・1・KSボックス",
+            "score": 0.55,
+            "score_rerank": 0,
+            "shelf_digit": "015",
+            "topn": [
+                "40：ケント・1・100・ボックス/IMG_4397_crop_half.jpg_AUGROTATED_0",
+                "37：マールボロ・ゴールド・ボックス/IMG_4558_crop_half.jpg_AUGROTATED_0",
+                "40：ケント・1・100・ボックス/IMG_4403_crop_half.jpg_AUGROTATED_0",
+                "40：ケント・1・100・ボックス/IMG_4405_crop_half.jpg_AUGROTATED_0",
+                "40：ケント・1・100・ボックス/IMG_4400_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                521,
+                2954,
+                336,
+                498
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "21：ネオ・クラシック・タバコ・hyper用/IMG_4420_crop_half.jpg_AUGROTATED_0",
+            "id": "21：ネオ・クラシック・タバコ・hyper用",
+            "img_crop_id": "N1T-Sk92klA1EQ",
+            "matched_files": [
+                {
+                    "drank_score": 0.9877525568008423,
+                    "image": "21：ネオ・クラシック・タバコ・hyper用/IMG_4420_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5814163228632507,
+                    "mode": "geometric matching",
+                    "score": 0.11989796,
+                    "score_rerank": 0.822791479899228
+                },
+                {
+                    "drank_score": 0.9963842630386353,
+                    "image": "21：ネオ・クラシック・タバコ・hyper用/IMG_4419_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5733641048222949,
+                    "mode": "geometric matching",
+                    "score": 0.123895705,
+                    "score_rerank": 0.8213662283582791
+                },
+                {
+                    "drank_score": 0.9844498038291931,
+                    "image": "21：ネオ・クラシック・タバコ・hyper用/IMG_4422_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5263410696822443,
+                    "mode": "geometric matching",
+                    "score": 0.12567544,
+                    "score_rerank": 0.8029670860534313
+                },
+                {
+                    "drank_score": 0.9826681017875671,
+                    "image": "21：ネオ・クラシック・タバコ・hyper用/IMG_4423_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5350960980453869,
+                    "mode": "geometric matching",
+                    "score": 0.1323685,
+                    "score_rerank": 0.8023818599498862
+                },
+                {
+                    "drank_score": 0.9900481700897217,
+                    "image": "21：ネオ・クラシック・タバコ・hyper用/IMG_4418_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.4770948243114242,
+                    "mode": "geometric matching",
+                    "score": 0.14693874,
+                    "score_rerank": 0.7813674023203437
+                }
+            ],
+            "name": "ネオ・クラシック・タバコ・hyper用",
+            "score": 0.85,
+            "score_rerank": 0.822791479899228,
+            "shelf_digit": "908",
+            "topn": [
+                "21：ネオ・クラシック・タバコ・hyper用",
+                "21：ネオ・クラシック・タバコ・hyper用/IMG_4420_crop_half.jpg_AUGROTATED_0",
+                "21：ネオ・クラシック・タバコ・hyper用/IMG_4419_crop_half.jpg_AUGROTATED_0",
+                "21：ネオ・クラシック・タバコ・hyper用/IMG_4422_crop_half.jpg_AUGROTATED_0",
+                "21：ネオ・クラシック・タバコ・hyper用/IMG_4423_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                2922,
+                250,
+                340,
+                517
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "32：メビウス・イーシリーズ・6/IMG_4562_crop_half.jpg_AUGROTATED_0",
+            "id": "32：メビウス・イーシリーズ・6",
+            "img_crop_id": "j6u2-3Vmro1KKw",
+            "matched_files": [
+                {
+                    "drank_score": 0.927854597568512,
+                    "image": "32：メビウス・イーシリーズ・6/IMG_4562_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.22000242984011076,
+                    "mode": "geometric matching",
+                    "score": 0.24739659,
+                    "score_rerank": 0.6453984722225868
+                },
+                {
+                    "drank_score": 0.8991286754608154,
+                    "image": "32：メビウス・イーシリーズ・6/IMG_4563_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.22088806575301612,
+                    "mode": "geometric matching",
+                    "score": 0.24445242,
+                    "score_rerank": 0.6382240543641495
+                },
+                {
+                    "drank_score": 0.8427304625511169,
+                    "image": "101：メビウス・ワン 20本入/IMG_2139_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.23281344547051994,
+                    "mode": "geometric matching",
+                    "score": 0.23563826,
+                    "score_rerank": 0.6284078684064911
+                },
+                {
+                    "drank_score": 0.8703590035438538,
+                    "image": "32：メビウス・イーシリーズ・6/IMG_4564_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.20468670025372857,
+                    "mode": "geometric matching",
+                    "score": 0.24282503,
+                    "score_rerank": 0.6253836991392747
+                },
+                {
+                    "drank_score": 0.8747490644454956,
+                    "image": "32：メビウス・イーシリーズ・6/IMG_4567_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.17688757028364727,
+                    "mode": "geometric matching",
+                    "score": 0.24533284,
+                    "score_rerank": 0.6173578544187429
+                }
+            ],
+            "name": "メビウス・ライト",
+            "score": 0.85,
+            "score_rerank": 0.6453984722225868,
+            "shelf_digit": "442",
+            "topn": [
+                "32：メビウス・イーシリーズ・6",
+                "101：メビウス・ワン 20本入/IMG_2139_crop_half.jpg_AUGROTATED_0",
+                "32：メビウス・イーシリーズ・6/IMG_4564_crop_half.jpg_AUGROTATED_0",
+                "32：メビウス・イーシリーズ・6/IMG_4563_crop_half.jpg_AUGROTATED_0",
+                "32：メビウス・イーシリーズ・6/IMG_4567_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                2220,
+                4790,
+                367,
+                668
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "39：ケント・3・100・ボックス/IMG_4665_crop_half.jpg_AUGROTATED_0",
+            "id": "39：ケント・3・100・ボックス",
+            "img_crop_id": "GKnl5CHGSlSceA",
+            "matched_files": [
+                {
+                    "drank_score": 0.6141849160194397,
+                    "image": "38：ケント・6・100・ボックス/IMG_4498_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.16987801905173122,
+                    "mode": "geometric matching",
+                    "score": 0.41133386,
+                    "score_rerank": 0.47068533652135125
+                },
+                {
+                    "drank_score": 0.3019574284553528,
+                    "image": "38：ケント・6・100・ボックス/IMG_4502_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.22717187154089347,
+                    "mode": "geometric matching",
+                    "score": 0.37226236,
+                    "score_rerank": 0.40983384599887385
+                },
+                {
+                    "drank_score": 0.33860382437705994,
+                    "image": "38：ケント・6・100・ボックス/IMG_4501_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.20871009948081615,
+                    "mode": "geometric matching",
+                    "score": 0.38944745,
+                    "score_rerank": 0.4084151971573628
+                }
+            ],
+            "name": "ケント・エス・シリーズ・スパーク・ミント1・100・ボックス",
+            "score": 0.85,
+            "score_rerank": 0.5031082967019123,
+            "shelf_digit": "636",
+            "topn": [
+                "38：ケント・6・100・ボックス",
+                "38：ケント・6・100・ボックス/IMG_4502_crop_half.jpg_AUGROTATED_0",
+                "39：ケント・3・100・ボックス/IMG_4665_crop_half.jpg_AUGROTATED_0",
+                "38：ケント・6・100・ボックス/IMG_4501_crop_half.jpg_AUGROTATED_0",
+                "39：ケント・3・100・ボックス/IMG_4669_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                3551,
+                3508,
+                354,
+                620
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "38：ケント・6・100・ボックス/IMG_4505_crop_half.jpg_AUGROTATED_0",
+            "id": "38：ケント・6・100・ボックス",
+            "img_crop_id": "qxXdyk2UdLci4A",
+            "matched_files": [
+                {
+                    "drank_score": 0.9376730918884277,
+                    "image": "38：ケント・6・100・ボックス/IMG_4505_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6603249488196179,
+                    "mode": "geometric matching",
+                    "score": 0.08774936,
+                    "score_rerank": 0.8442996682124138
+                },
+                {
+                    "drank_score": 0.946785032749176,
+                    "image": "38：ケント・6・100・ボックス/IMG_4506_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6129402049995255,
+                    "mode": "geometric matching",
+                    "score": 0.076607764,
+                    "score_rerank": 0.8372744657246104
+                },
+                {
+                    "drank_score": 0.9095156192779541,
+                    "image": "38：ケント・6・100・ボックス/IMG_4504_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6416609339301798,
+                    "mode": "geometric matching",
+                    "score": 0.08921242,
+                    "score_rerank": 0.8296679979624402
+                },
+                {
+                    "drank_score": 0.92867112159729,
+                    "image": "38：ケント・6・100・ボックス/IMG_4507_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.4222281405365781,
+                    "mode": "geometric matching",
+                    "score": 0.12920064,
+                    "score_rerank": 0.7535895226401604
+                },
+                {
+                    "drank_score": 0.6826746463775635,
+                    "image": "38：ケント・6・100・ボックス/IMG_4508_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5128591557516009,
+                    "mode": "geometric matching",
+                    "score": 0.13403523,
+                    "score_rerank": 0.7050460486387493
+                }
+            ],
+            "name": "ケント・6・100・ボックス",
+            "score": 0.85,
+            "score_rerank": 0.8442996682124138,
+            "shelf_digit": "630",
+            "topn": [
+                "38：ケント・6・100・ボックス",
+                "38：ケント・6・100・ボックス/IMG_4506_crop_half.jpg_AUGROTATED_0",
+                "38：ケント・6・100・ボックス/IMG_4505_crop_half.jpg_AUGROTATED_0",
+                "38：ケント・6・100・ボックス/IMG_4504_crop_half.jpg_AUGROTATED_0",
+                "38：ケント・6・100・ボックス/IMG_4507_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                840,
+                2312,
+                316,
+                424
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "17：センティア アイシー レッド/IMG_4829_crop_half.jpg_AUGROTATED_0",
+            "id": "17：センティア アイシー レッド",
+            "img_crop_id": "YPugS-P42mX5Jg",
+            "matched_files": [
+                {
+                    "drank_score": 0.9894775748252869,
+                    "image": "17：センティア アイシー レッド/IMG_4829_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.828525242420517,
+                    "mode": "geometric matching",
+                    "score": 0.14444745,
+                    "score_rerank": 0.8876218651737411
+                },
+                {
+                    "drank_score": 0.9930775165557861,
+                    "image": "17：センティア アイシー レッド/IMG_4826_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.7908756638974723,
+                    "mode": "geometric matching",
+                    "score": 0.19741333,
+                    "score_rerank": 0.8562206221359776
+                },
+                {
+                    "drank_score": 0.9805164933204651,
+                    "image": "17：センティア アイシー レッド/IMG_4828_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.705411257346558,
+                    "mode": "geometric matching",
+                    "score": 0.13593215,
+                    "score_rerank": 0.851405465200107
+                },
+                {
+                    "drank_score": 0.9870770573616028,
+                    "image": "17：センティア アイシー レッド/IMG_4827_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.7242163501820307,
+                    "mode": "geometric matching",
+                    "score": 0.2391699,
+                    "score_rerank": 0.81772006226309
+                },
+                {
+                    "drank_score": 0.9850935935974121,
+                    "image": "17：センティア アイシー レッド/IMG_4830_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.7175578884341232,
+                    "mode": "geometric matching",
+                    "score": 0.24012256,
+                    "score_rerank": 0.8147464206094606
+                }
+            ],
+            "name": "センティア ・アイシー レッド",
+            "score": 0.85,
+            "score_rerank": 0.8876218651737411,
+            "shelf_digit": "728",
+            "topn": [
+                "17：センティア アイシー レッド",
+                "17：センティア アイシー レッド/IMG_4828_crop_half.jpg_AUGROTATED_0",
+                "17：センティア アイシー レッド/IMG_4829_crop_half.jpg_AUGROTATED_0",
+                "17：センティア アイシー レッド/IMG_4826_crop_half.jpg_AUGROTATED_0",
+                "17：センティア アイシー レッド/IMG_4827_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                1163,
+                1023,
+                332,
+                396
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "8：メビウス・ブラック・コールド・メンソール・プルーム用/IMG_4610_crop_half.jpg_AUGROTATED_0",
+            "id": "8：メビウス・ブラック・コールド・メンソール・プルーム用",
+            "img_crop_id": "LubHSbjMWWukyg",
+            "matched_files": [
+                {
+                    "drank_score": 0.9858183264732361,
+                    "image": "8：メビウス・ブラック・コールド・メンソール・プルーム用/IMG_4610_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.4688418430100374,
+                    "mode": "geometric matching",
+                    "score": 0.19602561,
+                    "score_rerank": 0.7579878068449821
+                },
+                {
+                    "drank_score": 0.9858601093292236,
+                    "image": "8：メビウス・ブラック・コールド・メンソール・プルーム用/IMG_4611_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.45935714696802576,
+                    "mode": "geometric matching",
+                    "score": 0.2021349,
+                    "score_rerank": 0.7527112168891749
+                },
+                {
+                    "drank_score": 0.9940083026885986,
+                    "image": "8：メビウス・ブラック・コールド・メンソール・プルーム用/IMG_4614_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.4401756712725984,
+                    "mode": "geometric matching",
+                    "score": 0.20581418,
+                    "score_rerank": 0.7479295201883591
+                },
+                {
+                    "drank_score": 0.9662730693817139,
+                    "image": "8：メビウス・ブラック・コールド・メンソール・プルーム用/IMG_4612_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.4391516479190093,
+                    "mode": "geometric matching",
+                    "score": 0.19541079,
+                    "score_rerank": 0.743463099190217
+                },
+                {
+                    "drank_score": 0.9632239937782288,
+                    "image": "8：メビウス・ブラック・コールド・メンソール・プルーム用/IMG_4615_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.26451006284608536,
+                    "mode": "geometric matching",
+                    "score": 0.20309484,
+                    "score_rerank": 0.6870822809872943
+                }
+            ],
+            "name": "メビウス・ブラック・コールド・メンソール・プルーム用",
+            "score": 0.85,
+            "score_rerank": 0.7579878068449821,
+            "shelf_digit": "882",
+            "topn": [
+                "8：メビウス・ブラック・コールド・メンソール・プルーム用",
+                "8：メビウス・ブラック・コールド・メンソール・プルーム用/IMG_4612_crop_half.jpg_AUGROTATED_0",
+                "8：メビウス・ブラック・コールド・メンソール・プルーム用/IMG_4610_crop_half.jpg_AUGROTATED_0",
+                "8：メビウス・ブラック・コールド・メンソール・プルーム用/IMG_4611_crop_half.jpg_AUGROTATED_0",
+                "8：メビウス・ブラック・コールド・メンソール・プルーム用/IMG_4615_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                1488,
+                1015,
+                324,
+                374
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "9：キャメル・メンソール・ベリー・プルーム用/IMG_4657_crop_half.jpg_AUGROTATED_0",
+            "id": "9：キャメル・メンソール・ベリー・プルーム用",
+            "img_crop_id": "sitlAfOnMBffwg",
+            "matched_files": [
+                {
+                    "drank_score": 0.857455849647522,
+                    "image": "9：キャメル・メンソール・ベリー・プルーム用/IMG_4657_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5502307109813265,
+                    "mode": "geometric matching",
+                    "score": 0.1429227,
+                    "score_rerank": 0.7651368881886546
+                },
+                {
+                    "drank_score": 0.913963258266449,
+                    "image": "9：キャメル・メンソール・ベリー・プルーム用/IMG_4654_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5664635979420779,
+                    "mode": "geometric matching",
+                    "score": 0.25061154,
+                    "score_rerank": 0.7438834408625581
+                },
+                {
+                    "drank_score": 0.8343030214309692,
+                    "image": "9：キャメル・メンソール・ベリー・プルーム用/IMG_4656_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5188467036367026,
+                    "mode": "geometric matching",
+                    "score": 0.24695522,
+                    "score_rerank": 0.7071628295203015
+                },
+                {
+                    "drank_score": 0.8007065653800964,
+                    "image": "9：キャメル・メンソール・ベリー・プルーム用/IMG_4655_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.47851073026216107,
+                    "mode": "geometric matching",
+                    "score": 0.2393099,
+                    "score_rerank": 0.6880412286926774
+                },
+                {
+                    "drank_score": 0.6426940560340881,
+                    "image": "9：キャメル・メンソール・ベリー・プルーム用/IMG_4660_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.34860211712584804,
+                    "mode": "geometric matching",
+                    "score": 0.22546732,
+                    "score_rerank": 0.6072019239479809
+                }
+            ],
+            "name": "キャメル・メンソール・ベリー・プルーム用",
+            "score": 0.85,
+            "score_rerank": 0.7651368881886546,
+            "shelf_digit": "883",
+            "topn": [
+                "9：キャメル・メンソール・ベリー・プルーム用",
+                "9：キャメル・メンソール・ベリー・プルーム用/IMG_4657_crop_half.jpg_AUGROTATED_0",
+                "9：キャメル・メンソール・ベリー・プルーム用/IMG_4660_crop_half.jpg_AUGROTATED_0",
+                "9：キャメル・メンソール・ベリー・プルーム用/IMG_4655_crop_half.jpg_AUGROTATED_0",
+                "9：キャメル・メンソール・ベリー・プルーム用/IMG_4656_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                1161,
+                330,
+                330,
+                400
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "3：エボ・トロピカル・バナナ・クリスタル・プルーム用/IMG_4786_crop_half.jpg_AUGROTATED_0",
+            "id": "3：エボ・トロピカル・バナナ・クリスタル・プルーム用",
+            "img_crop_id": "UpipoflJzooA-Q",
+            "matched_files": [
+                {
+                    "drank_score": 0.8922171592712402,
+                    "image": "3：エボ・トロピカル・バナナ・クリスタル・プルーム用/IMG_4786_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5854674666870077,
+                    "mode": "geometric matching",
+                    "score": 0.2378431,
+                    "score_rerank": 0.7481681477874744
+                },
+                {
+                    "drank_score": 0.8715235590934753,
+                    "image": "3：エボ・トロピカル・バナナ・クリスタル・プルーム用/IMG_4785_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5229113942361334,
+                    "mode": "geometric matching",
+                    "score": 0.2519008,
+                    "score_rerank": 0.7175701659988827
+                },
+                {
+                    "drank_score": 0.7964068055152893,
+                    "image": "3：エボ・トロピカル・バナナ・クリスタル・プルーム用/IMG_4788_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5725628386182255,
+                    "mode": "geometric matching",
+                    "score": 0.25366354,
+                    "score_rerank": 0.7092254772400544
+                },
+                {
+                    "drank_score": 0.7799332737922668,
+                    "image": "3：エボ・トロピカル・バナナ・クリスタル・プルーム用/IMG_4790_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.528137242412825,
+                    "mode": "geometric matching",
+                    "score": 0.28354186,
+                    "score_rerank": 0.6790044108615276
+                },
+                {
+                    "drank_score": 0.6207987666130066,
+                    "image": "3：エボ・トロピカル・バナナ・クリスタル・プルーム用/IMG_4787_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5614778288869056,
+                    "mode": "geometric matching",
+                    "score": 0.28464305,
+                    "score_rerank": 0.6408257586499736
+                }
+            ],
+            "name": "エボ・トロピカル・バナナ・クリスタル・プルーム用",
+            "score": 0.85,
+            "score_rerank": 0.7481681477874744,
+            "shelf_digit": "113",
+            "topn": [
+                "3：エボ・トロピカル・バナナ・クリスタル・プルーム用",
+                "3：エボ・トロピカル・バナナ・クリスタル・プルーム用/IMG_4786_crop_half.jpg_AUGROTATED_0",
+                "3：エボ・トロピカル・バナナ・クリスタル・プルーム用/IMG_4785_crop_half.jpg_AUGROTATED_0",
+                "3：エボ・トロピカル・バナナ・クリスタル・プルーム用/IMG_4788_crop_half.jpg_AUGROTATED_0",
+                "3：エボ・トロピカル・バナナ・クリスタル・プルーム用/IMG_4790_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                1486,
+                1648,
+                332,
+                471
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "14：テリア シャイン パール/IMG_4687_crop_half.jpg_AUGROTATED_0",
+            "id": "14：テリア シャイン パール",
+            "img_crop_id": "rLNpRmkp_paTyw",
+            "matched_files": [
+                {
+                    "drank_score": 0.9959868788719177,
+                    "image": "14：テリア シャイン パール/IMG_4687_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.7236741709296777,
+                    "mode": "geometric matching",
+                    "score": 0.37535822,
+                    "score_rerank": 0.7657550269404786
+                },
+                {
+                    "drank_score": 0.9967451095581055,
+                    "image": "14：テリア シャイン パール/IMG_4685_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.7022531437638059,
+                    "mode": "geometric matching",
+                    "score": 0.3619011,
+                    "score_rerank": 0.7649390359965734
+                },
+                {
+                    "drank_score": 0.9967670440673828,
+                    "image": "14：テリア シャイン パール/IMG_4684_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.7617504398739565,
+                    "mode": "geometric matching",
+                    "score": 0.4269569,
+                    "score_rerank": 0.7567724851824018
+                },
+                {
+                    "drank_score": 0.9972713589668274,
+                    "image": "14：テリア シャイン パール/IMG_4686_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.7009362023994152,
+                    "mode": "geometric matching",
+                    "score": 0.4034056,
+                    "score_rerank": 0.7481000284098728
+                },
+                {
+                    "drank_score": 0.9966903924942017,
+                    "image": "16：テリア サン パール/IMG_4706_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6929953712549456,
+                    "mode": "geometric matching",
+                    "score": 0.4347142,
+                    "score_rerank": 0.7330200491247442
+                }
+            ],
+            "name": "テリア・ シャイン・ パール",
+            "score": 0.85,
+            "score_rerank": 0.7657550269404786,
+            "shelf_digit": "568",
+            "topn": [
+                "14：テリア シャイン パール",
+                "14：テリア シャイン パール/IMG_4685_crop_half.jpg_AUGROTATED_0",
+                "14：テリア シャイン パール/IMG_4687_crop_half.jpg_AUGROTATED_0",
+                "14：テリア シャイン パール/IMG_4686_crop_half.jpg_AUGROTATED_0",
+                "14：テリア シャイン パール/IMG_4684_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                844,
+                330,
+                328,
+                400
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "2：エボ・フレッシュ・ミント・プルーム用/IMG_4817_crop_half.jpg_AUGROTATED_0",
+            "id": "2：エボ・フレッシュ・ミント・プルーム用",
+            "img_crop_id": "STtfDH6FALY7Fg",
+            "matched_files": [
+                {
+                    "drank_score": 0.8308119177818298,
+                    "image": "2：エボ・フレッシュ・ミント・プルーム用/IMG_4817_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5453878957409928,
+                    "mode": "geometric matching",
+                    "score": 0.20781577,
+                    "score_rerank": 0.7297336360568467
+                },
+                {
+                    "drank_score": 0.7778675556182861,
+                    "image": "2：エボ・フレッシュ・ミント・プルーム用/IMG_4820_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5012686417142165,
+                    "mode": "geometric matching",
+                    "score": 0.20440799,
+                    "score_rerank": 0.7019776631997507
+                },
+                {
+                    "drank_score": 0.6606040596961975,
+                    "image": "2：エボ・フレッシュ・ミント・プルーム用/IMG_4818_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5329733869757156,
+                    "mode": "geometric matching",
+                    "score": 0.20595157,
+                    "score_rerank": 0.6756926060015739
+                },
+                {
+                    "drank_score": 0.4800509512424469,
+                    "image": "2：エボ・フレッシュ・ミント・プルーム用/IMG_4821_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5681009316734253,
+                    "mode": "geometric matching",
+                    "score": 0.20061648,
+                    "score_rerank": 0.6341989728747617
+                },
+                {
+                    "drank_score": 0.36515748500823975,
+                    "image": "2：エボ・フレッシュ・ミント・プルーム用/IMG_4816_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.4800578669481871,
+                    "mode": "geometric matching",
+                    "score": 0.21283984,
+                    "score_rerank": 0.5684286695869281
+                }
+            ],
+            "name": "エボ・フレッシュ・ミント・プルーム用",
+            "score": 0.85,
+            "score_rerank": 0.7297336360568467,
+            "shelf_digit": "112",
+            "topn": [
+                "2：エボ・フレッシュ・ミント・プルーム用",
+                "2：エボ・フレッシュ・ミント・プルーム用/IMG_4821_crop_half.jpg_AUGROTATED_0",
+                "2：エボ・フレッシュ・ミント・プルーム用/IMG_4820_crop_half.jpg_AUGROTATED_0",
+                "2：エボ・フレッシュ・ミント・プルーム用/IMG_4818_crop_half.jpg_AUGROTATED_0",
+                "2：エボ・フレッシュ・ミント・プルーム用/IMG_4817_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                3562,
+                2259,
+                332,
+                517
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "",
+            "id": null,
+            "img_crop_id": "AoWm6TmRNn5DDQ",
+            "matched_files": [],
+            "name": "セブンスター",
+            "score": 0.55,
+            "score_rerank": 0,
+            "shelf_digit": "229",
+            "topn": [
+                "40：ケント・1・100・ボックス/IMG_4400_crop_half.jpg_AUGROTATED_0",
+                "40：ケント・1・100・ボックス/IMG_4397_crop_half.jpg_AUGROTATED_0",
+                "18：センティア スムース バイオレット/IMG_4460_crop_half.jpg_AUGROTATED_0",
+                "101：メビウス・ワン 20本入/IMG_2145_crop_half.jpg_AUGROTATED_0",
+                "18：センティア スムース バイオレット/IMG_4456_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                1483,
+                359,
+                328,
+                376
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "4：エボ・トロピカル・ベリー・クリスタル・プルーム用/IMG_4393_crop_half.jpg_AUGROTATED_0",
+            "id": "4：エボ・トロピカル・ベリー・クリスタル・プルーム用",
+            "img_crop_id": "5PAO-dPZU3AX5w",
+            "matched_files": [
+                {
+                    "drank_score": 0.6732375621795654,
+                    "image": "4：エボ・トロピカル・ベリー・クリスタル・プルーム用/IMG_4393_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.29617187460880084,
+                    "mode": "geometric matching",
+                    "score": 0.35931635,
+                    "score_rerank": 0.5470962910365099
+                },
+                {
+                    "drank_score": 0.43426865339279175,
+                    "image": "4：エボ・トロピカル・ベリー・クリスタル・プルーム用/IMG_4376_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.40237855175948556,
+                    "mode": "geometric matching",
+                    "score": 0.33251178,
+                    "score_rerank": 0.5179894495456832
+                },
+                {
+                    "drank_score": 0.3943459689617157,
+                    "image": "4：エボ・トロピカル・ベリー・クリスタル・プルーム用/IMG_4392_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.4191899324785896,
+                    "mode": "geometric matching",
+                    "score": 0.32128042,
+                    "score_rerank": 0.5155486024320916
+                },
+                {
+                    "drank_score": 0.538598358631134,
+                    "image": "4：エボ・トロピカル・ベリー・クリスタル・プルーム用/IMG_4377_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.29496982552152895,
+                    "mode": "geometric matching",
+                    "score": 0.36052376,
+                    "score_rerank": 0.5058609512457989
+                },
+                {
+                    "drank_score": 0.4485897719860077,
+                    "image": "4：エボ・トロピカル・ベリー・クリスタル・プルーム用/IMG_4391_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.3047081212320113,
+                    "mode": "geometric matching",
+                    "score": 0.3973118,
+                    "score_rerank": 0.4670646479654057
+                }
+            ],
+            "name": "エボ・トロピカル・ベリー・クリスタル・プルーム用",
+            "score": 0.85,
+            "score_rerank": 0.5470962910365099,
+            "shelf_digit": "114",
+            "topn": [
+                "4：エボ・トロピカル・ベリー・クリスタル・プルーム用",
+                "4：エボ・トロピカル・ベリー・クリスタル・プルーム用/IMG_4392_crop_half.jpg_AUGROTATED_0",
+                "4：エボ・トロピカル・ベリー・クリスタル・プルーム用/IMG_4376_crop_half.jpg_AUGROTATED_0",
+                "4：エボ・トロピカル・ベリー・クリスタル・プルーム用/IMG_4393_crop_half.jpg_AUGROTATED_0",
+                "4：エボ・トロピカル・ベリー・クリスタル・プルーム用/IMG_4377_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                1812,
+                981,
+                331,
+                426
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "10：キャメル・スムース・プルーム用/IMG_4650_crop_half.jpg_AUGROTATED_0",
+            "id": "10：キャメル・スムース・プルーム用",
+            "img_crop_id": "CL9sTQAVppBqmg",
+            "matched_files": [
+                {
+                    "drank_score": 0.9779679179191589,
+                    "image": "10：キャメル・スムース・プルーム用/IMG_4650_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5527775305186966,
+                    "mode": "geometric matching",
+                    "score": 0.23109412,
+                    "score_rerank": 0.7667859865313568
+                },
+                {
+                    "drank_score": 0.9746987223625183,
+                    "image": "10：キャメル・スムース・プルーム用/IMG_4647_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.4786500770680584,
+                    "mode": "geometric matching",
+                    "score": 0.18829495,
+                    "score_rerank": 0.760686659829173
+                },
+                {
+                    "drank_score": 0.9686582088470459,
+                    "image": "10：キャメル・スムース・プルーム用/IMG_4651_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.46301352258381157,
+                    "mode": "geometric matching",
+                    "score": 0.23378384,
+                    "score_rerank": 0.7359879834292572
+                },
+                {
+                    "drank_score": 0.9206892848014832,
+                    "image": "10：キャメル・スムース・プルーム用/IMG_4648_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.4753832306555634,
+                    "mode": "geometric matching",
+                    "score": 0.24082911,
+                    "score_rerank": 0.722490110637114
+                },
+                {
+                    "drank_score": 0.9107353091239929,
+                    "image": "10：キャメル・スムース・プルーム用/IMG_4646_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.4120042028932236,
+                    "mode": "geometric matching",
+                    "score": 0.2627045,
+                    "score_rerank": 0.691740053605165
+                }
+            ],
+            "name": "キャメル・スムース・プルーム用",
+            "score": 0.85,
+            "score_rerank": 0.7667859865313568,
+            "shelf_digit": "884",
+            "topn": [
+                "10：キャメル・スムース・プルーム用",
+                "10：キャメル・スムース・プルーム用/IMG_4647_crop_half.jpg_AUGROTATED_0",
+                "10：キャメル・スムース・プルーム用/IMG_4650_crop_half.jpg_AUGROTATED_0",
+                "10：キャメル・スムース・プルーム用/IMG_4651_crop_half.jpg_AUGROTATED_0",
+                "10：キャメル・スムース・プルーム用/IMG_4648_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                1801,
+                324,
+                342,
+                444
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "5：エボ・ディープ・レギュラー・プルーム用/IMG_4514_crop_half.jpg_AUGROTATED_0",
+            "id": "5：エボ・ディープ・レギュラー・プルーム用",
+            "img_crop_id": "83jXdY2eO9HRGA",
+            "matched_files": [
+                {
+                    "drank_score": 0.8317886590957642,
+                    "image": "5：エボ・ディープ・レギュラー・プルーム用/IMG_4514_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5026585118467415,
+                    "mode": "geometric matching",
+                    "score": 0.3286587,
+                    "score_rerank": 0.6688706712827517
+                },
+                {
+                    "drank_score": 0.833870530128479,
+                    "image": "5：エボ・ディープ・レギュラー・プルーム用/IMG_4511_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.42350584794888735,
+                    "mode": "geometric matching",
+                    "score": 0.34023553,
+                    "score_rerank": 0.6411187014232099
+                },
+                {
+                    "drank_score": 0.8930254578590393,
+                    "image": "5：エボ・ディープ・レギュラー・プルーム用/IMG_4515_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.38439113645051604,
+                    "mode": "geometric matching",
+                    "score": 0.3757046,
+                    "score_rerank": 0.6329431382928666
+                },
+                {
+                    "drank_score": 0.8271618485450745,
+                    "image": "5：エボ・ディープ・レギュラー・プルーム用/IMG_4512_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.3907095031406059,
+                    "mode": "geometric matching",
+                    "score": 0.3634436,
+                    "score_rerank": 0.619983965505704
+                },
+                {
+                    "drank_score": 0.7359729409217834,
+                    "image": "5：エボ・ディープ・レギュラー・プルーム用/IMG_4510_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.3778847998453738,
+                    "mode": "geometric matching",
+                    "score": 0.36024183,
+                    "score_rerank": 0.5900605902301472
+                }
+            ],
+            "name": "エボ・ディープ・レギュラー・プルーム用",
+            "score": 0.85,
+            "score_rerank": 0.6688706712827517,
+            "shelf_digit": "115",
+            "topn": [
+                "5：エボ・ディープ・レギュラー・プルーム用",
+                "5：エボ・ディープ・レギュラー・プルーム用/IMG_4514_crop_half.jpg_AUGROTATED_0",
+                "5：エボ・ディープ・レギュラー・プルーム用/IMG_4511_crop_half.jpg_AUGROTATED_0",
+                "5：エボ・ディープ・レギュラー・プルーム用/IMG_4510_crop_half.jpg_AUGROTATED_0",
+                "5：エボ・ディープ・レギュラー・プルーム用/IMG_4512_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                1798,
+                1624,
+                328,
+                474
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "15：テリア リビエラ パール/IMG_4718_crop_half.jpg_AUGROTATED_0",
+            "id": "15：テリア リビエラ パール",
+            "img_crop_id": "ktAxYhP4jEqglg",
+            "matched_files": [
+                {
+                    "drank_score": 0.9921488761901855,
+                    "image": "15：テリア リビエラ パール/IMG_4718_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6995596632186445,
+                    "mode": "geometric matching",
+                    "score": 0.2876053,
+                    "score_rerank": 0.7924704418226489
+                },
+                {
+                    "drank_score": 0.9959259033203125,
+                    "image": "15：テリア リビエラ パール/IMG_4716_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.7299785472480489,
+                    "mode": "geometric matching",
+                    "score": 0.37416786,
+                    "score_rerank": 0.7681041911705083
+                },
+                {
+                    "drank_score": 0.9958068132400513,
+                    "image": "15：テリア リビエラ パール/IMG_4720_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.7027617561339505,
+                    "mode": "geometric matching",
+                    "score": 0.35813653,
+                    "score_rerank": 0.7663159588122005
+                },
+                {
+                    "drank_score": 0.9934378266334534,
+                    "image": "16：テリア サン パール/IMG_4706_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6685878725716392,
+                    "mode": "geometric matching",
+                    "score": 0.35139954,
+                    "score_rerank": 0.7580478937615277
+                },
+                {
+                    "drank_score": 0.9971218705177307,
+                    "image": "15：テリア リビエラ パール/IMG_4717_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6740994652219363,
+                    "mode": "geometric matching",
+                    "score": 0.37446356,
+                    "score_rerank": 0.7515809767219002
+                }
+            ],
+            "name": "テリア ・リビエラ ・パール",
+            "score": 0.85,
+            "score_rerank": 0.7924704418226489,
+            "shelf_digit": "569",
+            "topn": [
+                "15：テリア リビエラ パール",
+                "15：テリア リビエラ パール/IMG_4718_crop_half.jpg_AUGROTATED_0",
+                "16：テリア サン パール/IMG_4706_crop_half.jpg_AUGROTATED_0",
+                "15：テリア リビエラ パール/IMG_4720_crop_half.jpg_AUGROTATED_0",
+                "15：テリア リビエラ パール/IMG_4716_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                1161,
+                2310,
+                331,
+                460
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "18：センティア スムース バイオレット/IMG_4459_crop_half.jpg_AUGROTATED_0",
+            "id": "18：センティア スムース バイオレット",
+            "img_crop_id": "WQD6Lpf4aFALFw",
+            "matched_files": [
+                {
+                    "drank_score": 0.9889956712722778,
+                    "image": "18：センティア スムース バイオレット/IMG_4459_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.7292004025316805,
+                    "mode": "geometric matching",
+                    "score": 0.2639413,
+                    "score_rerank": 0.8098823021411875
+                },
+                {
+                    "drank_score": 0.9865682125091553,
+                    "image": "18：センティア スムース バイオレット/IMG_4458_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6517362696031723,
+                    "mode": "geometric matching",
+                    "score": 0.2859261,
+                    "score_rerank": 0.7771209046336982
+                },
+                {
+                    "drank_score": 0.9899988770484924,
+                    "image": "18：センティア スムース バイオレット/IMG_4457_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6761606243448355,
+                    "mode": "geometric matching",
+                    "score": 0.30809104,
+                    "score_rerank": 0.7766114344179984
+                },
+                {
+                    "drank_score": 0.9912434816360474,
+                    "image": "18：センティア スムース バイオレット/IMG_4455_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6240742634862367,
+                    "mode": "geometric matching",
+                    "score": 0.33828026,
+                    "score_rerank": 0.7492832195366852
+                },
+                {
+                    "drank_score": 0.9830746054649353,
+                    "image": "17：センティア アイシー レッド/IMG_4829_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.4242488655778983,
+                    "mode": "geometric matching",
+                    "score": 0.3373773,
+                    "score_rerank": 0.6872461213128501
+                }
+            ],
+            "name": "センティア ・スムース・ バイオレット",
+            "score": 0.85,
+            "score_rerank": 0.8098823021411875,
+            "shelf_digit": "729",
+            "topn": [
+                "18：センティア スムース バイオレット",
+                "18：センティア スムース バイオレット/IMG_4459_crop_half.jpg_AUGROTATED_0",
+                "18：センティア スムース バイオレット/IMG_4458_crop_half.jpg_AUGROTATED_0",
+                "18：センティア スムース バイオレット/IMG_4457_crop_half.jpg_AUGROTATED_0",
+                "17：センティア アイシー レッド/IMG_4829_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                1498,
+                2312,
+                315,
+                451
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "19：センティア・ピュア・ティーク/IMG_4465_crop_half.jpg_AUGROTATED_0",
+            "id": "19：センティア・ピュア・ティーク",
+            "img_crop_id": "lNH8Gfmi4IzHLg",
+            "matched_files": [
+                {
+                    "drank_score": 0.9939559102058411,
+                    "image": "19：センティア・ピュア・ティーク/IMG_4465_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.7387107974683329,
+                    "mode": "geometric matching",
+                    "score": 0.2179423,
+                    "score_rerank": 0.8326230923022522
+                },
+                {
+                    "drank_score": 0.9865582585334778,
+                    "image": "19：センティア・ピュア・ティーク/IMG_4462_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.7563177552089462,
+                    "mode": "geometric matching",
+                    "score": 0.2556916,
+                    "score_rerank": 0.8205861641227272
+                },
+                {
+                    "drank_score": 0.9837892055511475,
+                    "image": "19：センティア・ピュア・ティーク/IMG_4464_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.6241966798006414,
+                    "mode": "geometric matching",
+                    "score": 0.23623955,
+                    "score_rerank": 0.7878999456055367
+                },
+                {
+                    "drank_score": 0.9917287230491638,
+                    "image": "20：センティア スムース ゴールド/IMG_4731_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5325010824680716,
+                    "mode": "geometric matching",
+                    "score": 0.26854312,
+                    "score_rerank": 0.7498516936551707
+                },
+                {
+                    "drank_score": 0.9924736022949219,
+                    "image": "20：センティア スムース ゴールド/IMG_4728_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.49701708001204403,
+                    "mode": "geometric matching",
+                    "score": 0.26481074,
+                    "score_rerank": 0.7409229086920899
+                }
+            ],
+            "name": "センティア・ピュア・ティーク",
+            "score": 0.85,
+            "score_rerank": 0.8326230923022522,
+            "shelf_digit": "730",
+            "topn": [
+                "19：センティア・ピュア・ティーク",
+                "19：センティア・ピュア・ティーク/IMG_4465_crop_half.jpg_AUGROTATED_0",
+                "19：センティア・ピュア・ティーク/IMG_4464_crop_half.jpg_AUGROTATED_0",
+                "19：センティア・ピュア・ティーク/IMG_4462_crop_half.jpg_AUGROTATED_0",
+                "20：センティア スムース ゴールド/IMG_4728_crop_half.jpg_AUGROTATED_0"
+            ]
+        },
+        {
+            "bboxes": [
+                1814,
+                2292,
+                320,
+                466
+            ],
+            "class": 1,
+            "confirm": 1,
+            "filepath": "20：センティア スムース ゴールド/IMG_4731_crop_half.jpg_AUGROTATED_0",
+            "id": "20：センティア スムース ゴールド",
+            "img_crop_id": "2oTEAwwPp3IrSw",
+            "matched_files": [
+                {
+                    "drank_score": 0.9724752902984619,
+                    "image": "20：センティア スムース ゴールド/IMG_4731_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.7217886933748157,
+                    "mode": "geometric matching",
+                    "score": 0.20167094,
+                    "score_rerank": 0.8276108191019833
+                },
+                {
+                    "drank_score": 0.9765530228614807,
+                    "image": "20：センティア スムース ゴールド/IMG_4728_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.7375441129142701,
+                    "mode": "geometric matching",
+                    "score": 0.24676925,
+                    "score_rerank": 0.8155214407327253
+                },
+                {
+                    "drank_score": 0.9245991706848145,
+                    "image": "20：センティア スムース ゴールド/IMG_4730_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.5960315615044587,
+                    "mode": "geometric matching",
+                    "score": 0.23744136,
+                    "score_rerank": 0.761212675656782
+                },
+                {
+                    "drank_score": 0.956334114074707,
+                    "image": "19：センティア・ピュア・ティーク/IMG_4465_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.49936445852391986,
+                    "mode": "geometric matching",
+                    "score": 0.24604148,
+                    "score_rerank": 0.7382929797795881
+                },
+                {
+                    "drank_score": 0.927048921585083,
+                    "image": "19：センティア・ピュア・ティーク/IMG_4464_crop_half.jpg_AUGROTATED_0",
+                    "matching_score": 0.4556825727799417,
+                    "mode": "geometric matching",
+                    "score": 0.25132048,
+                    "score_rerank": 0.7142912563095074
+                }
+            ],
+            "name": "センティア・ スムース・ ゴールド",
+            "score": 0.85,
+            "score_rerank": 0.8276108191019833,
+            "shelf_digit": "731",
+            "topn": [
+                "20：センティア スムース ゴールド",
+                "20：センティア スムース ゴールド/IMG_4731_crop_half.jpg_AUGROTATED_0",
+                "20：センティア スムース ゴールド/IMG_4730_crop_half.jpg_AUGROTATED_0",
+                "19：センティア・ピュア・ティーク/IMG_4465_crop_half.jpg_AUGROTATED_0",
+                "20：センティア スムース ゴールド/IMG_4728_crop_half.jpg_AUGROTATED_0"
+            ]
+        }
+    ],
+    "start_time": 1776671707.0796947,
+    "status": 0
+}

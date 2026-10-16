@@ -45,9 +45,6 @@ export async function banUser(userId: string) {
     banReason: "Banned by admin",
   });
 
-  console.log("data:", data);
-  console.log("error:", error);
-
   if (error) {
     throw new Error(error.message);
   }
@@ -59,9 +56,6 @@ export async function unbanUser(userId: string) {
   const { data, error } = await authClient.admin.unbanUser({
     userId,
   });
-
-  console.log("data:", data);
-  console.log("error:", error);
 
   if (error) {
     throw new Error(error.message);
