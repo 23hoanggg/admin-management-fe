@@ -52,6 +52,7 @@ export default function ImageArea({
   const unselectedItems = items.filter(
     (item) => item.img_crop_id && item.img_crop_id !== selectedId,
   );
+
   const selectedItem = items.find((item) => item.img_crop_id === selectedId);
 
   return (
@@ -73,17 +74,23 @@ export default function ImageArea({
           {/* Unselected items rendered first */}
           {unselectedItems.map((item) => {
             const points: Polygon = item.polygon ?? bboxToPolygon(item.bboxes);
+            const dimmed = selectedId !== null;
 
             return (
-              <StaticPolygon
+              <g
                 key={item.img_crop_id}
-                points={points}
-                shelfDigit={item.shelf_digit}
-                itemId={item.img_crop_id}
-                isHovered={hoveredId === item.img_crop_id}
-                onHover={onHover}
-                onSelect={onSelect}
-              />
+                opacity={dimmed ? 0.2 : 1}
+                pointerEvents={dimmed ? "none" : "auto"}
+              >
+                <StaticPolygon
+                  points={points}
+                  shelfDigit={item.shelf_digit}
+                  itemId={item.img_crop_id}
+                  isHovered={hoveredId === item.img_crop_id}
+                  onHover={onHover}
+                  onSelect={onSelect}
+                />
+              </g>
             );
           })}
 

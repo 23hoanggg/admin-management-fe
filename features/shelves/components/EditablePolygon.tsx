@@ -132,7 +132,7 @@ export default function EditablePolygon({
           cy={point.y}
           r="30"
           fill="white"
-          stroke="purple"
+          stroke="red"
           strokeWidth="10"
           className="cursor-move"
           onPointerDown={(e) => handleCornerPointerDown(index, e)}

@@ -1,13 +1,13 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { ImageInfo, MockData, ShelfItem, Polygon } from "../types/shelf";
-import rawData from "../data/mock.json";
-import { bboxToPolygon, polygonToBBox } from "../utils/geometry";
+import React, { useState } from "react";
+import { useMutation } from "@tanstack/react-query";
+import { ImageInfo, ShelfItem, Polygon } from "../types/shelf";
+import { bboxToPolygon } from "../utils/geometry";
+import { updateJobItem, UpdateItemInput } from "@/app/lib/api/jobs";
 import ImageArea from "./ImageArea";
 import InfoList from "./InfoList";
-
-const mockData = rawData as unknown as MockData;
+import ItemEditModal from "./EditItemModel";
 
 interface PolygonDraft {
   itemId: string;
@@ -16,27 +16,35 @@ interface PolygonDraft {
 
 export interface ShelfEditorProps {
   image: ImageInfo;
+  initialItems: ShelfItem[];
+  jobId: string;
 }
 
-export default function ShelfEditor({ image }: ShelfEditorProps) {
-  const [items, setItems] = useState<ShelfItem[]>(mockData.results);
+export default function ShelfEditor({
+  image,
+  initialItems,
+  jobId,
+}: ShelfEditorProps) {
+  const [items, setItems] = useState<ShelfItem[]>(initialItems);
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [draft, setDraft] = useState<PolygonDraft | null>(null);
+  const [infoId, setInfoId] = useState<string | null>(null);
 
-  useEffect(() => {
-    try {
-      const savedItems = localStorage.getItem("shelf-items");
-      if (savedItems) {
-        const parsedItems: ShelfItem[] = JSON.parse(savedItems);
-        queueMicrotask(() => {
-          setItems(parsedItems);
-        });
-      }
-    } catch (error) {
-      console.error("Failed to load shelf items:", error);
-    }
-  }, []);
+  const infoItem = items.find((i) => i.img_crop_id === infoId);
+
+  const mutation = useMutation({
+    mutationFn: ({ id, input }: { id: string; input: UpdateItemInput }) =>
+      updateJobItem(jobId, id, input),
+    onSuccess: (saved) => {
+      // Thay item cũ bằng item BE vừa trả về
+      setItems((prev) =>
+        prev.map((item) =>
+          item.img_crop_id === saved.img_crop_id ? saved : item,
+        ),
+      );
+    },
+  });
 
   const handleSelect = (id: string | null) => {
     if (id === null) {
@@ -53,33 +61,46 @@ export default function ShelfEditor({ image }: ShelfEditorProps) {
     setDraft({ itemId: id, points });
   };
 
+  // Lưu hình dạng polygon
   const handleSave = () => {
     if (!draft) return;
+    mutation.mutate(
+      { id: draft.itemId, input: { polygon: draft.points } },
+      {
+        onSuccess: () => {
+          setDraft(null);
+          setSelectedId(null);
+        },
+      },
+    );
+  };
 
-    const updatedBbox = polygonToBBox(draft.points);
-
-    const updatedItems = items.map((item) => {
-      if (item.img_crop_id !== draft.itemId) return item;
-      return {
-        ...item,
-        polygon: draft.points,
-        updated_bboxes: updatedBbox,
-      };
-    });
-
-    setItems(updatedItems);
-    localStorage.setItem("shelf-items", JSON.stringify(updatedItems));
+  const handleCancel = () => {
+    mutation.reset();
     setDraft(null);
     setSelectedId(null);
   };
 
-  const handleCancel = () => {
-    setDraft(null);
-    setSelectedId(null);
+  // Lưu thông tin (tên, số kệ) từ modal
+  const handleSaveInfo = (changes: { name: string; shelf_digit: string }) => {
+    if (!infoId) return;
+    mutation.mutate(
+      { id: infoId, input: changes },
+      { onSuccess: () => setInfoId(null) },
+    );
   };
 
   return (
     <div className="flex flex-col md:flex-row h-full w-full p-2 md:p-4 gap-3 md:gap-4 overflow-y-auto md:overflow-hidden">
+      {mutation.isError && (
+        <div
+          role="alert"
+          className="fixed top-4 right-4 z-50 rounded-md bg-red-600 px-4 py-2 text-sm text-white shadow"
+        >
+          Lưu thất bại: {mutation.error.message}
+        </div>
+      )}
+
       <ImageArea
         items={items}
         hoveredId={hoveredId}
@@ -97,11 +118,22 @@ export default function ShelfEditor({ image }: ShelfEditorProps) {
         items={items}
         hoveredId={hoveredId}
         selectedId={selectedId}
+        isSaving={mutation.isPending}
         onHover={setHoveredId}
         onSelect={handleSelect}
         onSave={handleSave}
         onCancel={handleCancel}
+        onEditInfo={setInfoId}
       />
+
+      {infoItem && (
+        <ItemEditModal
+          key={infoItem.img_crop_id}
+          item={infoItem}
+          onSave={handleSaveInfo}
+          onClose={() => setInfoId(null)}
+        />
+      )}
     </div>
   );
 }
