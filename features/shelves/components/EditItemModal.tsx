@@ -25,9 +25,8 @@ export default function ItemEditModal({
   return (
     <dialog
       ref={dialogRef}
-      onClose={onClose} // chạy khi nhấn Esc hoặc dialog.close()
+      onClose={onClose}
       onClick={(e) => {
-        // bấm ra vùng nền tối -> đóng
         if (e.target === dialogRef.current) dialogRef.current?.close();
       }}
       className="m-auto w-full max-w-md rounded-lg p-0 shadow-xl backdrop:bg-black/50"

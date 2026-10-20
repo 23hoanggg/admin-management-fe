@@ -5,6 +5,7 @@ interface StaticPolygonProps {
   shelfDigit: string;
   itemId: string;
   isHovered: boolean;
+  isMatched?: boolean;
   onHover: (id: string | null) => void;
   onSelect: (id: string | null) => void;
 }
@@ -14,13 +15,18 @@ export default function StaticPolygon({
   shelfDigit,
   itemId,
   isHovered,
+  isMatched = false,
   onHover,
   onSelect,
 }: StaticPolygonProps) {
   const pointsString = points.map((p) => `${p.x},${p.y}`).join(" ");
 
-  const strokeColor = isHovered ? "#22c55e" : "#ef4444";
-  const fillColor = isHovered ? "rgba(34, 197, 94, 0.25)" : "transparent";
+  const strokeColor = isHovered ? "#22c55e" : isMatched ? "#F5EE27" : "#ef4444";
+  const fillColor = isHovered
+    ? "rgba(34, 197, 94, 0.25)"
+    : isMatched
+      ? "rgba(59, 130, 246, 0.25)"
+      : "transparent";
 
   return (
     <g

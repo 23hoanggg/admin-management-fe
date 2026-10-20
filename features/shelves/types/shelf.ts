@@ -14,15 +14,15 @@ export interface ShelfItem {
   name: string;
   img_crop_id: string;
   polygon?: Polygon;
-  updated_bboxes?: BoundingBox;
-}
-
-export interface MockData {
-  results: ShelfItem[];
 }
 
 export interface ImageInfo {
   src: string;
   width: number;
   height: number;
+}
+
+export interface PolygonDraft {
+  itemId: string;
+  points: Polygon;
 }

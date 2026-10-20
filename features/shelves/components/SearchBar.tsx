@@ -1,0 +1,44 @@
+interface SearchBarProps {
+  query: string;
+  onQueryChange: (value: string) => void;
+  isFiltering: boolean;
+  resultCount: number;
+  totalCount: number;
+}
+
+export default function SearchBar({
+  query,
+  onQueryChange,
+  isFiltering,
+  resultCount,
+  totalCount,
+}: SearchBarProps) {
+  return (
+    <div className="pb-2 mb-1 border-b border-gray-100 flex flex-col gap-2 sticky top-0 bg-white z-10">
+      <div className="relative">
+        <input
+          type="text"
+          value={query}
+          onChange={(e) => onQueryChange(e.target.value)}
+          placeholder="Search by name or shelf number..."
+          className="w-full px-3 py-1.5 pr-8 text-sm border border-gray-300 rounded-md outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500"
+        />
+        {query && (
+          <button
+            type="button"
+            onClick={() => onQueryChange("")}
+            aria-label="Clear search"
+            className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 text-sm"
+          >
+            ✕
+          </button>
+        )}
+      </div>
+      <div className="text-xs text-gray-500 font-medium">
+        {isFiltering
+          ? `${resultCount} / ${totalCount} shelves`
+          : `Total: ${totalCount} products`}
+      </div>
+    </div>
+  );
+}

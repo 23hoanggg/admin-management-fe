@@ -15,14 +15,14 @@ export default function JobShelvesPage() {
     enabled: Boolean(id),
   });
 
-  if (isPending) return <p className="p-6">Đang tải dữ liệu...</p>;
+  if (isPending) return <p className="p-6">Loading data...</p>;
 
   if (isError) {
     return (
       <div className="space-y-4 p-6">
-        <p role="alert">Không thể tải editor: {error.message}</p>
+        <p role="alert">Can not view detail: {error.message}</p>
         <Link href={`/dashboard/jobs/${id}`} className="underline">
-          Quay lại Job
+          Back to Job
         </Link>
       </div>
     );
@@ -41,7 +41,7 @@ export default function JobShelvesPage() {
           Shelf Management
         </h1>
         <Link href={`/dashboard/jobs/${id}`} className="text-sm underline">
-          Quay lại Job
+          Back to Job
         </Link>
       </div>
       <div className="flex-1 min-h-0 overflow-hidden">

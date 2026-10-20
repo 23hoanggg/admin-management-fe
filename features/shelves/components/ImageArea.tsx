@@ -1,12 +1,25 @@
-import React, { useRef } from "react";
-import { ImageInfo, ShelfItem, Point, Polygon } from "../types/shelf";
+import { useRef } from "react";
+import {
+  ImageInfo,
+  ShelfItem,
+  Point,
+  Polygon,
+  PolygonDraft,
+} from "../types/shelf";
 import StaticPolygon from "./StaticPolygon";
 import EditablePolygon from "./EditablePolygon";
 import { bboxToPolygon } from "../utils/geometry";
 
-interface PolygonDraft {
-  itemId: string;
-  points: Polygon;
+type PolygonState = "normal" | "matched" | "dimmed";
+
+function getPolygonState(
+  id: string,
+  selectedId: string | null,
+  matchedIds: Set<string> | null,
+): PolygonState {
+  if (selectedId !== null) return "dimmed";
+  if (matchedIds === null) return "normal";
+  return matchedIds.has(id) ? "matched" : "dimmed";
 }
 
 interface ImageAreaProps {
@@ -15,6 +28,7 @@ interface ImageAreaProps {
   selectedId: string | null;
   draft: PolygonDraft | null;
   image: ImageInfo;
+  matchedIds: Set<string> | null;
   onHover: (id: string | null) => void;
   onSelect: (id: string | null) => void;
   onDraftChange: (points: Polygon) => void;
@@ -26,6 +40,7 @@ export default function ImageArea({
   selectedId,
   draft,
   image,
+  matchedIds,
   onHover,
   onSelect,
   onDraftChange,
@@ -43,10 +58,7 @@ export default function ImageArea({
     if (!ctm) return { x: 0, y: 0 };
 
     const transformed = point.matrixTransform(ctm.inverse());
-    return {
-      x: transformed.x,
-      y: transformed.y,
-    };
+    return { x: transformed.x, y: transformed.y };
   };
 
   const unselectedItems = items.filter(
@@ -74,19 +86,24 @@ export default function ImageArea({
           {/* Unselected items rendered first */}
           {unselectedItems.map((item) => {
             const points: Polygon = item.polygon ?? bboxToPolygon(item.bboxes);
-            const dimmed = selectedId !== null;
+            const state = getPolygonState(
+              item.img_crop_id,
+              selectedId,
+              matchedIds,
+            );
 
             return (
               <g
                 key={item.img_crop_id}
-                opacity={dimmed ? 0.2 : 1}
-                pointerEvents={dimmed ? "none" : "auto"}
+                opacity={state === "dimmed" ? 0.2 : 1}
+                pointerEvents={state === "dimmed" ? "none" : "auto"}
               >
                 <StaticPolygon
                   points={points}
                   shelfDigit={item.shelf_digit}
                   itemId={item.img_crop_id}
                   isHovered={hoveredId === item.img_crop_id}
+                  isMatched={state === "matched"}
                   onHover={onHover}
                   onSelect={onSelect}
                 />

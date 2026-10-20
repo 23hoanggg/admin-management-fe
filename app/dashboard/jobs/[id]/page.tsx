@@ -20,16 +20,16 @@ export default function JobDetailPage() {
   });
 
   if (isPending) {
-    return <p>Đang tải thông tin Job...</p>;
+    return <p>Loading jobs information...</p>;
   }
 
   if (isError) {
     return (
       <main className="space-y-4 p-6">
-        <p role="alert">Không thể tải Job: {error.message}</p>
+        <p role="alert">can not load job: {error.message}</p>
 
         <Link href="/dashboard/jobs" className="underline">
-          Quay lại danh sách Jobs
+          Back to list job
         </Link>
       </main>
     );
@@ -38,7 +38,7 @@ export default function JobDetailPage() {
   return (
     <main className="space-y-6 p-6">
       <Link href="/dashboard/jobs" className="text-sm underline">
-        ← Quay lại danh sách Jobs
+        ← Back to list job
       </Link>
 
       <section className="rounded-lg border p-5">
@@ -54,15 +54,15 @@ export default function JobDetailPage() {
           </p>
 
           <p>
-            <strong>Trạng thái:</strong> {job.status}
+            <strong>Status:</strong> {job.status}
           </p>
 
-          <p>
+          {/*<p>
             <strong>Số Shelf:</strong> {job._count?.shelves ?? 0}
-          </p>
+          </p>*/}
 
           <p>
-            <strong>Ngày tạo:</strong>{" "}
+            <strong>Created at:</strong>{" "}
             {new Date(job.createdAt).toLocaleString("vi-VN")}
           </p>
         </div>
@@ -77,26 +77,25 @@ export default function JobDetailPage() {
               href={`/dashboard/jobs/${job.id}/shelves`}
               className="rounded-md border px-3 py-2 text-sm hover:bg-gray-50"
             >
-              Mở editor
+              View detail
             </Link>
 
             <button
               type="button"
               disabled
-              title="Sẽ triển khai sau khi hoàn thiện API Shelves"
               className="rounded-md border px-3 py-2 text-sm opacity-50"
             >
-              + Tạo Shelf
+              + Create shelf
             </button>
           </div>
         </div>
 
-        <div className="rounded-lg border border-dashed p-6 text-center">
+        {/*<div className="rounded-lg border border-dashed p-6 text-center">
           <p className="font-medium">Khu vực quản lý Shelf</p>
           <p className="mt-2 text-sm text-gray-500">
             Chúng ta sẽ kết nối API Shelves ở bước tiếp theo.
           </p>
-        </div>
+        </div>*/}
       </section>
     </main>
   );
