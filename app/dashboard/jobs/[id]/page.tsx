@@ -38,7 +38,7 @@ export default function JobDetailPage() {
   return (
     <main className="space-y-6 p-6">
       <Link href="/dashboard/jobs" className="text-sm underline">
-        ← Back to list job
+        Back to list job
       </Link>
 
       <section className="rounded-lg border p-5">

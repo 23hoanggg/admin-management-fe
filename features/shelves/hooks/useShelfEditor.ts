@@ -1,15 +1,12 @@
 import { useMemo, useState } from "react";
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { ShelfItem, Polygon, PolygonDraft } from "../types/shelf";
 import { bboxToPolygon } from "../utils/geometry";
 import { getMatchedIds } from "../utils/search";
 import { updateJobItem, UpdateItemInput } from "@/app/lib/api/jobs";
 
-function getInitialPolygon(item: ShelfItem): Polygon {
-  return item.polygon ?? bboxToPolygon(item.bboxes);
-}
-
 export function useShelfEditor(jobId: string, initialItems: ShelfItem[]) {
+  const queryClient = useQueryClient();
   const [items, setItems] = useState<ShelfItem[]>(initialItems);
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [selectedId, setSelectedId] = useState<string | null>(null);
@@ -17,18 +14,18 @@ export function useShelfEditor(jobId: string, initialItems: ShelfItem[]) {
   const [infoId, setInfoId] = useState<string | null>(null);
   const [query, setQuery] = useState("");
   const matchedIds = useMemo(() => getMatchedIds(items, query), [items, query]);
-  const infoItem = items.find((item) => item.img_crop_id === infoId);
+  const infoItem = items.find((i) => i.img_crop_id === infoId);
 
   const mutation = useMutation({
     mutationFn: ({ id, input }: { id: string; input: UpdateItemInput }) =>
       updateJobItem(jobId, id, input),
-
-    onSuccess: (savedItem) => {
+    onSuccess: (saved) => {
       setItems((prev) =>
         prev.map((item) =>
-          item.img_crop_id === savedItem.img_crop_id ? savedItem : item,
+          item.img_crop_id === saved.img_crop_id ? saved : item,
         ),
       );
+      queryClient.invalidateQueries({ queryKey: ["jobs", jobId, "editor"] });
     },
   });
 
@@ -38,12 +35,12 @@ export function useShelfEditor(jobId: string, initialItems: ShelfItem[]) {
       setDraft(null);
       return;
     }
-
     const item = items.find((i) => i.img_crop_id === id);
     if (!item) return;
 
+    const points: Polygon = item.polygon ?? bboxToPolygon(item.bboxes);
     setSelectedId(id);
-    setDraft({ itemId: id, points: getInitialPolygon(item) });
+    setDraft({ itemId: id, points });
   };
 
   const handleDraftChange = (points: Polygon) => {
@@ -52,7 +49,6 @@ export function useShelfEditor(jobId: string, initialItems: ShelfItem[]) {
 
   const handleSave = () => {
     if (!draft) return;
-
     mutation.mutate(
       { id: draft.itemId, input: { polygon: draft.points } },
       {
@@ -72,7 +68,6 @@ export function useShelfEditor(jobId: string, initialItems: ShelfItem[]) {
 
   const handleSaveInfo = (changes: { name: string; shelf_digit: string }) => {
     if (!infoId) return;
-
     mutation.mutate(
       { id: infoId, input: changes },
       { onSuccess: () => setInfoId(null) },
@@ -83,20 +78,17 @@ export function useShelfEditor(jobId: string, initialItems: ShelfItem[]) {
 
   return {
     items,
-    matchedIds,
-    infoItem,
     hoveredId,
     selectedId,
     draft,
     query,
-
+    matchedIds,
+    infoItem,
     isSaving: mutation.isPending,
     saveError: mutation.isError ? mutation.error.message : null,
-
     setHoveredId,
     setQuery,
     setInfoId,
-
     handleSelect,
     handleDraftChange,
     handleSave,

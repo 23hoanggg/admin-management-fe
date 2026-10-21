@@ -60,7 +60,7 @@ export default function InfoList({
       <div className="space-y-2 overflow-y-auto">
         {!selectedId && displayItems.length === 0 && (
           <p className="text-sm text-gray-500 text-center py-6">
-            No shelves match &quot;{query}&quot;
+            No product match &quot;{query}&quot;
           </p>
         )}
 

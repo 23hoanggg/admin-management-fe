@@ -21,7 +21,7 @@ export default function StaticPolygon({
 }: StaticPolygonProps) {
   const pointsString = points.map((p) => `${p.x},${p.y}`).join(" ");
 
-  const strokeColor = isHovered ? "#22c55e" : isMatched ? "#F5EE27" : "#ef4444";
+  const strokeColor = isHovered ? "#00FF7F" : isMatched ? "#2C2CFF" : "#ef4444";
   const fillColor = isHovered
     ? "rgba(34, 197, 94, 0.25)"
     : isMatched

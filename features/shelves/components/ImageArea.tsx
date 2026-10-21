@@ -95,7 +95,7 @@ export default function ImageArea({
             return (
               <g
                 key={item.img_crop_id}
-                opacity={state === "dimmed" ? 0.2 : 1}
+                opacity={state === "dimmed" ? 0.1 : 1}
                 pointerEvents={state === "dimmed" ? "none" : "auto"}
               >
                 <StaticPolygon

@@ -74,9 +74,6 @@ export default function JobsPage() {
           <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">
             Jobs
           </h1>
-          <p className="mt-1 text-sm text-muted-foreground">
-            Manage your jobs and their shelves.
-          </p>
         </div>
 
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -88,9 +85,6 @@ export default function JobsPage() {
       <div className="rounded-xl border bg-card p-5 shadow-sm sm:p-6">
         <div className="mb-5">
           <h2 className="text-lg font-semibold">Create a new job</h2>
-          <p className="mt-1 text-sm text-muted-foreground">
-            Enter the basic information to get started.
-          </p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -106,7 +100,7 @@ export default function JobsPage() {
                 onChange={(event) => setName(event.target.value)}
                 required
                 maxLength={120}
-                placeholder="Enter job name"
+                placeholder="job name"
                 className="w-full rounded-lg border bg-background px-3 py-2.5 text-sm outline-none transition placeholder:text-muted-foreground focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-primary/20"
               />
             </div>
@@ -122,7 +116,7 @@ export default function JobsPage() {
                 onChange={(event) => setDescription(event.target.value)}
                 maxLength={1000}
                 rows={1}
-                placeholder="Add a short description (optional)"
+                placeholder="description (optional)"
                 className="min-h-11 w-full resize-y rounded-lg border bg-background px-3 py-2.5 text-sm outline-none transition placeholder:text-muted-foreground focus-visible:border-primary focus-visible:ring-2 focus-visible:ring-primary/20"
               />
             </div>
@@ -205,7 +199,6 @@ export default function JobsPage() {
                     className="inline-flex items-center gap-1 text-sm font-medium text-primary transition hover:underline"
                   >
                     View details
-                    <span aria-hidden="true">→</span>
                   </Link>
                 </div>
               </article>
