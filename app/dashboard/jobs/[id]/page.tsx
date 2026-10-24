@@ -44,7 +44,7 @@ export default function JobDetailPage() {
       <section className="rounded-lg border p-5">
         <h1 className="text-2xl font-bold">{job.name}</h1>
 
-        <p className="mt-2 text-gray-500">
+        <p className="mt-2 text-muted-foreground">
           {job.description || "Job chưa có mô tả"}
         </p>
 
@@ -75,7 +75,7 @@ export default function JobDetailPage() {
           <div className="flex items-center gap-2">
             <Link
               href={`/dashboard/jobs/${job.id}/shelves`}
-              className="rounded-md border px-3 py-2 text-sm hover:bg-gray-50"
+              className="rounded-md border px-3 py-2 text-sm hover:bg-accent hover:text-accent-foreground"
             >
               View detail
             </Link>

@@ -132,7 +132,7 @@ export default function JobsPage() {
           )}
 
           {createJobMutation.isSuccess && (
-            <p className="text-sm text-emerald-600">
+            <p className="text-sm text-emerald-600 dark:text-emerald-400">
               Job created successfully.
             </p>
           )}

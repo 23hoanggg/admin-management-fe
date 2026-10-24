@@ -27,8 +27,8 @@ export default function SidebarSlot() {
             href={link.href}
             className={`rounded-lg px-4 py-2.5 text-sm font-medium transition-colors ${
               isActive
-                ? "bg-indigo-100 text-indigo-700"
-                : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                ? "bg-indigo-100 text-indigo-700 dark:bg-indigo-500/15 dark:text-indigo-300"
+                : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
             }`}
           >
             {link.name}

@@ -135,7 +135,7 @@ export default function UserSlot() {
     <section className="min-w-0 space-y-5">
       {/* Header */}
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <h2 className="text-xl font-bold tracking-tight text-gray-900">
+        <h2 className="text-xl font-bold tracking-tight text-foreground">
           Users
         </h2>
 
@@ -154,24 +154,24 @@ export default function UserSlot() {
           {data.users.map((user: User) => (
             <div
               key={user.id}
-              className="flex min-w-0 flex-col gap-3 rounded-xl border border-gray-200 bg-white p-4 transition hover:border-gray-300 sm:flex-row sm:items-center sm:justify-between"
+              className="flex min-w-0 flex-col gap-3 rounded-xl border border-border bg-card p-4 transition hover:border-input sm:flex-row sm:items-center sm:justify-between"
             >
               {/* Username + Status */}
               <div className="flex min-w-0 flex-col items-start gap-2">
-                <span className="max-w-full font-medium text-gray-900">
+                <span className="max-w-full font-medium text-foreground">
                   {user.username ?? user.name}
                 </span>
 
                 {user.banned === true ? (
-                  <span className="rounded-full bg-red-50 px-2.5 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-200">
+                  <span className="rounded-full bg-red-50 px-2.5 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-200 dark:bg-red-500/10 dark:text-red-300 dark:ring-red-500/30">
                     Banned
                   </span>
                 ) : user.banned === false ? (
-                  <span className="rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-medium text-emerald-700 ring-1 ring-inset ring-emerald-200">
+                  <span className="rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-medium text-emerald-700 ring-1 ring-inset ring-emerald-200 dark:bg-emerald-500/10 dark:text-emerald-300 dark:ring-emerald-500/30">
                     Active
                   </span>
                 ) : (
-                  <span className="rounded-full bg-gray-100 px-2.5 py-1 text-xs text-gray-500">
+                  <span className="rounded-full bg-muted px-2.5 py-1 text-xs text-muted-foreground">
                     Unknown
                   </span>
                 )}
@@ -182,7 +182,7 @@ export default function UserSlot() {
                 <button
                   type="button"
                   disabled={impersonateMutation.isPending}
-                  className="rounded-md border border-indigo-200 bg-indigo-50 px-3 py-1.5 text-xs font-medium text-indigo-700 transition hover:bg-indigo-100 disabled:cursor-not-allowed disabled:opacity-50"
+                  className="rounded-md border border-indigo-200 bg-indigo-50 px-3 py-1.5 text-xs font-medium text-indigo-700 transition hover:bg-indigo-100 dark:border-indigo-500/30 dark:bg-indigo-500/10 dark:text-indigo-300 dark:hover:bg-indigo-500/20 disabled:cursor-not-allowed disabled:opacity-50"
                   onClick={() => impersonateMutation.mutate(user.id)}
                 >
                   {impersonateMutation.isPending ? "Loading..." : "Login"}
@@ -191,7 +191,7 @@ export default function UserSlot() {
                 <button
                   type="button"
                   disabled={removeUserMutation.isPending}
-                  className="rounded-md border border-red-200 bg-white px-3 py-1.5 text-xs font-medium text-red-600 transition hover:bg-red-50 disabled:opacity-50"
+                  className="rounded-md border border-red-200 bg-card px-3 py-1.5 text-xs font-medium text-red-600 transition hover:bg-red-50 dark:border-red-500/30 dark:text-red-400 dark:hover:bg-red-500/10 disabled:opacity-50"
                   onClick={() => removeUserMutation.mutate(user.id)}
                 >
                   Delete
@@ -201,7 +201,7 @@ export default function UserSlot() {
                   <button
                     type="button"
                     disabled={unbanUserMutation.isPending}
-                    className="rounded-md border border-emerald-200 bg-white px-3 py-1.5 text-xs font-medium text-emerald-700 transition hover:bg-emerald-50 disabled:opacity-50"
+                    className="rounded-md border border-emerald-200 bg-card px-3 py-1.5 text-xs font-medium text-emerald-700 transition hover:bg-emerald-50 dark:border-emerald-500/30 dark:text-emerald-400 dark:hover:bg-emerald-500/10 disabled:opacity-50"
                     onClick={() => unbanUserMutation.mutate(user.id)}
                   >
                     Unban
@@ -210,7 +210,7 @@ export default function UserSlot() {
                   <button
                     type="button"
                     disabled={banUserMutation.isPending}
-                    className="rounded-md border border-amber-200 bg-white px-3 py-1.5 text-xs font-medium text-amber-700 transition hover:bg-amber-50 disabled:opacity-50"
+                    className="rounded-md border border-amber-200 bg-card px-3 py-1.5 text-xs font-medium text-amber-700 transition hover:bg-amber-50 dark:border-amber-500/30 dark:text-amber-400 dark:hover:bg-amber-500/10 disabled:opacity-50"
                     onClick={() => banUserMutation.mutate(user.id)}
                   >
                     Ban
@@ -219,7 +219,7 @@ export default function UserSlot() {
 
                 <button
                   type="button"
-                  className="rounded-md border border-gray-200 bg-white px-3 py-1.5 text-xs font-medium text-gray-700 transition hover:bg-gray-100"
+                  className="rounded-md border border-border bg-card px-3 py-1.5 text-xs font-medium text-secondary-foreground transition hover:bg-accent hover:text-accent-foreground"
                   onClick={() => setEditingUser(user)}
                 >
                   Update
@@ -229,17 +229,17 @@ export default function UserSlot() {
           ))}
 
           {data.users.length === 0 && (
-            <div className="rounded-xl border border-gray-200 bg-white px-4 py-12 text-center text-sm text-gray-500">
+            <div className="rounded-xl border border-border bg-card px-4 py-12 text-center text-sm text-muted-foreground">
               No users found.
             </div>
           )}
         </div>
 
-        <div className="mt-auto flex min-h-[56px] flex-wrap items-center justify-between gap-3 border-t border-gray-200 pt-4">
-          <p className="text-sm text-gray-500">
+        <div className="mt-auto flex min-h-[56px] flex-wrap items-center justify-between gap-3 border-t border-border pt-4">
+          <p className="text-sm text-muted-foreground">
             Page{" "}
-            <span className="font-medium text-gray-900">{currentPage}</span> of{" "}
-            <span className="font-medium text-gray-900">{totalPages || 1}</span>
+            <span className="font-medium text-foreground">{currentPage}</span> of{" "}
+            <span className="font-medium text-foreground">{totalPages || 1}</span>
           </p>
 
           <div className="flex items-center gap-2">
@@ -247,7 +247,7 @@ export default function UserSlot() {
               type="button"
               disabled={currentPage === 1 || isPlaceholderData}
               onClick={() => setCurrentPage((p) => p - 1)}
-              className="rounded-lg border border-gray-200 px-3 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-40"
+              className="rounded-lg border border-border px-3 py-2 text-sm font-medium text-secondary-foreground transition hover:bg-accent hover:text-accent-foreground disabled:cursor-not-allowed disabled:opacity-40"
             >
               Previous
             </button>
@@ -260,7 +260,7 @@ export default function UserSlot() {
                 currentPage >= totalPages
               }
               onClick={() => setCurrentPage((p) => p + 1)}
-              className="rounded-lg border border-gray-200 px-3 py-2 text-sm font-medium text-gray-700 transition hover:bg-gray-50 disabled:cursor-not-allowed disabled:opacity-40"
+              className="rounded-lg border border-border px-3 py-2 text-sm font-medium text-secondary-foreground transition hover:bg-accent hover:text-accent-foreground disabled:cursor-not-allowed disabled:opacity-40"
             >
               Next
             </button>

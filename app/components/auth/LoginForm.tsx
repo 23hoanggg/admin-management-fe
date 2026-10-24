@@ -86,21 +86,21 @@ export default function LoginForm({ isModal = false }: LoginFormProps) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4">
-      <div className="w-full max-w-md rounded-lg border bg-white p-6 shadow-lg">
+      <div className="w-full max-w-md rounded-lg border bg-card p-6 text-card-foreground shadow-lg">
         <div className="mb-5 flex items-center justify-between">
           <h2 className="text-lg font-semibold">Sign In</h2>
 
           <button
             type="button"
             onClick={() => router.back()}
-            className="text-gray-500 hover:text-black"
+            className="text-muted-foreground hover:text-foreground"
           >
             ✕
           </button>
         </div>
 
         {errorMessage && (
-          <p role="alert" className="mb-4 text-sm text-red-600">
+          <p role="alert" className="mb-4 text-sm text-destructive">
             {errorMessage}
           </p>
         )}
@@ -120,7 +120,7 @@ export default function LoginForm({ isModal = false }: LoginFormProps) {
               onChange={(event) => setUsername(event.target.value)}
               required
               disabled={isLoading}
-              className="w-full rounded-md border px-3 py-2 text-sm outline-none focus:border-black"
+              className="w-full rounded-md border border-input bg-input-background px-3 py-2 text-sm text-input-foreground outline-none placeholder:text-placeholder focus:border-ring"
             />
           </div>
 
@@ -138,7 +138,7 @@ export default function LoginForm({ isModal = false }: LoginFormProps) {
               onChange={(event) => setPassword(event.target.value)}
               required
               disabled={isLoading}
-              className="w-full rounded-md border px-3 py-2 text-sm outline-none focus:border-black"
+              className="w-full rounded-md border border-input bg-input-background px-3 py-2 text-sm text-input-foreground outline-none placeholder:text-placeholder focus:border-ring"
             />
           </div>
 
@@ -146,7 +146,7 @@ export default function LoginForm({ isModal = false }: LoginFormProps) {
             <button
               type="submit"
               disabled={isLoading}
-              className="w-full rounded-md bg-black px-4 py-2 text-sm text-white hover:bg-gray-800 disabled:opacity-50"
+              className="w-full rounded-md bg-primary px-4 py-2 text-sm text-primary-foreground hover:bg-primary/90 disabled:opacity-50"
             >
               {isLoading ? "Signing in..." : "Sign In"}
             </button>
@@ -155,7 +155,7 @@ export default function LoginForm({ isModal = false }: LoginFormProps) {
               type="button"
               onClick={handleAnonymousLogin}
               disabled={isLoading}
-              className="w-full rounded-md border px-4 py-2 text-sm hover:bg-gray-100 disabled:opacity-50"
+              className="w-full rounded-md border px-4 py-2 text-sm hover:bg-accent hover:text-accent-foreground disabled:opacity-50"
             >
               Sign In Anonymously
             </button>

@@ -39,7 +39,7 @@ export default function InfoList({
       : items;
 
   return (
-    <div className="w-full md:w-80 lg:w-96 p-3 md:p-4 rounded-lg flex flex-col gap-2 overflow-y-auto h-full md:h-full max-h-[500px] md:max-h-none border border-gray-200 bg-white">
+    <div className="w-full md:w-80 lg:w-96 p-3 md:p-4 rounded-lg flex flex-col gap-2 overflow-y-auto h-full md:h-full max-h-[500px] md:max-h-none border border-border bg-card text-card-foreground">
       {selectedId ? (
         <EditToolbar
           totalCount={items.length}
@@ -59,7 +59,7 @@ export default function InfoList({
 
       <div className="space-y-2 overflow-y-auto">
         {!selectedId && displayItems.length === 0 && (
-          <p className="text-sm text-gray-500 text-center py-6">
+          <p className="text-sm text-muted-foreground text-center py-6">
             No product match &quot;{query}&quot;
           </p>
         )}

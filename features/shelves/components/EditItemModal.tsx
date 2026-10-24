@@ -29,7 +29,7 @@ export default function ItemEditModal({
       onClick={(e) => {
         if (e.target === dialogRef.current) dialogRef.current?.close();
       }}
-      className="m-auto w-full max-w-md rounded-lg p-0 shadow-xl backdrop:bg-black/50"
+      className="m-auto w-full max-w-md rounded-lg bg-card p-0 text-card-foreground shadow-xl backdrop:bg-black/50"
     >
       <form
         onSubmit={(e) => {
@@ -38,24 +38,24 @@ export default function ItemEditModal({
         }}
         className="flex flex-col gap-4 p-5"
       >
-        <h2 className="text-lg font-bold text-gray-900">Edit shelf info</h2>
+        <h2 className="text-lg font-bold text-foreground">Edit shelf info</h2>
 
-        <label className="flex flex-col gap-1 text-sm font-medium text-gray-700">
+        <label className="flex flex-col gap-1 text-sm font-medium text-secondary-foreground">
           Name
           <input
             value={name}
             onChange={(e) => setName(e.target.value)}
             autoFocus
-            className="rounded-md border border-gray-300 px-3 py-2 outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500"
+            className="rounded-md border border-input bg-input-background px-3 py-2 text-input-foreground outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500"
           />
         </label>
 
-        <label className="flex flex-col gap-1 text-sm font-medium text-gray-700">
+        <label className="flex flex-col gap-1 text-sm font-medium text-secondary-foreground">
           Shelf number
           <input
             value={shelfDigit}
             onChange={(e) => setShelfDigit(e.target.value)}
-            className="rounded-md border border-gray-300 px-3 py-2 outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500"
+            className="rounded-md border border-input bg-input-background px-3 py-2 text-input-foreground outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500"
           />
         </label>
 
@@ -63,7 +63,7 @@ export default function ItemEditModal({
           <button
             type="button"
             onClick={() => dialogRef.current?.close()}
-            className="rounded-md bg-gray-100 px-4 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-200"
+            className="rounded-md bg-secondary px-4 py-1.5 text-sm font-medium text-secondary-foreground hover:bg-secondary/80"
           >
             Cancel
           </button>

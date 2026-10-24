@@ -88,21 +88,21 @@ export default function UpdateUserForm({ user, onClose }: UpdateUserFormProps) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4">
-      <div className="w-full max-w-md rounded-lg border bg-white p-6 shadow-lg">
+      <div className="w-full max-w-md rounded-lg border bg-card p-6 text-card-foreground shadow-lg">
         <div className="mb-5 flex items-center justify-between">
           <h2 className="text-lg font-semibold">Update User</h2>
 
           <button
             type="button"
             onClick={onClose}
-            className="text-gray-500 hover:text-black"
+            className="text-muted-foreground hover:text-foreground"
           >
             ✕
           </button>
         </div>
 
         {errorMessage && (
-          <p role="alert" className="mb-4 text-sm text-red-600">
+          <p role="alert" className="mb-4 text-sm text-destructive">
             {errorMessage}
           </p>
         )}
@@ -120,7 +120,7 @@ export default function UpdateUserForm({ user, onClose }: UpdateUserFormProps) {
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
-              className="w-full rounded-md border px-3 py-2 text-sm outline-none focus:border-black"
+              className="w-full rounded-md border border-input bg-input-background px-3 py-2 text-sm text-input-foreground outline-none placeholder:text-placeholder focus:border-ring"
             />
           </div>
 
@@ -136,7 +136,7 @@ export default function UpdateUserForm({ user, onClose }: UpdateUserFormProps) {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               required
-              className="w-full rounded-md border px-3 py-2 text-sm outline-none focus:border-black"
+              className="w-full rounded-md border border-input bg-input-background px-3 py-2 text-sm text-input-foreground outline-none placeholder:text-placeholder focus:border-ring"
             />
           </div>
 
@@ -153,7 +153,7 @@ export default function UpdateUserForm({ user, onClose }: UpdateUserFormProps) {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full rounded-md border px-3 py-2 text-sm outline-none focus:border-black"
+              className="w-full rounded-md border border-input bg-input-background px-3 py-2 text-sm text-input-foreground outline-none placeholder:text-placeholder focus:border-ring"
             />
           </div>
 
@@ -170,7 +170,7 @@ export default function UpdateUserForm({ user, onClose }: UpdateUserFormProps) {
               placeholder="Để trống nếu không đổi"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full rounded-md border px-3 py-2 text-sm outline-none focus:border-black"
+              className="w-full rounded-md border border-input bg-input-background px-3 py-2 text-sm text-input-foreground outline-none placeholder:text-placeholder focus:border-ring"
             />
           </div>
 
@@ -178,7 +178,7 @@ export default function UpdateUserForm({ user, onClose }: UpdateUserFormProps) {
             <button
               type="button"
               onClick={onClose}
-              className="rounded-md border px-4 py-2 text-sm hover:bg-gray-100"
+              className="rounded-md border px-4 py-2 text-sm hover:bg-accent hover:text-accent-foreground"
             >
               Cancel
             </button>
@@ -186,7 +186,7 @@ export default function UpdateUserForm({ user, onClose }: UpdateUserFormProps) {
             <button
               type="submit"
               disabled={updateMutation.isPending}
-              className="rounded-md bg-black px-4 py-2 text-sm text-white hover:bg-gray-800 disabled:cursor-not-allowed disabled:opacity-50"
+              className="rounded-md bg-primary px-4 py-2 text-sm text-primary-foreground hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-50"
             >
               {updateMutation.isPending ? "Updating..." : "Update user"}
             </button>

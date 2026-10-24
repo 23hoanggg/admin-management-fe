@@ -36,8 +36,8 @@ export default function JobShelvesPage() {
 
   return (
     <div className="flex h-full w-full flex-col">
-      <div className="mb-2 flex items-center justify-between border-b border-gray-200 pb-2">
-        <h1 className="text-xl font-bold tracking-tight text-gray-900">
+      <div className="mb-2 flex items-center justify-between border-b border-border pb-2">
+        <h1 className="text-xl font-bold tracking-tight text-foreground">
           Shelf Management
         </h1>
         <Link href={`/dashboard/jobs/${id}`} className="text-sm underline">

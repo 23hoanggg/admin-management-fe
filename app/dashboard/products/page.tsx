@@ -27,7 +27,7 @@ export default function ProductsPage() {
 
   return (
     <div className="space-y-2 p-6">
-      <p className="text-sm text-gray-500">{products.length} rows</p>
+      <p className="text-sm text-muted-foreground">{products.length} rows</p>
 
       {products.map((product) => (
         <div key={product.key} className=" border p-3">

@@ -6,18 +6,53 @@
     --background: #ffffff;
     --foreground: #171717;
 
+    --card: #ffffff;
+    --card-foreground: #171717;
+
+    --muted: #f5f5f5;
+    --muted-foreground: #737373;
+
+    --secondary: #f5f5f5;
+    --secondary-foreground: #404040;
+
+    --accent: #f5f5f5;
+    --accent-foreground: #171717;
+
+    --primary: #171717;
+    --primary-foreground: #fafafa;
+
+    --destructive: #dc2626;
+    --destructive-foreground: #fafafa;
+
+    --border: #e5e5e5;
+    --input: #d4d4d4;
+    --ring: #171717;
+
     --input-background: #ffffff;
     --input-foreground: #171717;
-    --border: #d4d4d4;
-    --placeholder: #737373;
+    --placeholder: var(--muted-foreground);
 }
 
 @theme inline {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-destructive: var(--destructive);
+    --color-destructive-foreground: var(--destructive-foreground);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
     --color-input-background: var(--input-background);
     --color-input-foreground: var(--input-foreground);
-    --color-border: var(--border);
     --color-placeholder: var(--placeholder);
 
     --font-sans: var(--font-geist-sans);
@@ -31,10 +66,41 @@
         --background: #0a0a0a;
         --foreground: #ededed;
 
-        --input-background: #171717;
+        --card: #171717;
+        --card-foreground: #ededed;
+
+        --muted: #262626;
+        --muted-foreground: #a3a3a3;
+
+        --secondary: #262626;
+        --secondary-foreground: #e5e5e5;
+
+        --accent: #262626;
+        --accent-foreground: #fafafa;
+
+        --primary: #ededed;
+        --primary-foreground: #171717;
+
+        --destructive: #f87171;
+        --destructive-foreground: #0a0a0a;
+
+        --border: #2e2e2e;
+        --input: #404040;
+        --ring: #d4d4d4;
+
+        --input-background: #0a0a0a;
         --input-foreground: #ededed;
-        --border: #404040;
-        --placeholder: #a3a3a3;
+    }
+}
+
+@layer base {
+    /* Tailwind v4 defaults borders to currentColor; use the theme border color instead */
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-border);
     }
 }
 
