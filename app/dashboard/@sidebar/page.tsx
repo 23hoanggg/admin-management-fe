@@ -29,7 +29,7 @@ const groups = [
   },
   {
     title: "PDF service",
-    links: [{ name: "Queue (Bull Board)", href: `${PDF_URL}/admin/queues` }],
+    links: [{ name: "Bull board", href: `${PDF_URL}/admin/queues` }],
   },
 ];
 
@@ -62,7 +62,7 @@ export default function SidebarSlot() {
                 }`}
               >
                 {link.name}
-                {isExternal && " ↗"}
+                {isExternal}
               </Link>
             );
           })}
