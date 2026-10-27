@@ -28,7 +28,7 @@ export interface EditorData {
   items: ShelfItem[];
 }
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:6868";
+const API_URL = process.env.NEXT_PUBLIC_IMAGE_URL ?? "http://localhost:6869";
 
 export async function listJobs(): Promise<Job[]> {
   const response = await fetch(`${API_URL}/jobs`, {
