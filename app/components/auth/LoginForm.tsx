@@ -20,7 +20,6 @@ export default function LoginForm({ isModal = false }: LoginFormProps) {
   const handleSubmit = async (event: React.SubmitEvent<HTMLFormElement>) => {
     event.preventDefault();
     setErrorMessage(null);
-
     const result = loginSchema.safeParse({
       username,
       password,

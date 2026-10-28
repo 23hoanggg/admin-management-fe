@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 
 const PDF_URL = process.env.NEXT_PUBLIC_PDF_URL ?? "http://localhost:3001";
 
-// Nhóm link theo service ở backend
 const groups = [
   {
     title: "",
@@ -29,7 +28,10 @@ const groups = [
   },
   {
     title: "PDF service",
-    links: [{ name: "Bull board", href: `${PDF_URL}/admin/queues` }],
+    links: [
+      { name: "Upload PDF", href: "/dashboard/pdf" },
+      { name: "Bull board", href: `${PDF_URL}/admin/queues` },
+    ],
   },
 ];
 
