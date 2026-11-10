@@ -59,7 +59,7 @@ export default function ShelfEditor({
 
       {editor.infoItem && (
         <EditItemModal
-          key={editor.infoItem.img_crop_id}
+          key={editor.infoItem.id}
           item={editor.infoItem}
           onSave={editor.handleSaveInfo}
           onClose={editor.closeInfo}

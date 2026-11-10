@@ -58,7 +58,7 @@ export default function JobDetailPage() {
           </p>
 
           {/*<p>
-            <strong>Số Shelf:</strong> {job._count?.shelves ?? 0}
+            <strong>Số Shelf:</strong> {job.shelfCount}
           </p>*/}
 
           <p>

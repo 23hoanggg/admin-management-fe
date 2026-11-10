@@ -3,13 +3,11 @@ import type { ShelfItem } from "@/features/shelves/types/shelf";
 export interface Job {
   id: string;
   name: string;
-  description: string | null;
+  description?: string;
   status: "PENDING" | "PROCESSING" | "COMPLETED" | "FAILED";
   createdAt: string;
   updatedAt: string;
-  _count?: {
-    shelves: number;
-  };
+  shelfCount: number;
 }
 
 export interface CreateJobInput {
@@ -28,7 +26,7 @@ export interface EditorData {
   items: ShelfItem[];
 }
 
-const API_URL = process.env.NEXT_PUBLIC_IMAGE_URL ?? "http://localhost:6869";
+const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8080";
 
 export async function listJobs(): Promise<Job[]> {
   const response = await fetch(`${API_URL}/jobs`, {
@@ -91,7 +89,7 @@ export async function getJobEditor(id: string): Promise<EditorData> {
 
 export interface UpdateItemInput {
   name?: string;
-  shelf_digit?: string;
+  shelfDigit?: string;
   polygon?: { x: number; y: number }[];
 }
 

@@ -33,9 +33,9 @@ export default function InfoList({
   matchedIds,
 }: InfoListProps) {
   const displayItems = selectedId
-    ? items.filter((item) => item.img_crop_id === selectedId)
+    ? items.filter((item) => item.id === selectedId)
     : matchedIds
-      ? items.filter((item) => matchedIds.has(item.img_crop_id))
+      ? items.filter((item) => matchedIds.has(item.id))
       : items;
 
   return (
@@ -66,10 +66,10 @@ export default function InfoList({
 
         {displayItems.map((item) => (
           <ItemCard
-            key={item.img_crop_id}
+            key={item.id}
             item={item}
-            isSelected={selectedId === item.img_crop_id}
-            isHovered={hoveredId === item.img_crop_id}
+            isSelected={selectedId === item.id}
+            isHovered={hoveredId === item.id}
             onHover={onHover}
             onSelect={onSelect}
             onEditInfo={onEditInfo}

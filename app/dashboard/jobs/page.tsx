@@ -187,9 +187,9 @@ export default function JobsPage() {
 
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <span className="font-medium text-foreground">
-                      {job._count?.shelves ?? 0}
+                      {job.shelfCount}
                     </span>
-                    {job._count?.shelves === 1 ? "shelf" : "shelves"}
+                    {job.shelfCount === 1 ? "shelf" : "shelves"}
                   </div>
                 </div>
 

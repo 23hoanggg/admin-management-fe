@@ -1,8 +1,8 @@
-const API_URL = process.env.NEXT_PUBLIC_IMAGE_URL ?? "http://localhost:6869";
+const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8080";
 
 export interface Product {
   key: string;
-  no: number | null;
+  no?: number;
   name: string;
 }
 

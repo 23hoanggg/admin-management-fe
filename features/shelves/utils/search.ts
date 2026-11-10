@@ -20,9 +20,9 @@ export function getMatchedIds(
   for (const item of items) {
     if (
       normalize(item.name).includes(q) ||
-      normalize(item.shelf_digit).includes(q)
+      normalize(item.shelfDigit).includes(q)
     ) {
-      ids.add(item.img_crop_id);
+      ids.add(item.id);
     }
   }
   return ids;

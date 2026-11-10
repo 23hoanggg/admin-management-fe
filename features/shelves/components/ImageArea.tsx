@@ -62,10 +62,10 @@ export default function ImageArea({
   };
 
   const unselectedItems = items.filter(
-    (item) => item.img_crop_id && item.img_crop_id !== selectedId,
+    (item) => item.id && item.id !== selectedId,
   );
 
-  const selectedItem = items.find((item) => item.img_crop_id === selectedId);
+  const selectedItem = items.find((item) => item.id === selectedId);
 
   return (
     <div className="relative flex-1 bg-slate-200 dark:bg-slate-800 rounded-lg p-2 flex items-center justify-center overflow-auto h-[50vh] sm:h-[55vh] md:h-full w-full">
@@ -85,24 +85,24 @@ export default function ImageArea({
 
           {/* Unselected items rendered first */}
           {unselectedItems.map((item) => {
-            const points: Polygon = item.polygon ?? bboxToPolygon(item.bboxes);
+            const points: Polygon = item.polygon.length === 4 ? item.polygon : bboxToPolygon(item.bbox);
             const state = getPolygonState(
-              item.img_crop_id,
+              item.id,
               selectedId,
               matchedIds,
             );
 
             return (
               <g
-                key={item.img_crop_id}
+                key={item.id}
                 opacity={state === "dimmed" ? 0.1 : 1}
                 pointerEvents={state === "dimmed" ? "none" : "auto"}
               >
                 <StaticPolygon
                   points={points}
-                  shelfDigit={item.shelf_digit}
-                  itemId={item.img_crop_id}
-                  isHovered={hoveredId === item.img_crop_id}
+                  shelfDigit={item.shelfDigit}
+                  itemId={item.id}
+                  isHovered={hoveredId === item.id}
                   isMatched={state === "matched"}
                   onHover={onHover}
                   onSelect={onSelect}
@@ -114,9 +114,9 @@ export default function ImageArea({
           {/* Selected / Editable item rendered last (highest z-order) */}
           {selectedItem && draft && (
             <EditablePolygon
-              key={selectedItem.img_crop_id}
+              key={selectedItem.id}
               points={draft.points}
-              shelfDigit={selectedItem.shelf_digit}
+              shelfDigit={selectedItem.shelfDigit}
               imageWidth={image.width}
               imageHeight={image.height}
               getSvgPoint={getSvgPoint}

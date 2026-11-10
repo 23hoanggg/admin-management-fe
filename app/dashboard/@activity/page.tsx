@@ -40,7 +40,9 @@ export default function ActivitySlot() {
         )}
 
         {error && (
-          <p className="text-sm text-destructive">Session error: {error.message}</p>
+          <p className="text-sm text-destructive">
+            Session error: {error.message}
+          </p>
         )}
 
         {!isPending && !error && !session && (

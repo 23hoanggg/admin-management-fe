@@ -5,7 +5,7 @@ import { ShelfItem } from "../types/shelf";
 
 interface ItemEditModalProps {
   item: ShelfItem;
-  onSave: (changes: { name: string; shelf_digit: string }) => void;
+  onSave: (changes: { name: string; shelfDigit: string }) => void;
   onClose: () => void;
 }
 
@@ -16,7 +16,7 @@ export default function ItemEditModal({
 }: ItemEditModalProps) {
   const dialogRef = useRef<HTMLDialogElement>(null);
   const [name, setName] = useState(item.name ?? "");
-  const [shelfDigit, setShelfDigit] = useState(String(item.shelf_digit ?? ""));
+  const [shelfDigit, setShelfDigit] = useState(String(item.shelfDigit ?? ""));
 
   useEffect(() => {
     dialogRef.current?.showModal();
@@ -34,7 +34,7 @@ export default function ItemEditModal({
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          onSave({ name: name.trim(), shelf_digit: shelfDigit.trim() });
+          onSave({ name: name.trim(), shelfDigit: shelfDigit.trim() });
         }}
         className="flex flex-col gap-4 p-5"
       >

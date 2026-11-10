@@ -14,7 +14,7 @@ export function useShelfEditor(jobId: string, initialItems: ShelfItem[]) {
   const [infoId, setInfoId] = useState<string | null>(null);
   const [query, setQuery] = useState("");
   const matchedIds = useMemo(() => getMatchedIds(items, query), [items, query]);
-  const infoItem = items.find((i) => i.img_crop_id === infoId);
+  const infoItem = items.find((i) => i.id === infoId);
 
   const mutation = useMutation({
     mutationFn: ({ id, input }: { id: string; input: UpdateItemInput }) =>
@@ -22,7 +22,7 @@ export function useShelfEditor(jobId: string, initialItems: ShelfItem[]) {
     onSuccess: (saved) => {
       setItems((prev) =>
         prev.map((item) =>
-          item.img_crop_id === saved.img_crop_id ? saved : item,
+          item.id === saved.id ? saved : item,
         ),
       );
       queryClient.invalidateQueries({ queryKey: ["jobs", jobId, "editor"] });
@@ -35,10 +35,10 @@ export function useShelfEditor(jobId: string, initialItems: ShelfItem[]) {
       setDraft(null);
       return;
     }
-    const item = items.find((i) => i.img_crop_id === id);
+    const item = items.find((i) => i.id === id);
     if (!item) return;
 
-    const points: Polygon = item.polygon ?? bboxToPolygon(item.bboxes);
+    const points: Polygon = item.polygon.length === 4 ? item.polygon : bboxToPolygon(item.bbox);
     setSelectedId(id);
     setDraft({ itemId: id, points });
   };
@@ -66,7 +66,7 @@ export function useShelfEditor(jobId: string, initialItems: ShelfItem[]) {
     setSelectedId(null);
   };
 
-  const handleSaveInfo = (changes: { name: string; shelf_digit: string }) => {
+  const handleSaveInfo = (changes: { name: string; shelfDigit: string }) => {
     if (!infoId) return;
     mutation.mutate(
       { id: infoId, input: changes },

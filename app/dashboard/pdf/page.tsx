@@ -92,7 +92,7 @@ export default function PdfUploadPage() {
                 <span className="truncate">{conversion.originalName}</span>
                 <span className="shrink-0 text-muted-foreground">
                   {conversion.status}
-                  {conversion.totalPages !== null &&
+                  {conversion.totalPages !== undefined &&
                     ` - ${conversion.totalPages} pages`}
                 </span>
               </li>

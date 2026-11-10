@@ -7,13 +7,13 @@ export type Point = {
 
 export type Polygon = [Point, Point, Point, Point];
 
+// Giống message EditorItem trong proto/image.proto
 export interface ShelfItem {
-  bboxes: BoundingBox;
-  shelf_digit: string;
-  id: string | null;
+  id: string;
   name: string;
-  img_crop_id: string;
-  polygon?: Polygon;
+  shelfDigit: string;
+  bbox: BoundingBox;
+  polygon: Polygon | []; // [] = chưa vẽ polygon
 }
 
 export interface ImageInfo {

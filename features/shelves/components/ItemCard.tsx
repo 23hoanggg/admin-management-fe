@@ -17,7 +17,7 @@ export default function ItemCard({
   onSelect,
   onEditInfo,
 }: ItemCardProps) {
-  const id = item.img_crop_id;
+  const id = item.id;
 
   return (
     <div
@@ -34,7 +34,7 @@ export default function ItemCard({
     >
       <div className="flex items-center justify-between gap-2">
         <span className="font-bold text-sm text-foreground">
-          Shelf: {item.shelf_digit}
+          Shelf: {item.shelfDigit}
         </span>
         <div className="flex items-center gap-2">
           {isSelected && (

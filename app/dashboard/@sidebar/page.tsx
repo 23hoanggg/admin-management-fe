@@ -3,8 +3,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const PDF_URL = process.env.NEXT_PUBLIC_PDF_URL ?? "http://localhost:3001";
-
 const groups = [
   {
     title: "",
@@ -30,7 +28,6 @@ const groups = [
     title: "PDF service",
     links: [
       { name: "Upload PDF", href: "/dashboard/pdf" },
-      { name: "Bull board", href: `${PDF_URL}/admin/queues` },
     ],
   },
 ];
