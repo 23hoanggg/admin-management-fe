@@ -12,7 +12,7 @@ export async function getProductsApi(): Promise<Product[]> {
   });
 
   if (!response.ok) {
-    throw new Error(`Không thể lấy danh sách sản phẩm: ${response.status}`);
+    throw new Error(`Could not load products: ${response.status}`);
   }
 
   return response.json() as Promise<Product[]>;

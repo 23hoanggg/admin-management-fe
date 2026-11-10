@@ -12,21 +12,12 @@ export default function JobShelvesPage() {
   const { data, isPending, isError, error } = useQuery({
     queryKey: ["jobs", id, "editor"],
     queryFn: () => getJobEditor(id),
-    enabled: Boolean(id),
   });
 
-  if (isPending) return <p className="p-6">Loading data...</p>;
-
-  if (isError) {
-    return (
-      <div className="space-y-4 p-6">
-        <p role="alert">Can not view detail: {error.message}</p>
-        <Link href={`/dashboard/jobs/${id}`} className="underline">
-          Back to Job
-        </Link>
-      </div>
-    );
-  }
+  if (isPending)
+    return <p className="text-sm text-muted-foreground">Loading…</p>;
+  if (isError)
+    return <p className="text-sm text-destructive">{error.message}</p>;
 
   const image = {
     src: `/api/images/${data.image.storageKey}`,
@@ -35,16 +26,18 @@ export default function JobShelvesPage() {
   };
 
   return (
-    <div className="flex h-full w-full flex-col">
-      <div className="mb-2 flex items-center justify-between border-b border-border pb-2">
-        <h1 className="text-xl font-bold tracking-tight text-foreground">
-          Shelf Management
-        </h1>
-        <Link href={`/dashboard/jobs/${id}`} className="text-sm underline">
-          Back to Job
+    <div className="space-y-4">
+      <div>
+        <Link
+          href={`/dashboard/jobs/${id}`}
+          className="text-xs text-muted-foreground hover:underline"
+        >
+          ← Back to job
         </Link>
+        <h1 className="text-lg font-semibold">Shelf editor</h1>
       </div>
-      <div className="flex-1 min-h-0 overflow-hidden">
+
+      <div className="panel h-[calc(100dvh-8rem)] overflow-hidden">
         <ShelfEditor image={image} initialItems={data.items} jobId={id} />
       </div>
     </div>

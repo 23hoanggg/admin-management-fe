@@ -2,20 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import ThemeToggle from "@/app/components/ThemeToggle";
 
 const groups = [
   {
     title: "",
     links: [{ name: "Dashboard", href: "/dashboard" }],
-  },
-  {
-    title: "Auth service",
-    links: [
-      { name: "Users", href: "/dashboard/users" },
-      { name: "Admin", href: "/dashboard/admin" },
-      { name: "Login", href: "/login" },
-      { name: "Register", href: "/register" },
-    ],
   },
   {
     title: "Image service",
@@ -26,9 +18,7 @@ const groups = [
   },
   {
     title: "PDF service",
-    links: [
-      { name: "Upload PDF", href: "/dashboard/pdf" },
-    ],
+    links: [{ name: "PDF", href: "/dashboard/pdf" }],
   },
 ];
 
@@ -36,37 +26,47 @@ export default function SidebarSlot() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex flex-col gap-4 p-4">
-      {groups.map((group) => (
-        <div key={group.title} className="flex flex-col gap-1">
-          {group.title && (
-            <p className="px-4 pb-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-              {group.title}
-            </p>
-          )}
+    <>
+      <div className="flex h-14 items-center border-b px-5 font-semibold">
+        Management
+      </div>
 
-          {group.links.map((link) => {
-            const isActive = pathname === link.href;
-            const isExternal = link.href.startsWith("http");
+      <nav className="flex-1 space-y-5 overflow-y-auto px-3 py-4">
+        {groups.map((group) => (
+          <div key={group.title}>
+            {group.title && (
+              <p className="px-2 pb-1 text-xs text-muted-foreground">
+                {group.title}
+              </p>
+            )}
 
-            return (
-              <Link
-                key={link.href}
-                href={link.href}
-                target={isExternal ? "_blank" : undefined}
-                className={`rounded-lg px-4 py-2.5 text-sm font-medium transition-colors ${
-                  isActive
-                    ? "bg-indigo-100 text-indigo-700 dark:bg-indigo-500/15 dark:text-indigo-300"
-                    : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
-                }`}
-              >
-                {link.name}
-                {isExternal}
-              </Link>
-            );
-          })}
-        </div>
-      ))}
-    </nav>
+            {group.links.map((link) => {
+              const isActive =
+                link.href === "/dashboard"
+                  ? pathname === link.href
+                  : pathname.startsWith(link.href);
+
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`block rounded-md px-2 py-1.5 text-sm ${
+                    isActive
+                      ? "bg-accent font-medium text-foreground"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
+          </div>
+        ))}
+      </nav>
+
+      <div className="border-t p-3">
+        <ThemeToggle />
+      </div>
+    </>
   );
 }

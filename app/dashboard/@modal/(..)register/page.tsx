@@ -4,7 +4,7 @@ import RegisterForm from "@/app/components/auth/RegisterForm";
 export default function RegisterModalPage() {
   return (
     <AuthModal>
-      <RegisterForm />
+      <RegisterForm isModal />
     </AuthModal>
   );
 }

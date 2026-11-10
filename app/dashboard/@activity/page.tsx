@@ -1,118 +1,144 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { authClient } from "@/app/lib/auth-client";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { stopImpersonateUser } from "@/app/lib/api/users";
+import { listPdfConversions } from "@/app/lib/api/pdf";
+import StatusBadge from "@/app/components/StatusBadge";
 
 export default function ActivitySlot() {
-  const router = useRouter();
   const queryClient = useQueryClient();
+  const {
+    data: session,
+    isPending,
+    refetch: refetchSession,
+  } = authClient.useSession();
 
-  const { data: session, isPending, error } = authClient.useSession();
+  const recentPdfs = useQuery({
+    queryKey: ["pdf", "recent"],
+    queryFn: () => listPdfConversions(1, 5),
+    enabled: !!session,
+  });
 
-  const handleLogout = async () => {
-    try {
-      await authClient.signOut();
-      queryClient.removeQueries({ queryKey: ["users"] });
-      router.refresh();
-    } catch (error) {
-      console.error("Logout failed:", error);
-    }
-  };
+  async function handleLogout() {
+    await authClient.signOut();
+    queryClient.clear();
+  }
 
   const stopImpersonateMutation = useMutation({
     mutationFn: stopImpersonateUser,
     onSuccess: async () => {
-      await queryClient.invalidateQueries({ queryKey: ["users"] });
-      router.refresh();
-    },
-    onError: (error) => {
-      console.error("Stop impersonation failed:", error);
+      await refetchSession();
+      queryClient.invalidateQueries();
     },
   });
 
+  const isImpersonating = !!session?.session.impersonatedBy;
+
   return (
-    <section className="space-y-8">
-      <div className="flex min-h-16 items-center justify-end gap-3 border-b border-border pb-4">
+    <div>
+      <div className="panel-header">
+        <h2 className="panel-title">Activity</h2>
+
         {isPending && (
-          <p className="text-sm text-muted-foreground">Checking session...</p>
+          <span className="text-xs text-muted-foreground">Loading…</span>
         )}
 
-        {error && (
-          <p className="text-sm text-destructive">
-            Session error: {error.message}
+        {!isPending && !session && (
+          <Link href="/login" className="btn btn-primary">
+            Sign in
+          </Link>
+        )}
+
+        {session && (
+          <div className="flex items-center gap-3">
+            <div className="text-right">
+              <p className="text-sm font-medium">{session.user.name}</p>
+              <p className="text-xs text-muted-foreground">
+                @{session.user.username ?? "guest"} ·{" "}
+                {session.user.role ?? "user"}
+              </p>
+            </div>
+
+            {isImpersonating && (
+              <button
+                type="button"
+                className="btn text-warning"
+                disabled={stopImpersonateMutation.isPending}
+                onClick={() => stopImpersonateMutation.mutate()}
+              >
+                Stop impersonating
+              </button>
+            )}
+
+            <button type="button" className="btn" onClick={handleLogout}>
+              Sign out
+            </button>
+          </div>
+        )}
+      </div>
+
+      <div className="p-4">
+        <div className="mb-2 flex items-center justify-between">
+          <h3 className="text-sm font-medium">Recent PDF files</h3>
+          <Link
+            href="/dashboard/pdf"
+            className="text-xs text-muted-foreground hover:underline"
+          >
+            View all
+          </Link>
+        </div>
+
+        {!session && (
+          <p className="text-sm text-muted-foreground">
+            Sign in to see activity.
           </p>
         )}
 
-        {!isPending && !error && !session && (
-          <button
-            type="button"
-            onClick={() => router.push("/login")}
-            className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/80"
-          >
-            Login
-          </button>
+        {recentPdfs.isError && (
+          <p className="text-sm text-destructive">{recentPdfs.error.message}</p>
         )}
 
-        {!isPending && !error && session && (
-          <>
-            <div className="flex items-center gap-3 border-r border-border pr-4">
-              <div className="hidden sm:block">
-                <p className="text-sm font-semibold text-foreground">
-                  {session.user.name}
-                </p>
-                <p className="text-xs text-muted-foreground">
-                  @{session.user.username ?? "N/A"}
-                </p>
-              </div>
-
-              <span
-                className={`rounded-full px-2.5 py-1 text-xs font-semibold ${
-                  session.user.role === "admin"
-                    ? "bg-indigo-100 text-indigo-700 dark:bg-indigo-500/15 dark:text-indigo-300"
-                    : "bg-secondary text-secondary-foreground"
-                }`}
-              >
-                {session.user.role ?? "user"}
-              </span>
-            </div>
-
-            {/* Các nút thao tác */}
-            <div className="flex items-center gap-2">
-              {session.user.role !== "admin" && (
-                <button
-                  type="button"
-                  onClick={() => stopImpersonateMutation.mutate()}
-                  disabled={stopImpersonateMutation.isPending}
-                  className="rounded-lg border border-amber-300 bg-amber-50 px-3 py-2 text-sm font-medium text-amber-800 hover:bg-amber-100 dark:border-amber-500/40 dark:bg-amber-500/10 dark:text-amber-300 dark:hover:bg-amber-500/20 disabled:opacity-50"
-                >
-                  {stopImpersonateMutation.isPending
-                    ? "Stopping..."
-                    : "Stop impersonation"}
-                </button>
+        {recentPdfs.data && (
+          <table className="table rounded-md border">
+            <thead>
+              <tr>
+                <th>File</th>
+                <th>Status</th>
+                <th>Uploaded</th>
+              </tr>
+            </thead>
+            <tbody>
+              {recentPdfs.data.conversions.length === 0 && (
+                <tr>
+                  <td colSpan={3} className="text-center text-muted-foreground">
+                    No files yet.
+                  </td>
+                </tr>
               )}
-
-              <button
-                type="button"
-                onClick={handleLogout}
-                className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/80"
-              >
-                Logout
-              </button>
-            </div>
-          </>
+              {recentPdfs.data.conversions.map((pdf) => (
+                <tr key={pdf.id}>
+                  <td>
+                    <Link
+                      href={`/dashboard/pdf/${pdf.id}`}
+                      className="hover:underline"
+                    >
+                      {pdf.originalName}
+                    </Link>
+                  </td>
+                  <td>
+                    <StatusBadge status={pdf.status} />
+                  </td>
+                  <td className="text-muted-foreground">
+                    {new Date(pdf.createdAt).toLocaleString("en-GB")}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         )}
       </div>
-
-      {/* Activity */}
-      <div>
-        <h2 className="mb-4 text-lg font-bold text-foreground">Activity</h2>
-
-        <div className="rounded-xl border border-border bg-card p-6 shadow-sm">
-          <p className="text-sm text-muted-foreground">No recent activity.</p>
-        </div>
-      </div>
-    </section>
+    </div>
   );
 }

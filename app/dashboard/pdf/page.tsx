@@ -1,105 +1,182 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { listPdfConversions, uploadPdfs } from "@/app/lib/api/pdf";
+import { deletePdfConversion, listPdfConversions } from "@/app/lib/api/pdf";
+import { authClient } from "@/app/lib/auth-client";
+import Pagination from "@/app/components/Pagination";
+import StatusBadge from "@/app/components/StatusBadge";
+import PdfUploader from "./PdfUploader";
 
-export default function PdfUploadPage() {
+const PAGE_SIZE = 10;
+
+export default function PdfListPage() {
   const queryClient = useQueryClient();
-  const [files, setFiles] = useState<File[]>([]);
+  const { data: session } = authClient.useSession();
+  const isAdmin = session?.user?.role === "admin";
+
+  const [page, setPage] = useState(1);
+  const [status, setStatus] = useState("");
+  const [searchInput, setSearchInput] = useState("");
+  const [search, setSearch] = useState("");
 
   const { data, isPending, isError, error } = useQuery({
-    queryKey: ["pdf"],
-    queryFn: listPdfConversions,
+    queryKey: ["pdf", "list", page, status, search],
+    queryFn: () => listPdfConversions(page, PAGE_SIZE, status, search),
+    refetchInterval: 3000,
   });
 
-  const uploadMutation = useMutation({
-    mutationFn: uploadPdfs,
-    onSuccess: async () => {
-      setFiles([]);
-      await queryClient.invalidateQueries({ queryKey: ["pdf"] });
-    },
+  const deleteMutation = useMutation({
+    mutationFn: deletePdfConversion,
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: ["pdf"] }),
+    onError: (err) => alert(err.message),
   });
 
-  const handleSubmit = (event: React.SubmitEvent<HTMLFormElement>) => {
+  function handleSearch(event: React.SubmitEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (files.length === 0) return;
-    uploadMutation.mutate(files);
-    event.currentTarget.reset();
-  };
+    setSearch(searchInput.trim());
+    setPage(1);
+  }
+
+  function handleDelete(id: string, name: string) {
+    if (confirm(`Delete "${name}" and all of its images?`)) {
+      deleteMutation.mutate(id);
+    }
+  }
 
   return (
-    <div className="space-y-6 p-6">
-      <h1 className="text-xl font-bold">Upload PDF</h1>
-
-      <form onSubmit={handleSubmit} className="flex items-center gap-2">
-        <input
-          type="file"
-          accept="application/pdf"
-          multiple
-          onChange={(event) => setFiles(Array.from(event.target.files ?? []))}
-          className="text-sm file:mr-3 file:rounded-md file:border file:bg-card file:px-3 file:py-1.5 file:text-sm"
-        />
-
-        <button
-          type="submit"
-          disabled={files.length === 0 || uploadMutation.isPending}
-          className="rounded-md border px-3 py-1.5 text-sm hover:bg-accent disabled:opacity-50"
-        >
-          {uploadMutation.isPending ? "Uploading..." : "Upload"}
-        </button>
-      </form>
-
-      {uploadMutation.isError && (
-        <p role="alert" className="text-sm text-destructive">
-          {uploadMutation.error.message}
+    <div className="space-y-6">
+      <div>
+        <h1 className="text-lg font-semibold">PDF to images</h1>
+        <p className="text-sm text-muted-foreground">
+          Upload PDF files and get every page as a JPEG image.
         </p>
+      </div>
+
+      {isAdmin && (
+        <PdfUploader
+          onUploaded={() => {
+            setPage(1);
+            queryClient.invalidateQueries({ queryKey: ["pdf"] });
+          }}
+        />
       )}
 
-      <div className="space-y-2">
-        <div className="flex items-center justify-between">
-          <h2 className="font-semibold">Files</h2>
-          {/* <button
-            type="button"
-            onClick={() => refetch()}
-            className="text-sm underline"
-          >
-            Refresh
-          </button> */}
+      <section className="panel">
+        <div className="panel-header">
+          <h2 className="panel-title">Files</h2>
+
+          <form onSubmit={handleSearch} className="flex gap-2">
+            <select
+              value={status}
+              onChange={(event) => {
+                setStatus(event.target.value);
+                setPage(1);
+              }}
+              className="input w-36"
+            >
+              <option value="">All statuses</option>
+              <option value="PENDING">Pending</option>
+              <option value="PROCESSING">Processing</option>
+              <option value="COMPLETED">Completed</option>
+              <option value="FAILED">Failed</option>
+            </select>
+            <input
+              value={searchInput}
+              onChange={(event) => setSearchInput(event.target.value)}
+              placeholder="File name"
+              className="input w-48"
+            />
+            <button type="submit" className="btn">
+              Search
+            </button>
+          </form>
         </div>
 
         {isPending && (
-          <p className="text-sm text-muted-foreground">Loading...</p>
+          <p className="p-4 text-sm text-muted-foreground">Loading…</p>
         )}
-
         {isError && (
-          <p role="alert" className="text-sm text-destructive">
-            {error.message}
-          </p>
+          <p className="p-4 text-sm text-destructive">{error.message}</p>
         )}
 
-        {data?.length === 0 && (
-          <p className="text-sm text-muted-foreground">No files yet.</p>
+        {data && (
+          <table className="table">
+            <thead>
+              <tr>
+                <th>File name</th>
+                <th>Status</th>
+                <th className="text-right">Pages</th>
+                <th>Uploaded</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.conversions.length === 0 && (
+                <tr>
+                  <td
+                    colSpan={5}
+                    className="py-8 text-center text-muted-foreground"
+                  >
+                    No files found.
+                  </td>
+                </tr>
+              )}
+
+              {data.conversions.map((pdf) => (
+                <tr key={pdf.id}>
+                  <td>
+                    <Link
+                      href={`/dashboard/pdf/${pdf.id}`}
+                      className="font-medium hover:underline"
+                    >
+                      {pdf.originalName}
+                    </Link>
+                    {pdf.error && (
+                      <p className="text-xs text-destructive">{pdf.error}</p>
+                    )}
+                  </td>
+                  <td>
+                    <StatusBadge status={pdf.status} />
+                  </td>
+                  <td className="text-right">{pdf.totalPages ?? "–"}</td>
+                  <td className="text-muted-foreground">
+                    {new Date(pdf.createdAt).toLocaleString("en-GB")}
+                  </td>
+                  <td className="text-right">
+                    <Link
+                      href={`/dashboard/pdf/${pdf.id}`}
+                      className="btn btn-sm"
+                    >
+                      View
+                    </Link>
+                    {isAdmin && (
+                      <button
+                        type="button"
+                        className="btn btn-sm btn-danger ml-1.5"
+                        disabled={pdf.status === "PROCESSING"}
+                        onClick={() => handleDelete(pdf.id, pdf.originalName)}
+                      >
+                        Delete
+                      </button>
+                    )}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         )}
 
-        {data && data.length > 0 && (
-          <ul className="divide-y rounded-md border">
-            {data.map((conversion) => (
-              <li
-                key={conversion.id}
-                className="flex items-center justify-between gap-4 px-3 py-2 text-sm"
-              >
-                <span className="truncate">{conversion.originalName}</span>
-                <span className="shrink-0 text-muted-foreground">
-                  {conversion.status}
-                  {conversion.totalPages !== undefined &&
-                    ` - ${conversion.totalPages} pages`}
-                </span>
-              </li>
-            ))}
-          </ul>
+        {data && (
+          <Pagination
+            page={page}
+            pageSize={PAGE_SIZE}
+            total={data.total}
+            onPageChange={setPage}
+          />
         )}
-      </div>
+      </section>
     </div>
   );
 }

@@ -1,5 +1,7 @@
 import type { ShelfItem } from "@/features/shelves/types/shelf";
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8080";
+
 export interface Job {
   id: string;
   name: string;
@@ -26,15 +28,13 @@ export interface EditorData {
   items: ShelfItem[];
 }
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8080";
-
 export async function listJobs(): Promise<Job[]> {
   const response = await fetch(`${API_URL}/jobs`, {
     credentials: "include",
   });
 
   if (!response.ok) {
-    throw new Error(`Không thể lấy danh sách Jobs: ${response.status}`);
+    throw new Error(`Could not load jobs: ${response.status}`);
   }
 
   return response.json() as Promise<Job[]>;
@@ -46,8 +46,7 @@ export async function getJob(id: string): Promise<Job> {
   });
 
   if (!response.ok) {
-    const message = await response.text();
-    throw new Error(message || `Không thể lấy Job: ${response.status}`);
+    throw new Error(`Could not load job: ${response.status}`);
   }
 
   return response.json() as Promise<Job>;
@@ -64,8 +63,7 @@ export async function createJob(input: CreateJobInput): Promise<Job> {
   });
 
   if (!response.ok) {
-    const message = await response.text();
-    throw new Error(message || `Không thể tạo Job: ${response.status}`);
+    throw new Error(`Could not create job: ${response.status}`);
   }
 
   return response.json() as Promise<Job>;
@@ -78,10 +76,7 @@ export async function getJobEditor(id: string): Promise<EditorData> {
   );
 
   if (!response.ok) {
-    const body = await response.json().catch(() => null);
-    throw new Error(
-      body?.message ?? `Không thể lấy dữ liệu editor: ${response.status}`,
-    );
+    throw new Error(`Could not load editor data: ${response.status}`);
   }
 
   return response.json() as Promise<EditorData>;
@@ -109,11 +104,7 @@ export async function updateJobItem(
   );
 
   if (!response.ok) {
-    const body = await response.json().catch(() => null);
-    const message = Array.isArray(body?.message)
-      ? body.message.join(", ")
-      : body?.message;
-    throw new Error(message ?? `Không thể lưu: ${response.status}`);
+    throw new Error(`Could not save: ${response.status}`);
   }
 
   return response.json() as Promise<ShelfItem>;

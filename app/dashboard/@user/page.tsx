@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import {
   banUser,
   impersonateUser,
@@ -7,17 +9,11 @@ import {
   removeUser,
   unbanUser,
 } from "@/app/lib/api/users";
+import { authClient } from "@/app/lib/auth-client";
 import CreateUserForm from "@/app/components/users/CreateUserForm";
 import UpdateUserForm from "@/app/components/users/UpdateUserForm";
-import { authClient } from "@/app/lib/auth-client";
-import {
-  keepPreviousData,
-  useMutation,
-  useQuery,
-  useQueryClient,
-} from "@tanstack/react-query";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
+import Pagination from "@/app/components/Pagination";
+import StatusBadge from "@/app/components/StatusBadge";
 
 interface User {
   id: string;
@@ -27,258 +23,170 @@ interface User {
   banned?: boolean | null;
 }
 
+const PAGE_SIZE = 8;
+
 export default function UserSlot() {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [pageSize, setPageSize] = useState(5);
-
-  const [isCreateForm, setIsCreateForm] = useState(false);
-  const [editingUser, setEditingUser] = useState<User | null>(null);
-
-  const router = useRouter();
   const queryClient = useQueryClient();
 
-  const {
-    data: session,
-    isPending: authPending,
-    error: authError,
-  } = authClient.useSession();
+  const [page, setPage] = useState(1);
+  const [isCreating, setIsCreating] = useState(false);
+  const [editingUser, setEditingUser] = useState<User | null>(null);
+
+  const { data: session, refetch: refetchSession } = authClient.useSession();
+  const isAdmin = session?.user?.role === "admin";
+
+  const { data, isPending, isError, error } = useQuery({
+    queryKey: ["users", page],
+    queryFn: () => listUsers({ currentPage: page, pageSize: PAGE_SIZE }),
+    enabled: isAdmin,
+  });
+
+  function reloadUsers() {
+    queryClient.invalidateQueries({ queryKey: ["users"] });
+  }
 
   const impersonateMutation = useMutation({
     mutationFn: impersonateUser,
-
     onSuccess: async () => {
-      await queryClient.cancelQueries();
-      queryClient.clear();
-      router.refresh();
+      await refetchSession();
+      queryClient.invalidateQueries();
     },
-
-    onError: (error: Error) => {
-      console.error(error);
-      window.alert("User got banned, can not sign in");
-    },
+    onError: (err) => alert(err.message),
   });
 
-  const banUserMutation = useMutation({
+  const banMutation = useMutation({
     mutationFn: banUser,
-    onSuccess: async () => {
-      await queryClient.invalidateQueries({ queryKey: ["users"] });
-    },
-    onError: (error) => {
-      console.error("Ban user failed:", error);
-    },
+    onSuccess: reloadUsers,
   });
 
-  const unbanUserMutation = useMutation({
+  const unbanMutation = useMutation({
     mutationFn: unbanUser,
-    onSuccess: async () => {
-      await queryClient.invalidateQueries({ queryKey: ["users"] });
-    },
-    onError: (error) => {
-      console.error("Unban user failed:", error);
-    },
+    onSuccess: reloadUsers,
   });
 
-  const removeUserMutation = useMutation({
+  const removeMutation = useMutation({
     mutationFn: removeUser,
-    onSuccess: async () => {
-      await queryClient.invalidateQueries({ queryKey: ["users"] });
-    },
-    onError: (error) => {
-      console.error("Remove user failed:", error);
-    },
+    onSuccess: reloadUsers,
   });
 
-  const {
-    data,
-    isPending: usersPending,
-    isError: usersIsError,
-    error: usersError,
-    isPlaceholderData,
-  } = useQuery({
-    queryKey: ["users", { currentPage, pageSize }],
-    queryFn: () => listUsers({ currentPage, pageSize }),
-    placeholderData: keepPreviousData,
-    enabled: !authPending && session?.user?.role === "admin",
-  });
-
-  const totalPages = Math.ceil((data?.total ?? 0) / pageSize);
-
-  if (authPending) {
-    return <p>Đang kiểm tra đăng nhập...</p>;
+  function handleDelete(user: User) {
+    if (confirm(`Delete user "${user.name}"?`)) {
+      removeMutation.mutate(user.id);
+    }
   }
 
-  if (authError) {
-    return <p>Lỗi xác thực. Vui lòng thử lại.</p>;
-  }
-
-  if (!session?.user) {
-    return <p>Chưa đăng nhập.</p>;
-  }
-
-  if (session.user.role !== "admin") {
-    return <p>User kh xem duoc.</p>;
-  }
-
-  if (usersPending) {
-    return <p>Loading users...</p>;
-  }
-
-  if (usersIsError) {
-    return <p>{usersError.message}</p>;
-  }
-
-  if (!data) {
-    return <p>Không có dữ liệu users.</p>;
+  if (!isAdmin) {
+    return (
+      <div>
+        <div className="panel-header">
+          <h2 className="panel-title">Users</h2>
+        </div>
+        <p className="p-4 text-sm text-muted-foreground">
+          Only admins can manage users.
+        </p>
+      </div>
+    );
   }
 
   return (
-    <section className="min-w-0 space-y-5">
-      {/* Header */}
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <h2 className="text-xl font-bold tracking-tight text-foreground">
-          Users
-        </h2>
-
+    <div className="flex h-full flex-col">
+      <div className="panel-header">
+        <h2 className="panel-title">Users</h2>
         <button
           type="button"
-          className="rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-indigo-700"
-          onClick={() => setIsCreateForm(true)}
+          className="btn btn-primary"
+          onClick={() => setIsCreating(true)}
         >
-          + Create User
+          New user
         </button>
       </div>
 
-      {/* Users list + Pagination */}
-      <div className="flex flex-col">
-        <div className="min-h-[360px] space-y-3">
-          {data.users.map((user: User) => (
-            <div
-              key={user.id}
-              className="flex min-w-0 flex-col gap-3 rounded-xl border border-border bg-card p-4 transition hover:border-input sm:flex-row sm:items-center sm:justify-between"
-            >
-              {/* Username + Status */}
-              <div className="flex min-w-0 flex-col items-start gap-2">
-                <span className="max-w-full font-medium text-foreground">
-                  {user.username ?? user.name}
-                </span>
+      <div className="flex-1">
+        {isPending && (
+          <p className="p-4 text-sm text-muted-foreground">Loading…</p>
+        )}
+        {isError && (
+          <p className="p-4 text-sm text-destructive">{error.message}</p>
+        )}
+        {data?.users.length === 0 && (
+          <p className="p-4 text-sm text-muted-foreground">No users found.</p>
+        )}
 
-                {user.banned === true ? (
-                  <span className="rounded-full bg-red-50 px-2.5 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-200 dark:bg-red-500/10 dark:text-red-300 dark:ring-red-500/30">
-                    Banned
-                  </span>
-                ) : user.banned === false ? (
-                  <span className="rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-medium text-emerald-700 ring-1 ring-inset ring-emerald-200 dark:bg-emerald-500/10 dark:text-emerald-300 dark:ring-emerald-500/30">
-                    Active
-                  </span>
-                ) : (
-                  <span className="rounded-full bg-muted px-2.5 py-1 text-xs text-muted-foreground">
-                    Unknown
-                  </span>
-                )}
+        <ul className="divide-y">
+          {data?.users.map((user: User) => (
+            <li key={user.id} className="space-y-2 px-4 py-3">
+              <div className="flex items-start justify-between gap-2">
+                <div>
+                  <p className="font-medium">{user.name}</p>
+                  <p className="text-xs text-muted-foreground">
+                    @{user.username} · {user.email}
+                  </p>
+                </div>
+                <StatusBadge status={user.banned ? "BANNED" : "ACTIVE"} />
               </div>
 
-              {/* Actions */}
-              <div className="flex min-w-0 flex-wrap items-center gap-2">
+              <div className="flex flex-wrap gap-1.5">
                 <button
                   type="button"
-                  disabled={impersonateMutation.isPending}
-                  className="rounded-md border border-indigo-200 bg-indigo-50 px-3 py-1.5 text-xs font-medium text-indigo-700 transition hover:bg-indigo-100 dark:border-indigo-500/30 dark:bg-indigo-500/10 dark:text-indigo-300 dark:hover:bg-indigo-500/20 disabled:cursor-not-allowed disabled:opacity-50"
+                  className="btn btn-sm"
+                  disabled={!!user.banned || impersonateMutation.isPending}
                   onClick={() => impersonateMutation.mutate(user.id)}
                 >
-                  {impersonateMutation.isPending ? "Loading..." : "Login"}
+                  Impersonate
                 </button>
-
                 <button
                   type="button"
-                  disabled={removeUserMutation.isPending}
-                  className="rounded-md border border-red-200 bg-card px-3 py-1.5 text-xs font-medium text-red-600 transition hover:bg-red-50 dark:border-red-500/30 dark:text-red-400 dark:hover:bg-red-500/10 disabled:opacity-50"
-                  onClick={() => removeUserMutation.mutate(user.id)}
+                  className="btn btn-sm"
+                  onClick={() => setEditingUser(user)}
                 >
-                  Delete
+                  Edit
                 </button>
-
-                {user.banned === true ? (
+                {user.banned ? (
                   <button
                     type="button"
-                    disabled={unbanUserMutation.isPending}
-                    className="rounded-md border border-emerald-200 bg-card px-3 py-1.5 text-xs font-medium text-emerald-700 transition hover:bg-emerald-50 dark:border-emerald-500/30 dark:text-emerald-400 dark:hover:bg-emerald-500/10 disabled:opacity-50"
-                    onClick={() => unbanUserMutation.mutate(user.id)}
+                    className="btn btn-sm"
+                    onClick={() => unbanMutation.mutate(user.id)}
                   >
                     Unban
                   </button>
                 ) : (
                   <button
                     type="button"
-                    disabled={banUserMutation.isPending}
-                    className="rounded-md border border-amber-200 bg-card px-3 py-1.5 text-xs font-medium text-amber-700 transition hover:bg-amber-50 dark:border-amber-500/30 dark:text-amber-400 dark:hover:bg-amber-500/10 disabled:opacity-50"
-                    onClick={() => banUserMutation.mutate(user.id)}
+                    className="btn btn-sm"
+                    onClick={() => banMutation.mutate(user.id)}
                   >
                     Ban
                   </button>
                 )}
-
                 <button
                   type="button"
-                  className="rounded-md border border-border bg-card px-3 py-1.5 text-xs font-medium text-secondary-foreground transition hover:bg-accent hover:text-accent-foreground"
-                  onClick={() => setEditingUser(user)}
+                  className="btn btn-sm btn-danger"
+                  onClick={() => handleDelete(user)}
                 >
-                  Update
+                  Delete
                 </button>
               </div>
-            </div>
+            </li>
           ))}
-
-          {data.users.length === 0 && (
-            <div className="rounded-xl border border-border bg-card px-4 py-12 text-center text-sm text-muted-foreground">
-              No users found.
-            </div>
-          )}
-        </div>
-
-        <div className="mt-auto flex min-h-[56px] flex-wrap items-center justify-between gap-3 border-t border-border pt-4">
-          <p className="text-sm text-muted-foreground">
-            Page{" "}
-            <span className="font-medium text-foreground">{currentPage}</span> of{" "}
-            <span className="font-medium text-foreground">{totalPages || 1}</span>
-          </p>
-
-          <div className="flex items-center gap-2">
-            <button
-              type="button"
-              disabled={currentPage === 1 || isPlaceholderData}
-              onClick={() => setCurrentPage((p) => p - 1)}
-              className="rounded-lg border border-border px-3 py-2 text-sm font-medium text-secondary-foreground transition hover:bg-accent hover:text-accent-foreground disabled:cursor-not-allowed disabled:opacity-40"
-            >
-              Previous
-            </button>
-
-            <button
-              type="button"
-              disabled={
-                isPlaceholderData ||
-                totalPages === 0 ||
-                currentPage >= totalPages
-              }
-              onClick={() => setCurrentPage((p) => p + 1)}
-              className="rounded-lg border border-border px-3 py-2 text-sm font-medium text-secondary-foreground transition hover:bg-accent hover:text-accent-foreground disabled:cursor-not-allowed disabled:opacity-40"
-            >
-              Next
-            </button>
-          </div>
-        </div>
+        </ul>
       </div>
 
-      {/* Forms */}
-      {isCreateForm && (
-        <CreateUserForm onClose={() => setIsCreateForm(false)} />
+      {data && (
+        <Pagination
+          page={page}
+          pageSize={PAGE_SIZE}
+          total={data.total}
+          onPageChange={setPage}
+        />
       )}
 
+      {isCreating && <CreateUserForm onClose={() => setIsCreating(false)} />}
       {editingUser && (
         <UpdateUserForm
           user={editingUser}
           onClose={() => setEditingUser(null)}
         />
       )}
-    </section>
+    </div>
   );
 }

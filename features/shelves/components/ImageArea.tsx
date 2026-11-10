@@ -68,7 +68,7 @@ export default function ImageArea({
   const selectedItem = items.find((item) => item.id === selectedId);
 
   return (
-    <div className="relative flex-1 bg-slate-200 dark:bg-slate-800 rounded-lg p-2 flex items-center justify-center overflow-auto h-[50vh] sm:h-[55vh] md:h-full w-full">
+    <div className="relative flex-1 bg-muted p-2 flex items-center justify-center overflow-auto h-[50vh] sm:h-[55vh] md:h-full w-full">
       <div className="relative h-full transition-all duration-150">
         <svg
           ref={svgRef}
@@ -85,12 +85,11 @@ export default function ImageArea({
 
           {/* Unselected items rendered first */}
           {unselectedItems.map((item) => {
-            const points: Polygon = item.polygon.length === 4 ? item.polygon : bboxToPolygon(item.bbox);
-            const state = getPolygonState(
-              item.id,
-              selectedId,
-              matchedIds,
-            );
+            const points: Polygon =
+              item.polygon.length === 4
+                ? item.polygon
+                : bboxToPolygon(item.bbox);
+            const state = getPolygonState(item.id, selectedId, matchedIds);
 
             return (
               <g

@@ -3,34 +3,40 @@ import { z } from "zod";
 const nameSchema = z
   .string()
   .trim()
-  .min(1, "Tên không được để trống")
-  .max(50, "Tên tối đa 50 ký tự")
+  .min(1, "Name is required")
+  .max(50, "Name must be at most 50 characters")
   .regex(
     /^[\p{L}\p{M}]+(?:[ '\u2019-][\p{L}\p{M}]+)*$/u,
-    "Tên chỉ được chứa chữ cái, khoảng trắng và dấu nối",
+    "Name may only contain letters, spaces and hyphens",
   );
 
 const usernameSchema = z
   .string()
   .trim()
-  .min(3, "Username tối thiểu 3 ký tự")
-  .max(20, "Username tối đa 20 ký tự")
-  .regex(/^[a-zA-Z0-9_]+$/, "Username chỉ được chứa chữ, số và gạch dưới");
+  .min(3, "Username must be at least 3 characters")
+  .max(20, "Username must be at most 20 characters")
+  .regex(
+    /^[a-zA-Z0-9_]+$/,
+    "Username may only contain letters, numbers and underscores",
+  );
 
-const emailSchema = z.string().trim().email("Email không hợp lệ");
+const emailSchema = z.string().trim().email("Invalid email address");
 
 const createPasswordSchema = z
   .string()
-  .min(8, "Mật khẩu tối thiểu 8 ký tự")
-  .max(64, "Mật khẩu tối đa 64 ký tự");
+  .min(8, "Password must be at least 8 characters")
+  .max(64, "Password must be at most 64 characters");
 
 const updatePasswordSchema = z
   .string()
   .refine(
     (value) => value === "" || value.length >= 8,
-    "Mật khẩu tối thiểu 8 ký tự",
+    "Password must be at least 8 characters",
   )
-  .refine((value) => value.length <= 64, "Mật khẩu tối đa 64 ký tự");
+  .refine(
+    (value) => value.length <= 64,
+    "Password must be at most 64 characters",
+  );
 
 export const createUserSchema = z.object({
   name: nameSchema,

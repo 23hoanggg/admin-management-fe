@@ -24,7 +24,7 @@ export default function ShelfEditor({
       {editor.saveError && (
         <div
           role="alert"
-          className="fixed top-4 right-4 z-50 rounded-md bg-red-600 px-4 py-2 text-sm text-white shadow"
+          className="fixed top-4 right-4 z-50 rounded-md border bg-card px-4 py-2 text-sm text-destructive shadow-md"
         >
           Save error: {editor.saveError}
         </div>

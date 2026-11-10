@@ -1,19 +1,5 @@
-import Link from "next/link";
+import { redirect } from "next/navigation";
 
 export default function HomePage() {
-  return (
-    <main>
-      <h1>Admin Frontend</h1>
-
-      <nav>
-        <div>
-          <Link href="/dashboard">Dashboard</Link>
-        </div>
-
-        <div>
-          <Link href="/login">Login</Link>
-        </div>
-      </nav>
-    </main>
-  );
+  redirect("/dashboard");
 }

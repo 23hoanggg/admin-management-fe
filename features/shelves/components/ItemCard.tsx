@@ -24,7 +24,7 @@ export default function ItemCard({
       onMouseEnter={() => onHover(id)}
       onMouseLeave={() => onHover(null)}
       onClick={() => onSelect(isSelected ? null : id)}
-      className={`p-3 rounded-lg border cursor-pointer transition-colors ${
+      className={`p-3 rounded-md border cursor-pointer transition-colors ${
         isSelected
           ? "bg-green-100 border-green-500 dark:bg-green-500/15"
           : isHovered
@@ -38,7 +38,7 @@ export default function ItemCard({
         </span>
         <div className="flex items-center gap-2">
           {isSelected && (
-            <span className="text-xs text-green-700 font-semibold bg-green-200 dark:bg-green-500/25 dark:text-green-300 px-2 py-0.5 rounded">
+            <span className="text-xs font-medium text-muted-foreground border px-1.5 py-0.5 rounded tabular-nums">
               Editing
             </span>
           )}
@@ -48,7 +48,7 @@ export default function ItemCard({
               e.stopPropagation();
               onEditInfo(id);
             }}
-            className="text-xs text-blue-600 dark:text-blue-400 hover:underline"
+            className="text-xs text-muted-foreground hover:text-foreground hover:underline"
           >
             Edit info
           </button>

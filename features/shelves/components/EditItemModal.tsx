@@ -46,7 +46,7 @@ export default function ItemEditModal({
             value={name}
             onChange={(e) => setName(e.target.value)}
             autoFocus
-            className="rounded-md border border-input bg-input-background px-3 py-2 text-input-foreground outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500"
+            className="input"
           />
         </label>
 
@@ -55,7 +55,7 @@ export default function ItemEditModal({
           <input
             value={shelfDigit}
             onChange={(e) => setShelfDigit(e.target.value)}
-            className="rounded-md border border-input bg-input-background px-3 py-2 text-input-foreground outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500"
+            className="input"
           />
         </label>
 
@@ -67,10 +67,7 @@ export default function ItemEditModal({
           >
             Cancel
           </button>
-          <button
-            type="submit"
-            className="rounded-md bg-green-600 px-4 py-1.5 text-sm font-medium text-white hover:bg-green-700"
-          >
+          <button type="submit" className="btn btn-primary">
             Save
           </button>
         </div>

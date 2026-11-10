@@ -39,7 +39,7 @@ export default function InfoList({
       : items;
 
   return (
-    <div className="w-full md:w-80 lg:w-96 p-3 md:p-4 rounded-lg flex flex-col gap-2 overflow-y-auto h-full md:h-full max-h-[500px] md:max-h-none border border-border bg-card text-card-foreground">
+    <div className="w-full md:w-80 lg:w-96 p-3 md:p-4 flex flex-col gap-2 overflow-y-auto h-full md:h-full max-h-[500px] md:max-h-none border-l border-border bg-card text-card-foreground">
       {selectedId ? (
         <EditToolbar
           totalCount={items.length}

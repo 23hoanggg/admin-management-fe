@@ -3,24 +3,22 @@
 import { useRouter } from "next/navigation";
 import type { ReactNode } from "react";
 
-interface AuthModalProps {
-  children: ReactNode;
-}
-
-export default function AuthModal({ children }: AuthModalProps) {
+// Khung popup cho login/register khi mở từ trong dashboard
+export default function AuthModal({ children }: { children: ReactNode }) {
   const router = useRouter();
 
-  const handleClose = () => {
-    router.back();
-  };
-
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black/30">
-      <div className="w-full max-w-md rounded border bg-card p-6 text-card-foreground">
-        <button type="button" onClick={handleClose} className="mb-4">
-          Close
-        </button>
-
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4">
+      <div className="panel w-full max-w-sm p-5">
+        <div className="mb-4 flex justify-end">
+          <button
+            type="button"
+            className="btn btn-sm"
+            onClick={() => router.back()}
+          >
+            Close
+          </button>
+        </div>
         {children}
       </div>
     </div>

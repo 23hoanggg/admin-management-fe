@@ -1,166 +1,115 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { authClient } from "@/app/lib/auth-client";
 import { loginSchema } from "@/app/lib/schemas/auth.schema";
 
-interface LoginFormProps {
-  isModal?: boolean;
-}
-
-export default function LoginForm({ isModal = false }: LoginFormProps) {
+export default function LoginForm({ isModal = false }: { isModal?: boolean }) {
   const router = useRouter();
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = async (event: React.SubmitEvent<HTMLFormElement>) => {
+  // Đăng nhập xong: đang ở popup thì đóng popup, không thì về dashboard
+  function goNext() {
+    if (isModal) router.back();
+    else router.push("/dashboard");
+  }
+
+  async function handleSubmit(event: React.SubmitEvent<HTMLFormElement>) {
     event.preventDefault();
-    setErrorMessage(null);
-    const result = loginSchema.safeParse({
-      username,
-      password,
-    });
+    setErrorMessage("");
 
+    const result = loginSchema.safeParse({ username, password });
     if (!result.success) {
       setErrorMessage(result.error.issues[0].message);
       return;
     }
 
     setIsLoading(true);
+    const { error } = await authClient.signIn.username(result.data);
+    setIsLoading(false);
 
-    try {
-      const { data, error } = await authClient.signIn.username({
-        username: result.data.username,
-        password: result.data.password,
-      });
-
-      if (error) {
-        setErrorMessage(error.message ?? "Đã xảy ra lỗi. Vui lòng thử lại.");
-        return;
-      }
-
-      if (data) {
-        if (isModal) {
-          router.back();
-        } else {
-          router.push("/dashboard");
-        }
-      }
-    } catch {
-      setErrorMessage("Đã xảy ra lỗi. Vui lòng thử lại.");
-    } finally {
-      setIsLoading(false);
+    if (error) {
+      setErrorMessage(error.message ?? "Sign in failed.");
+      return;
     }
-  };
+    goNext();
+  }
 
-  const handleAnonymousLogin = async () => {
-    setErrorMessage(null);
+  async function handleGuestLogin() {
     setIsLoading(true);
+    const { error } = await authClient.signIn.anonymous();
+    setIsLoading(false);
 
-    try {
-      const { data, error } = await authClient.signIn.anonymous();
-
-      if (error) {
-        setErrorMessage(error.message ?? "Đã xảy ra lỗi. Vui lòng thử lại.");
-        return;
-      }
-
-      if (data) {
-        if (isModal) {
-          router.back();
-        } else {
-          router.push("/dashboard");
-        }
-      }
-    } catch {
-      setErrorMessage("Đã xảy ra lỗi. Vui lòng thử lại.");
-    } finally {
-      setIsLoading(false);
+    if (error) {
+      setErrorMessage(error.message ?? "Sign in failed.");
+      return;
     }
-  };
+    goNext();
+  }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 p-4">
-      <div className="w-full max-w-md rounded-lg border bg-card p-6 text-card-foreground shadow-lg">
-        <div className="mb-5 flex items-center justify-between">
-          <h2 className="text-lg font-semibold">Sign In</h2>
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <h2 className="text-lg font-semibold">Sign in</h2>
 
-          <button
-            type="button"
-            onClick={() => router.back()}
-            className="text-muted-foreground hover:text-foreground"
-          >
-            ✕
-          </button>
-        </div>
-
-        {errorMessage && (
-          <p role="alert" className="mb-4 text-sm text-destructive">
-            {errorMessage}
-          </p>
-        )}
-
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-          <div>
-            <label
-              htmlFor="login-username"
-              className="mb-1 block text-sm font-medium"
-            >
-              Username
-            </label>
-            <input
-              id="login-username"
-              type="text"
-              value={username}
-              onChange={(event) => setUsername(event.target.value)}
-              required
-              disabled={isLoading}
-              className="w-full rounded-md border border-input bg-input-background px-3 py-2 text-sm text-input-foreground outline-none placeholder:text-placeholder focus:border-ring"
-            />
-          </div>
-
-          <div>
-            <label
-              htmlFor="login-password"
-              className="mb-1 block text-sm font-medium"
-            >
-              Password
-            </label>
-            <input
-              id="login-password"
-              type="password"
-              value={password}
-              onChange={(event) => setPassword(event.target.value)}
-              required
-              disabled={isLoading}
-              className="w-full rounded-md border border-input bg-input-background px-3 py-2 text-sm text-input-foreground outline-none placeholder:text-placeholder focus:border-ring"
-            />
-          </div>
-
-          <div className="mt-2 flex flex-col gap-2">
-            <button
-              type="submit"
-              disabled={isLoading}
-              className="w-full rounded-md bg-primary px-4 py-2 text-sm text-primary-foreground hover:bg-primary/90 disabled:opacity-50"
-            >
-              {isLoading ? "Signing in..." : "Sign In"}
-            </button>
-
-            <button
-              type="button"
-              onClick={handleAnonymousLogin}
-              disabled={isLoading}
-              className="w-full rounded-md border px-4 py-2 text-sm hover:bg-accent hover:text-accent-foreground disabled:opacity-50"
-            >
-              Sign In Anonymously
-            </button>
-          </div>
-        </form>
+      <div>
+        <label htmlFor="login-username" className="label">
+          Username
+        </label>
+        <input
+          id="login-username"
+          className="input"
+          value={username}
+          onChange={(event) => setUsername(event.target.value)}
+          disabled={isLoading}
+        />
       </div>
-    </div>
+
+      <div>
+        <label htmlFor="login-password" className="label">
+          Password
+        </label>
+        <input
+          id="login-password"
+          type="password"
+          className="input"
+          value={password}
+          onChange={(event) => setPassword(event.target.value)}
+          disabled={isLoading}
+        />
+      </div>
+
+      {errorMessage && (
+        <p className="text-sm text-destructive">{errorMessage}</p>
+      )}
+
+      <button
+        type="submit"
+        disabled={isLoading}
+        className="btn btn-primary w-full"
+      >
+        {isLoading ? "Signing in…" : "Sign in"}
+      </button>
+      <button
+        type="button"
+        disabled={isLoading}
+        onClick={handleGuestLogin}
+        className="btn w-full"
+      >
+        Continue as guest
+      </button>
+
+      <p className="text-center text-xs text-muted-foreground">
+        No account?{" "}
+        <Link href="/register" replace className="text-foreground underline">
+          Register
+        </Link>
+      </p>
+    </form>
   );
 }

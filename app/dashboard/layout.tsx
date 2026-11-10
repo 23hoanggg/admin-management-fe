@@ -21,41 +21,34 @@ export default function DashboardLayout({
   modal,
 }: DashboardLayoutProps) {
   const pathname = usePathname();
-
   const isDashboardHome = pathname === "/dashboard";
 
   return (
-    <div className="h-dvh overflow-hidden bg-muted/50 p-3 dark:bg-background">
-      <div className="mx-auto flex h-full max-w-[1800px] gap-3">
-        <aside className="min-h-0 w-[200px] shrink-0 overflow-y-auto rounded-xl border border-border bg-card text-card-foreground p-3">
-          {sidebar}
-        </aside>
+    <div className="flex h-dvh overflow-hidden">
+      <aside className="flex w-56 shrink-0 flex-col border-r bg-card">
+        {sidebar}
+      </aside>
 
-        <div className="min-h-0 min-w-0 flex-1">
-          {isDashboardHome ? (
-            <div className="grid h-full min-h-0 grid-cols-[minmax(0,1fr)_minmax(380px,520px)] grid-rows-[minmax(0,1fr)_minmax(180px,auto)] gap-3">
-              {/* Activity */}
-              <section className="min-h-0 min-w-0 overflow-y-auto rounded-xl border border-border bg-card text-card-foreground p-4">
-                {activity}
-              </section>
+      <main className="min-w-0 flex-1 overflow-y-auto p-6">
+        {isDashboardHome ? (
+          // Trang chủ dashboard: 3 slot song song
+          // | activity | user |
+          // | admin    | user |
+          <div className="grid h-full min-h-[560px] grid-cols-[minmax(0,1fr)_minmax(380px,520px)] grid-rows-[minmax(0,1fr)_auto] gap-4">
+            <section className="panel min-h-0 overflow-y-auto">
+              {activity}
+            </section>
 
-              {/* User */}
-              <section className="row-span-2 min-h-0 min-w-0 overflow-x-hidden overflow-y-auto rounded-xl border border-border bg-card text-card-foreground p-4">
-                {user}
-              </section>
+            <section className="panel row-span-2 min-h-0 overflow-y-auto">
+              {user}
+            </section>
 
-              {/* Admin */}
-              <section className="min-h-0 min-w-0 overflow-y-auto rounded-xl border border-border bg-card text-card-foreground p-4">
-                {admin}
-              </section>
-            </div>
-          ) : (
-            <main className="h-full min-h-0 min-w-0 overflow-auto rounded-xl border border-border bg-card text-card-foreground p-4">
-              {children}
-            </main>
-          )}
-        </div>
-      </div>
+            <section className="panel">{admin}</section>
+          </div>
+        ) : (
+          <div className="mx-auto max-w-6xl">{children}</div>
+        )}
+      </main>
 
       {modal}
     </div>

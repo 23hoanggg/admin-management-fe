@@ -21,7 +21,7 @@ export default function SearchBar({
           value={query}
           onChange={(e) => onQueryChange(e.target.value)}
           placeholder="Search by name or shelf number..."
-          className="w-full px-3 py-1.5 pr-8 text-sm border border-input bg-input-background text-input-foreground placeholder:text-placeholder rounded-md outline-none focus:border-green-500 focus:ring-1 focus:ring-green-500"
+          className="w-full px-3 py-1.5 pr-8 text-sm border border-input bg-input-background text-input-foreground placeholder:text-placeholder rounded-md outline-none focus:border-ring"
         />
         {query && (
           <button
