@@ -5,7 +5,9 @@ interface BoxOverlayProps {
   outputKey: string;
   box: PdfBox;
   isHovered: boolean;
+  isSelected: boolean;
   onHover: (key: string | null) => void;
+  onClick: () => void;
 }
 
 // box polygon
@@ -13,17 +15,23 @@ export default function BoxOverlay({
   outputKey,
   box,
   isHovered,
+  isSelected,
   onHover,
+  onClick,
 }: BoxOverlayProps) {
-  const colorClass = isHovered
-    ? "border-green-500 bg-green-500/25"
-    : "border-red-500";
+  let colorClass = "border-red-500";
+  if (isHovered) colorClass = "border-green-500 bg-green-500/25";
+  if (isSelected) colorClass = "border-blue-500 bg-blue-500/25";
 
   return (
     <div
       onMouseEnter={() => onHover(outputKey)}
       onMouseLeave={() => onHover(null)}
-      className={`absolute border-2 ${colorClass}`}
+      onClick={(event) => {
+        event.stopPropagation();
+        onClick();
+      }}
+      className={`absolute cursor-pointer border-2 ${colorClass}`}
       style={boxToStyle(box)}
     >
       {/* label box */}
