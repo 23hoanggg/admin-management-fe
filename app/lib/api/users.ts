@@ -20,6 +20,7 @@ export interface ListUsersParams {
   pageSize: number;
 }
 
+// list users (paging)
 export async function listUsers({ currentPage, pageSize }: ListUsersParams) {
   const { data, error } = await authClient.admin.listUsers({
     query: {
@@ -39,6 +40,7 @@ export async function listUsers({ currentPage, pageSize }: ListUsersParams) {
   return data;
 }
 
+// ban user
 export async function banUser(userId: string) {
   const { data, error } = await authClient.admin.banUser({
     userId,
@@ -52,6 +54,7 @@ export async function banUser(userId: string) {
   return data;
 }
 
+// unban user
 export async function unbanUser(userId: string) {
   const { data, error } = await authClient.admin.unbanUser({
     userId,
@@ -64,6 +67,7 @@ export async function unbanUser(userId: string) {
   return data;
 }
 
+// log in as this user
 export async function impersonateUser(userId: string) {
   const { data, error } = await authClient.admin.impersonateUser({
     userId,
@@ -76,6 +80,7 @@ export async function impersonateUser(userId: string) {
   return data;
 }
 
+// stop logging in as another user
 export async function stopImpersonateUser() {
   const { data, error } = await authClient.admin.stopImpersonating();
 
@@ -86,6 +91,7 @@ export async function stopImpersonateUser() {
   return data;
 }
 
+// delete user
 export async function removeUser(userId: string) {
   const { data: deletedUser, error } = await authClient.admin.removeUser({
     userId,
@@ -97,6 +103,7 @@ export async function removeUser(userId: string) {
   return deletedUser;
 }
 
+// user detail
 export async function getUser(userId: string) {
   const { data, error } = await authClient.admin.getUser({
     query: {
@@ -107,6 +114,7 @@ export async function getUser(userId: string) {
   return data;
 }
 
+// make user admin
 export async function setRole(userId: string) {
   const { data, error } = await authClient.admin.setRole({
     userId,
@@ -116,6 +124,7 @@ export async function setRole(userId: string) {
   return data;
 }
 
+// update name / username / email / password
 export async function updateUser(userId: string, input: UpdateUserInput) {
   const updateData: Record<string, string> = {};
 
@@ -140,6 +149,7 @@ export async function updateUser(userId: string, input: UpdateUserInput) {
   }
 }
 
+// create user
 export async function createUser(input: CreateUserInput) {
   const { data, error } = await authClient.admin.createUser({
     name: input.name,

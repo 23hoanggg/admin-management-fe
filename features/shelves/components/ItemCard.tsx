@@ -7,6 +7,7 @@ interface ItemCardProps {
   onHover: (id: string | null) => void;
   onSelect: (id: string | null) => void;
   onEditInfo: (id: string) => void;
+  canEdit: boolean;
 }
 
 export default function ItemCard({
@@ -16,6 +17,7 @@ export default function ItemCard({
   onHover,
   onSelect,
   onEditInfo,
+  canEdit,
 }: ItemCardProps) {
   const id = item.id;
 
@@ -37,21 +39,23 @@ export default function ItemCard({
           Shelf: {item.shelfDigit}
         </span>
         <div className="flex items-center gap-2">
-          {isSelected && (
+          {canEdit && isSelected && (
             <span className="text-xs font-medium text-muted-foreground border px-1.5 py-0.5 rounded tabular-nums">
               Editing
             </span>
           )}
-          <button
-            type="button"
-            onClick={(e) => {
-              e.stopPropagation();
-              onEditInfo(id);
-            }}
-            className="text-xs text-muted-foreground hover:text-foreground hover:underline"
-          >
-            Edit info
-          </button>
+          {canEdit && (
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                onEditInfo(id);
+              }}
+              className="text-xs text-muted-foreground hover:text-foreground hover:underline"
+            >
+              Edit info
+            </button>
+          )}
         </div>
       </div>
 

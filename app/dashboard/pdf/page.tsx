@@ -3,34 +3,46 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { deletePdfConversion, listPdfConversions } from "@/app/lib/api/pdf";
-import { authClient } from "@/app/lib/auth-client";
+import {
+  deletePdfConversion,
+  getPdfConfig,
+  listPdfConversions,
+} from "@/app/lib/api/pdf";
 import Pagination from "@/app/components/Pagination";
 import StatusBadge from "@/app/components/StatusBadge";
+import DeleteButton from "@/app/components/DeleteButton";
 import PdfUploader from "./PdfUploader";
 
-const PAGE_SIZE = 10;
+const PAGE_SIZE = 7;
 
 export default function PdfListPage() {
   const queryClient = useQueryClient();
-  const { data: session } = authClient.useSession();
-  const isAdmin = session?.user?.role === "admin";
 
   const [page, setPage] = useState(1);
   const [status, setStatus] = useState("");
   const [searchInput, setSearchInput] = useState("");
   const [search, setSearch] = useState("");
 
+  const { data: config } = useQuery({
+    queryKey: ["pdf", "config"],
+    queryFn: getPdfConfig,
+  });
+
   const { data, isPending, isError, error } = useQuery({
     queryKey: ["pdf", "list", page, status, search],
     queryFn: () => listPdfConversions(page, PAGE_SIZE, status, search),
-    refetchInterval: 3000,
+    refetchInterval: (query) => {
+      const pdfs = query.state.data?.conversions ?? [];
+      const converting = pdfs.some(
+        (pdf) => pdf.status === "PENDING" || pdf.status === "PROCESSING",
+      );
+      return converting ? 1000 : false;
+    },
   });
 
   const deleteMutation = useMutation({
     mutationFn: deletePdfConversion,
     onSuccess: () => queryClient.invalidateQueries({ queryKey: ["pdf"] }),
-    onError: (err) => alert(err.message),
   });
 
   function handleSearch(event: React.SubmitEvent<HTMLFormElement>) {
@@ -39,23 +51,15 @@ export default function PdfListPage() {
     setPage(1);
   }
 
-  function handleDelete(id: string, name: string) {
-    if (confirm(`Delete "${name}" and all of its images?`)) {
-      deleteMutation.mutate(id);
-    }
-  }
-
   return (
     <div className="space-y-6">
       <div>
         <h1 className="text-lg font-semibold">PDF to images</h1>
-        <p className="text-sm text-muted-foreground">
-          Upload PDF files and get every page as a JPEG image.
-        </p>
       </div>
 
-      {isAdmin && (
+      {config && (
         <PdfUploader
+          config={config}
           onUploaded={() => {
             setPage(1);
             queryClient.invalidateQueries({ queryKey: ["pdf"] });
@@ -77,10 +81,11 @@ export default function PdfListPage() {
               className="input w-36"
             >
               <option value="">All statuses</option>
-              <option value="PENDING">Pending</option>
-              <option value="PROCESSING">Processing</option>
-              <option value="COMPLETED">Completed</option>
-              <option value="FAILED">Failed</option>
+              {config?.statuses.map((value) => (
+                <option key={value} value={value}>
+                  {value}
+                </option>
+              ))}
             </select>
             <input
               value={searchInput}
@@ -144,23 +149,20 @@ export default function PdfListPage() {
                   <td className="text-muted-foreground">
                     {new Date(pdf.createdAt).toLocaleString("en-GB")}
                   </td>
-                  <td className="text-right">
-                    <Link
-                      href={`/dashboard/pdf/${pdf.id}`}
-                      className="btn btn-sm"
-                    >
-                      View
-                    </Link>
-                    {isAdmin && (
-                      <button
-                        type="button"
-                        className="btn btn-sm btn-danger ml-1.5"
-                        disabled={pdf.status === "PROCESSING"}
-                        onClick={() => handleDelete(pdf.id, pdf.originalName)}
+                  <td>
+                    <div className="flex justify-end gap-1.5">
+                      <Link
+                        href={`/dashboard/pdf/${pdf.id}`}
+                        className="btn btn-sm"
                       >
-                        Delete
-                      </button>
-                    )}
+                        View
+                      </Link>
+                      <DeleteButton
+                        itemName={pdf.originalName}
+                        disabled={pdf.status === "PROCESSING"}
+                        onConfirm={() => deleteMutation.mutateAsync(pdf.id)}
+                      />
+                    </div>
                   </td>
                 </tr>
               ))}

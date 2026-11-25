@@ -2,29 +2,14 @@
 
 import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
-import { PDF_MAX_FILES, PDF_MAX_SIZE_MB, uploadPdfs } from "@/app/lib/api/pdf";
+import { uploadPdfs, type PdfConfig } from "@/app/lib/api/pdf";
 
-// Kiểm tra file trước khi gửi. Trả về câu báo lỗi, hoặc "" nếu hợp lệ
-function validateFiles(files: File[]) {
-  if (files.length > PDF_MAX_FILES) {
-    return `You can upload at most ${PDF_MAX_FILES} files at once.`;
-  }
-  for (const file of files) {
-    if (!file.name.toLowerCase().endsWith(".pdf")) {
-      return `${file.name} is not a PDF file.`;
-    }
-    if (file.size > PDF_MAX_SIZE_MB * 1024 * 1024) {
-      return `${file.name} is larger than ${PDF_MAX_SIZE_MB} MB.`;
-    }
-  }
-  return "";
+interface PdfUploaderProps {
+  config: PdfConfig;
+  onUploaded: () => void;
 }
 
-export default function PdfUploader({
-  onUploaded,
-}: {
-  onUploaded: () => void;
-}) {
+export default function PdfUploader({ config, onUploaded }: PdfUploaderProps) {
   const [files, setFiles] = useState<File[]>([]);
   const [message, setMessage] = useState("");
 
@@ -43,19 +28,27 @@ export default function PdfUploader({
     setMessage("");
   }
 
-  const error = validateFiles(files);
+  let error = "";
+  if (files.length > config.maxFiles) {
+    error = `You can upload at most ${config.maxFiles} files at once.`;
+  }
+  for (const file of files) {
+    if (file.size > config.maxFileSizeMb * 1024 * 1024) {
+      error = `${file.name} is larger than ${config.maxFileSizeMb} MB.`;
+    }
+  }
 
   return (
     <section className="panel">
       <div className="panel-header">
         <h2 className="panel-title">Upload PDF</h2>
         <span className="text-xs text-muted-foreground">
-          Max {PDF_MAX_FILES} files, {PDF_MAX_SIZE_MB} MB each
+          Max {config.maxFiles} files, {config.maxFileSizeMb} MB each
         </span>
       </div>
 
       <div className="space-y-3 p-4">
-        {/* Bấm để chọn file, hoặc kéo thả file vào ô này */}
+        {/* Bấm để chọn file, hoặc kéo thả file*/}
         <label
           onDragOver={(event) => event.preventDefault()}
           onDrop={(event) => {
@@ -64,11 +57,10 @@ export default function PdfUploader({
           }}
           className="block cursor-pointer rounded-md border border-dashed border-input px-4 py-6 text-center text-sm hover:bg-muted"
         >
-          Drop PDF files here, or{" "}
-          <span className="font-medium underline">browse</span>
+          PDF file
           <input
             type="file"
-            accept=".pdf"
+            accept="application/pdf"
             multiple
             className="hidden"
             onChange={(event) => {

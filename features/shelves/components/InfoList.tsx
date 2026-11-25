@@ -16,6 +16,7 @@ interface InfoListProps {
   query: string;
   onQueryChange: (value: string) => void;
   matchedIds: Set<string> | null;
+  canEdit: boolean;
 }
 
 export default function InfoList({
@@ -31,16 +32,18 @@ export default function InfoList({
   query,
   onQueryChange,
   matchedIds,
+  canEdit,
 }: InfoListProps) {
-  const displayItems = selectedId
-    ? items.filter((item) => item.id === selectedId)
-    : matchedIds
-      ? items.filter((item) => matchedIds.has(item.id))
-      : items;
+  const displayItems =
+    selectedId && canEdit
+      ? items.filter((item) => item.id === selectedId)
+      : matchedIds
+        ? items.filter((item) => matchedIds.has(item.id))
+        : items;
 
   return (
-    <div className="w-full md:w-80 lg:w-96 p-3 md:p-4 flex flex-col gap-2 overflow-y-auto h-full md:h-full max-h-[500px] md:max-h-none border-l border-border bg-card text-card-foreground">
-      {selectedId ? (
+    <div className="w-full md:w-80 lg:w-96 p-3 md:p-4 flex flex-col gap-2 overflow-y-auto h-full md:h-full max-h-125 md:max-h-none border-l border-border bg-card text-card-foreground">
+      {selectedId && canEdit ? (
         <EditToolbar
           totalCount={items.length}
           isSaving={isSaving}
@@ -73,6 +76,7 @@ export default function InfoList({
             onHover={onHover}
             onSelect={onSelect}
             onEditInfo={onEditInfo}
+            canEdit={canEdit}
           />
         ))}
       </div>

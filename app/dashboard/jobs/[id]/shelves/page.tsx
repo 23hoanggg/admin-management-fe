@@ -5,9 +5,12 @@ import { useParams } from "next/navigation";
 import { useQuery } from "@tanstack/react-query";
 import { ShelfEditor } from "@/features/shelves";
 import { getJobEditor } from "@/app/lib/api/jobs";
+import { authClient } from "@/app/lib/auth-client";
 
 export default function JobShelvesPage() {
   const { id } = useParams<{ id: string }>();
+  const { data: session } = authClient.useSession();
+  const isAdmin = session?.user?.role === "admin"; // chỉ admin được sửa
 
   const { data, isPending, isError, error } = useQuery({
     queryKey: ["jobs", id, "editor"],
@@ -38,7 +41,12 @@ export default function JobShelvesPage() {
       </div>
 
       <div className="panel h-[calc(100dvh-8rem)] overflow-hidden">
-        <ShelfEditor image={image} initialItems={data.items} jobId={id} />
+        <ShelfEditor
+          image={image}
+          initialItems={data.items}
+          jobId={id}
+          canEdit={isAdmin}
+        />
       </div>
     </div>
   );

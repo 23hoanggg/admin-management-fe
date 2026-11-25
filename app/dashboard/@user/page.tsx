@@ -14,6 +14,7 @@ import CreateUserForm from "@/app/components/users/CreateUserForm";
 import UpdateUserForm from "@/app/components/users/UpdateUserForm";
 import Pagination from "@/app/components/Pagination";
 import StatusBadge from "@/app/components/StatusBadge";
+import DeleteButton from "@/app/components/DeleteButton";
 
 interface User {
   id: string;
@@ -51,7 +52,6 @@ export default function UserSlot() {
       await refetchSession();
       queryClient.invalidateQueries();
     },
-    onError: (err) => alert(err.message),
   });
 
   const banMutation = useMutation({
@@ -69,11 +69,8 @@ export default function UserSlot() {
     onSuccess: reloadUsers,
   });
 
-  function handleDelete(user: User) {
-    if (confirm(`Delete user "${user.name}"?`)) {
-      removeMutation.mutate(user.id);
-    }
-  }
+  const actionError =
+    impersonateMutation.error ?? banMutation.error ?? unbanMutation.error;
 
   if (!isAdmin) {
     return (
@@ -100,6 +97,12 @@ export default function UserSlot() {
           New user
         </button>
       </div>
+
+      {actionError && (
+        <p className="border-b px-4 py-2 text-sm text-destructive">
+          {actionError.message}
+        </p>
+      )}
 
       <div className="flex-1">
         {isPending && (
@@ -158,13 +161,10 @@ export default function UserSlot() {
                     Ban
                   </button>
                 )}
-                <button
-                  type="button"
-                  className="btn btn-sm btn-danger"
-                  onClick={() => handleDelete(user)}
-                >
-                  Delete
-                </button>
+                <DeleteButton
+                  itemName={user.name}
+                  onConfirm={() => removeMutation.mutateAsync(user.id)}
+                />
               </div>
             </li>
           ))}

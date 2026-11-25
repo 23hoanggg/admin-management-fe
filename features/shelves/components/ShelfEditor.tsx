@@ -10,12 +10,14 @@ export interface ShelfEditorProps {
   image: ImageInfo;
   initialItems: ShelfItem[];
   jobId: string;
+  canEdit: boolean;
 }
 
 export default function ShelfEditor({
   image,
   initialItems,
   jobId,
+  canEdit,
 }: ShelfEditorProps) {
   const editor = useShelfEditor(jobId, initialItems);
 
@@ -34,7 +36,7 @@ export default function ShelfEditor({
         items={editor.items}
         hoveredId={editor.hoveredId}
         selectedId={editor.selectedId}
-        draft={editor.draft}
+        draft={canEdit ? editor.draft : null}
         image={image}
         matchedIds={editor.matchedIds}
         onHover={editor.setHoveredId}
@@ -55,9 +57,10 @@ export default function ShelfEditor({
         onSave={editor.handleSave}
         onCancel={editor.handleCancel}
         onEditInfo={editor.setInfoId}
+        canEdit={canEdit}
       />
 
-      {editor.infoItem && (
+      {canEdit && editor.infoItem && (
         <EditItemModal
           key={editor.infoItem.id}
           item={editor.infoItem}

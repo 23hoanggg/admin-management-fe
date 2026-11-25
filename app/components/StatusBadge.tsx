@@ -1,5 +1,4 @@
-const tone: Record<string, string> = {
-  PENDING: "text-muted-foreground",
+const colors: Record<string, string> = {
   PROCESSING: "text-warning",
   COMPLETED: "text-success",
   FAILED: "text-destructive",
@@ -7,21 +6,12 @@ const tone: Record<string, string> = {
   BANNED: "text-destructive",
 };
 
-const label: Record<string, string> = {
-  PENDING: "Pending",
-  PROCESSING: "Processing",
-  COMPLETED: "Completed",
-  FAILED: "Failed",
-  ACTIVE: "Active",
-  BANNED: "Banned",
-};
-
 export default function StatusBadge({ status }: { status: string }) {
+  const color = colors[status] ?? "text-muted-foreground";
+
   return (
-    <span
-      className={`whitespace-nowrap text-xs font-medium ${tone[status] ?? "text-muted-foreground"}`}
-    >
-      {label[status] ?? status}
+    <span className={`text-xs font-medium capitalize ${color}`}>
+      {status.toLowerCase()}
     </span>
   );
 }

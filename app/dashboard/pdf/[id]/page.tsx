@@ -9,17 +9,15 @@ import {
   getPdfConversion,
   pdfPageUrl,
 } from "@/app/lib/api/pdf";
-import { authClient } from "@/app/lib/auth-client";
 import StatusBadge from "@/app/components/StatusBadge";
+import DeleteButton from "@/app/components/DeleteButton";
+import { getNgDetails, PdfViewer } from "@/features/pdf";
 
 export default function PdfDetailPage() {
   const { id } = useParams<{ id: string }>();
   const router = useRouter();
   const queryClient = useQueryClient();
-  const { data: session } = authClient.useSession();
-  const isAdmin = session?.user?.role === "admin";
 
-  // Trang PDF đang xem (bắt đầu từ 1)
   const [currentPage, setCurrentPage] = useState(1);
 
   const {
@@ -30,8 +28,15 @@ export default function PdfDetailPage() {
   } = useQuery({
     queryKey: ["pdf", "detail", id],
     queryFn: () => getPdfConversion(id),
-    // Tự tải lại mỗi 3 giây để thấy trạng thái convert mới nhất
-    refetchInterval: 3000,
+    // refetch while converting images or RunPod is analyzing
+    refetchInterval: (query) => {
+      const data = query.state.data;
+      const isWorking =
+        data?.status === "PENDING" ||
+        data?.status === "PROCESSING" ||
+        data?.runpodJobStatus === "PROCESSING";
+      return isWorking ? 3000 : false;
+    },
   });
 
   const deleteMutation = useMutation({
@@ -40,7 +45,6 @@ export default function PdfDetailPage() {
       queryClient.invalidateQueries({ queryKey: ["pdf"] });
       router.push("/dashboard/pdf");
     },
-    onError: (err) => alert(err.message),
   });
 
   if (isPending)
@@ -50,6 +54,7 @@ export default function PdfDetailPage() {
 
   const totalPages = pdf.pages.length;
   const imageUrl = pdfPageUrl(pdf.id, currentPage);
+  const details = getNgDetails(pdf.detailsJson);
 
   return (
     <div className="space-y-6">
@@ -64,23 +69,17 @@ export default function PdfDetailPage() {
           <h1 className="text-lg font-semibold">{pdf.originalName}</h1>
         </div>
 
-        {isAdmin && (
-          <button
-            type="button"
-            className="btn btn-danger"
-            disabled={pdf.status === "PROCESSING"}
-            onClick={() => {
-              if (confirm(`Delete "${pdf.originalName}"?`))
-                deleteMutation.mutate();
-            }}
-          >
-            Delete
-          </button>
-        )}
+        <DeleteButton
+          itemName={pdf.originalName}
+          disabled={
+            pdf.status === "PROCESSING" || pdf.runpodJobStatus === "PROCESSING"
+          }
+          onConfirm={() => deleteMutation.mutateAsync()}
+        />
       </div>
 
       {/* Thông tin file */}
-      <section className="panel grid grid-cols-4 divide-x">
+      <section className="panel grid grid-cols-5 divide-x">
         <div className="px-4 py-3">
           <p className="text-xs text-muted-foreground">Status</p>
           <StatusBadge status={pdf.status} />
@@ -101,9 +100,19 @@ export default function PdfDetailPage() {
             {new Date(pdf.updatedAt).toLocaleString("en-GB")}
           </p>
         </div>
+        <div className="px-4 py-3">
+          <p className="text-xs text-muted-foreground">Analysis</p>
+          <StatusBadge status={pdf.runpodJobStatus} />
+          {pdf.fileOverall && (
+            <span className="ml-2 text-sm font-medium">{pdf.fileOverall}</span>
+          )}
+        </div>
       </section>
 
       {pdf.error && <p className="text-sm text-destructive">{pdf.error}</p>}
+      {pdf.outputError && (
+        <p className="text-sm text-destructive">{pdf.outputError}</p>
+      )}
 
       {/* Xem từng trang */}
       {totalPages > 0 && (
@@ -132,17 +141,17 @@ export default function PdfDetailPage() {
             </div>
 
             <div className="flex gap-2">
-              <a href={imageUrl} target="_blank" className="btn btn-sm">
+              <a href={imageUrl} target="blank" className="btn btn-sm">
                 Open full size
               </a>
-              <a href={imageUrl} download className="btn btn-sm">
+              <a href={`${imageUrl}?download=true`} className="btn btn-sm">
                 Download
               </a>
             </div>
           </div>
 
           <div className="flex h-[70vh]">
-            {/* Danh sách trang bên trái */}
+            {/* list anh */}
             <div className="w-28 shrink-0 space-y-3 overflow-y-auto border-r bg-muted p-3">
               {pdf.pages.map((page) => (
                 <button
@@ -167,15 +176,12 @@ export default function PdfDetailPage() {
               ))}
             </div>
 
-            {/* Ảnh trang đang chọn */}
-            <div className="flex flex-1 items-center justify-center overflow-auto bg-muted p-4">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={imageUrl}
-                alt={`Page ${currentPage}`}
-                className="max-h-full max-w-full border bg-white"
-              />
-            </div>
+            {/* image + boxes | detail list */}
+            <PdfViewer
+              imageUrl={imageUrl}
+              page={currentPage}
+              details={details}
+            />
           </div>
         </section>
       )}

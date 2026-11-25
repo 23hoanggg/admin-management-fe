@@ -31,10 +31,7 @@ export default function DashboardLayout({
 
       <main className="min-w-0 flex-1 overflow-y-auto p-6">
         {isDashboardHome ? (
-          // Trang chủ dashboard: 3 slot song song
-          // | activity | user |
-          // | admin    | user |
-          <div className="grid h-full min-h-[560px] grid-cols-[minmax(0,1fr)_minmax(380px,520px)] grid-rows-[minmax(0,1fr)_auto] gap-4">
+          <div className="grid h-full min-h-140 grid-cols-[minmax(0,1fr)_minmax(380px,520px)] grid-rows-[minmax(0,1fr)_auto] gap-4">
             <section className="panel min-h-0 overflow-y-auto">
               {activity}
             </section>

@@ -14,7 +14,7 @@ export async function GET(
     await fs.access(imagePath);
 
     const image = await sharp(imagePath)
-      .resize({ width: 800 })
+      .resize({ width: 1200 })
       .avif({ quality: 50 })
       .toBuffer();
 

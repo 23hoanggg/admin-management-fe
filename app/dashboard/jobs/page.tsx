@@ -43,7 +43,6 @@ export default function JobsPage() {
     });
   }
 
-  // Cắt danh sách theo trang (API trả về tất cả jobs)
   const jobsOnPage =
     jobs?.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE) ?? [];
 
@@ -64,7 +63,7 @@ export default function JobsPage() {
             onChange={(event) => setName(event.target.value)}
           />
         </div>
-        <div className="flex-[2]">
+        <div className="flex-2">
           <label htmlFor="job-description" className="label">
             Description (optional)
           </label>
