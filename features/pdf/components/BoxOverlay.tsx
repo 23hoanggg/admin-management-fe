@@ -1,5 +1,14 @@
-import { PdfBox } from "../types/pdf";
+import { PointerEvent } from "react";
+import { DragMode, PdfBox, ResizeCorner } from "../types/pdf";
 import { boxToStyle } from "../utils/geometry";
+import ResizeHandle from "./ResizeHandle";
+
+const CORNERS: ResizeCorner[] = [
+  "top-left",
+  "top-right",
+  "bottom-left",
+  "bottom-right",
+];
 
 interface BoxOverlayProps {
   outputKey: string;
@@ -7,17 +16,17 @@ interface BoxOverlayProps {
   isHovered: boolean;
   isSelected: boolean;
   onHover: (key: string | null) => void;
-  onClick: () => void;
+  onDragStart: (mode: DragMode, event: PointerEvent) => void;
 }
 
-// box polygon
+// Bounding box
 export default function BoxOverlay({
   outputKey,
   box,
   isHovered,
   isSelected,
   onHover,
-  onClick,
+  onDragStart,
 }: BoxOverlayProps) {
   let colorClass = "border-red-500";
   if (isHovered) colorClass = "border-green-500 bg-green-500/25";
@@ -27,17 +36,26 @@ export default function BoxOverlay({
     <div
       onMouseEnter={() => onHover(outputKey)}
       onMouseLeave={() => onHover(null)}
-      onClick={(event) => {
+      onPointerDown={(event) => {
         event.stopPropagation();
-        onClick();
+        onDragStart("move", event);
       }}
-      className={`absolute cursor-pointer border-2 ${colorClass}`}
+      className={`absolute cursor-move border-2 ${colorClass}`}
       style={boxToStyle(box)}
     >
       {/* label box */}
       <span className="absolute bottom-full left-0 bg-black px-1 text-xs font-bold text-white">
         {outputKey}
       </span>
+
+      {isSelected &&
+        CORNERS.map((corner) => (
+          <ResizeHandle
+            key={corner}
+            corner={corner}
+            onDragStart={(event) => onDragStart(corner, event)}
+          />
+        ))}
     </div>
   );
 }

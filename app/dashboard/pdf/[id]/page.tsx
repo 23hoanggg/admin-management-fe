@@ -176,7 +176,6 @@ export default function PdfDetailPage() {
               ))}
             </div>
 
-            {/* image + boxes | detail list */}
             <PdfViewer
               imageUrl={imageUrl}
               page={currentPage}
